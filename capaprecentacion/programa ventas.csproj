@@ -18,11 +18,9 @@
     <ProjectReference Include="..\capadatos\capadatos.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.0\MySql.Data.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MySql.Data" Version="9.0.0" />
+	</ItemGroup>
 
   <ItemGroup>
     <Compile Update="complementos\mdproductos2.cs">
