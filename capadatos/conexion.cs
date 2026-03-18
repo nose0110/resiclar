@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Data;
-using MySql.Data.MySqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace conexion
 {
     public class DatabaseConnection
     {
-        private MySqlConnection connection;
+        private SqlConnection connection;
         private string connectionString;
 
         public DatabaseConnection()
         {
-            connectionString = "server=localhost;port=3306;database=bdventas;user=root;password=;";
-            connection = new MySqlConnection(connectionString);
+            connectionString = "Server=localhost\\SQLEXPRESS;Database=HospitalDB;Integrated Security=True;TrustServerCertificate=True;";
+            connection = new SqlConnection(connectionString);
         }
 
         public void OpenConnection()
@@ -24,7 +24,7 @@ namespace conexion
                     connection.Open();
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("No se pudo abrir la conexión a la base de datos.", ex);
             }
@@ -39,7 +39,7 @@ namespace conexion
                     connection.Close();
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("No se pudo cerrar la conexión a la base de datos.", ex);
             }
@@ -50,15 +50,14 @@ namespace conexion
             try
             {
                 OpenConnection();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                SqlCommand cmd = new SqlCommand(query, connection);
                 if (parameters != null)
                 {
-                    // Asignar parámetros a la consulta
                     AssignParameters(cmd, parameters);
                 }
                 return Convert.ToInt32(cmd.ExecuteScalar());
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar consulta: " + ex.Message, ex);
             }
@@ -67,12 +66,13 @@ namespace conexion
                 CloseConnection();
             }
         }
+
         public decimal? ExecuteScalar2(string query, object parameters = null)
         {
             try
             {
                 OpenConnection();
-                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     if (parameters != null)
                     {
@@ -82,7 +82,7 @@ namespace conexion
                     return result != null && result != DBNull.Value ? Convert.ToDecimal(result) : (decimal?)null;
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar consulta: " + ex.Message, ex);
             }
@@ -97,7 +97,7 @@ namespace conexion
             try
             {
                 OpenConnection();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                SqlCommand cmd = new SqlCommand(query, connection);
 
                 if (parameters != null)
                 {
@@ -107,12 +107,12 @@ namespace conexion
                     }
                 }
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar la consulta: " + ex.Message, ex);
             }
@@ -127,7 +127,7 @@ namespace conexion
             try
             {
                 OpenConnection();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                SqlCommand cmd = new SqlCommand(query, connection);
 
                 if (parameters != null)
                 {
@@ -137,12 +137,12 @@ namespace conexion
                     }
                 }
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar la consulta: " + ex.Message, ex);
             }
@@ -157,15 +157,14 @@ namespace conexion
             try
             {
                 OpenConnection();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                SqlCommand cmd = new SqlCommand(query, connection);
                 if (parameters != null)
                 {
-                    // Asignar parámetros a la consulta
                     AssignParameters(cmd, parameters);
                 }
                 return cmd.ExecuteNonQuery();
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar consulta: " + ex.Message, ex);
             }
@@ -174,18 +173,19 @@ namespace conexion
                 CloseConnection();
             }
         }
+
         public DataTable ExecuteQuery(string query)
         {
             try
             {
                 OpenConnection();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                SqlCommand cmd = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar la consulta: " + ex.Message, ex);
             }
@@ -195,13 +195,12 @@ namespace conexion
             }
         }
 
-
         public DataTable ExecuteQuery(string query, object parameters = null)
         {
             try
             {
                 OpenConnection();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+                SqlCommand cmd = new SqlCommand(query, connection);
 
                 if (parameters != null)
                 {
@@ -211,12 +210,12 @@ namespace conexion
                     }
                 }
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 throw new Exception("Error al ejecutar la consulta: " + ex.Message, ex);
             }
@@ -225,9 +224,9 @@ namespace conexion
                 CloseConnection();
             }
         }
-        private void AssignParameters(MySqlCommand cmd, object parameters)
+
+        private void AssignParameters(SqlCommand cmd, object parameters)
         {
-            // Asignar parámetros a la consulta
             var properties = parameters.GetType().GetProperties();
             foreach (var prop in properties)
             {
