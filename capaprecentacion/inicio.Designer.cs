@@ -16,12 +16,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicio));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panelSidebar = new Panel();
             panelNavItems = new Panel();
             iconNavInicio = new FontAwesome.Sharp.IconPictureBox();
-            iconNavInicio.Click += lblNavInicio_Click;
             lblNavInicio = new Label();
             iconNavRegistrar = new FontAwesome.Sharp.IconPictureBox();
             lblNavRegistrar = new Label();
@@ -131,6 +130,7 @@
             iconNavInicio.Size = new Size(24, 24);
             iconNavInicio.TabIndex = 0;
             iconNavInicio.TabStop = false;
+            iconNavInicio.Click += lblNavInicio_Click;
             // 
             // lblNavInicio
             // 
@@ -480,24 +480,24 @@
             dgvPacientes.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dgvPacientes.BackgroundColor = Color.White;
             dgvPacientes.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(240, 244, 250);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(33, 46, 68);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(240, 244, 250);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(33, 46, 68);
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPacientes.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(210, 225, 245);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(33, 46, 68);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvPacientes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(210, 225, 245);
+            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(33, 46, 68);
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvPacientes.DefaultCellStyle = dataGridViewCellStyle6;
             dgvPacientes.EnableHeadersVisualStyles = false;
             dgvPacientes.Font = new Font("Segoe UI", 10F);
             dgvPacientes.GridColor = Color.FromArgb(230, 235, 245);
@@ -631,7 +631,7 @@
             iconMenuItem4.IconColor = Color.Black;
             iconMenuItem4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem4.Name = "iconMenuItem4";
-            iconMenuItem4.Size = new Size(149, 26);
+            iconMenuItem4.Size = new Size(224, 26);
             iconMenuItem4.Text = "ventas";
             iconMenuItem4.Click += iconMenuItem4_Click;
             // 

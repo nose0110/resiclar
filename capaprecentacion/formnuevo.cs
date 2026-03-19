@@ -122,6 +122,26 @@ namespace capaprecentacion
             // Mostramos el resultado en el otro cuadro de fecha
             //   dateTimePicker2.Value = fpp;
         }
+
+        private void labeledad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void asdasdasd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estado_civil_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

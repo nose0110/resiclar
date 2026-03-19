@@ -169,6 +169,11 @@ namespace capaprecentacion
             label42 = new Label();
             label41 = new Label();
             tabPage5 = new TabPage();
+            label59 = new Label();
+            textBox21 = new TextBox();
+            label58 = new Label();
+            label57 = new Label();
+            numericUpDown1 = new NumericUpDown();
             label56 = new Label();
             dateTimePicker2 = new DateTimePicker();
             label55 = new Label();
@@ -178,11 +183,6 @@ namespace capaprecentacion
             tabPage7 = new TabPage();
             tabPage8 = new TabPage();
             label53 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            label57 = new Label();
-            label58 = new Label();
-            textBox21 = new TextBox();
-            label59 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)edad1).BeginInit();
@@ -200,8 +200,8 @@ namespace capaprecentacion
             panel7.SuspendLayout();
             panel6.SuspendLayout();
             tabPage5.SuspendLayout();
-            tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            tabPage8.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -214,10 +214,11 @@ namespace capaprecentacion
             tabControl1.Controls.Add(tabPage6);
             tabControl1.Controls.Add(tabPage7);
             tabControl1.Controls.Add(tabPage8);
-            tabControl1.Location = new Point(2, 9);
+            tabControl1.Location = new Point(2, 7);
+            tabControl1.Margin = new Padding(2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1330, 890);
+            tabControl1.Size = new Size(1064, 712);
             tabControl1.TabIndex = 97;
             // 
             // tabPage1
@@ -248,226 +249,276 @@ namespace capaprecentacion
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(button1);
-            tabPage1.Location = new Point(4, 34);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Margin = new Padding(2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1322, 852);
+            tabPage1.Padding = new Padding(2);
+            tabPage1.Size = new Size(1056, 679);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Ficha de Identificación";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // telefono
             // 
-            telefono.Location = new Point(31, 614);
+            telefono.Location = new Point(669, 431);
+            telefono.Margin = new Padding(2);
             telefono.Name = "telefono";
-            telefono.Size = new Size(150, 31);
+            telefono.Size = new Size(176, 27);
             telefono.TabIndex = 25;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(35, 567);
+            label11.Font = new Font("Segoe UI", 12F);
+            label11.Location = new Point(669, 383);
+            label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
-            label11.Size = new Size(177, 25);
+            label11.Size = new Size(123, 28);
             label11.TabIndex = 24;
-            label11.Text = "telefono de contacto";
+            label11.Text = "Tel.Contacto:";
             // 
             // no_expediente
             // 
-            no_expediente.Location = new Point(534, 484);
+            no_expediente.Location = new Point(458, 431);
+            no_expediente.Margin = new Padding(2);
             no_expediente.Name = "no_expediente";
-            no_expediente.Size = new Size(150, 31);
+            no_expediente.Size = new Size(176, 27);
             no_expediente.TabIndex = 23;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(534, 448);
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.Location = new Point(458, 383);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(190, 25);
+            label8.Size = new Size(143, 28);
             label8.TabIndex = 22;
-            label8.Text = "numero de expediente";
+            label8.Text = "No.Expediente:";
             // 
             // cama
             // 
-            cama.Location = new Point(271, 484);
+            cama.Location = new Point(249, 431);
+            cama.Margin = new Padding(2);
             cama.Name = "cama";
-            cama.Size = new Size(150, 31);
+            cama.Size = new Size(176, 27);
             cama.TabIndex = 21;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(272, 444);
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(249, 383);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(54, 25);
+            label7.Size = new Size(65, 28);
             label7.TabIndex = 20;
-            label7.Text = "cama";
+            label7.Text = "Cama:";
             // 
             // servicio
             // 
-            servicio.Location = new Point(25, 476);
+            servicio.Location = new Point(27, 431);
+            servicio.Margin = new Padding(2);
             servicio.Name = "servicio";
-            servicio.Size = new Size(150, 31);
+            servicio.Size = new Size(176, 27);
             servicio.TabIndex = 19;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(24, 429);
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.Location = new Point(30, 383);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(71, 25);
+            label5.Size = new Size(85, 28);
             label5.TabIndex = 18;
-            label5.Text = "servicio";
+            label5.Text = "Servicio:";
+            label5.Click += label5_Click;
             // 
             // religion
             // 
-            religion.Location = new Point(720, 330);
+            religion.Location = new Point(669, 302);
+            religion.Margin = new Padding(2);
             religion.Name = "religion";
-            religion.Size = new Size(150, 31);
+            religion.Size = new Size(176, 27);
             religion.TabIndex = 17;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(721, 289);
+            label4.Font = new Font("Segoe UI", 12F);
+            label4.Location = new Point(669, 256);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(71, 25);
+            label4.Size = new Size(87, 28);
             label4.TabIndex = 16;
-            label4.Text = "religion";
+            label4.Text = "Religión:";
             // 
             // escolaridad
             // 
-            escolaridad.Location = new Point(493, 331);
+            escolaridad.Location = new Point(458, 302);
+            escolaridad.Margin = new Padding(2);
             escolaridad.Name = "escolaridad";
-            escolaridad.Size = new Size(150, 31);
+            escolaridad.Size = new Size(176, 27);
             escolaridad.TabIndex = 15;
             // 
             // asdasdasd
             // 
             asdasdasd.AutoSize = true;
-            asdasdasd.Location = new Point(505, 284);
+            asdasdasd.Font = new Font("Segoe UI", 12F);
+            asdasdasd.Location = new Point(458, 256);
+            asdasdasd.Margin = new Padding(2, 0, 2, 0);
             asdasdasd.Name = "asdasdasd";
-            asdasdasd.Size = new Size(102, 25);
+            asdasdasd.Size = new Size(116, 28);
             asdasdasd.TabIndex = 14;
-            asdasdasd.Text = "escolaridad";
+            asdasdasd.Text = "Escolaridad:";
+            asdasdasd.Click += asdasdasd_Click;
             // 
             // nacionalidad
             // 
-            nacionalidad.Location = new Point(258, 330);
+            nacionalidad.Location = new Point(249, 302);
+            nacionalidad.Margin = new Padding(2);
             nacionalidad.Name = "nacionalidad";
-            nacionalidad.Size = new Size(150, 31);
+            nacionalidad.Size = new Size(176, 27);
             nacionalidad.TabIndex = 13;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(262, 274);
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.Location = new Point(249, 256);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(112, 25);
+            label3.Size = new Size(132, 28);
             label3.TabIndex = 12;
-            label3.Text = "nacionalidad";
+            label3.Text = "Nacionalidad:";
             // 
             // estado_civil
             // 
-            estado_civil.Location = new Point(19, 328);
+            estado_civil.Location = new Point(27, 302);
+            estado_civil.Margin = new Padding(2);
             estado_civil.Name = "estado_civil";
-            estado_civil.Size = new Size(150, 31);
+            estado_civil.Size = new Size(176, 27);
             estado_civil.TabIndex = 11;
+            estado_civil.TextChanged += estado_civil_TextChanged;
             // 
             // labe2
             // 
             labe2.AutoSize = true;
-            labe2.Location = new Point(19, 274);
+            labe2.Font = new Font("Segoe UI", 12F);
+            labe2.Location = new Point(27, 256);
+            labe2.Margin = new Padding(2, 0, 2, 0);
             labe2.Name = "labe2";
-            labe2.Size = new Size(100, 25);
+            labe2.Size = new Size(114, 28);
             labe2.TabIndex = 10;
-            labe2.Text = "estado civil";
+            labe2.Text = "Estado civil:";
             // 
             // ocupacion
             // 
-            ocupacion.Location = new Point(700, 128);
+            ocupacion.Location = new Point(669, 167);
+            ocupacion.Margin = new Padding(2);
             ocupacion.Name = "ocupacion";
-            ocupacion.Size = new Size(150, 31);
+            ocupacion.Size = new Size(176, 27);
             ocupacion.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(709, 92);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(669, 124);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(94, 25);
+            label2.Size = new Size(110, 28);
             label2.TabIndex = 8;
-            label2.Text = "ocupacion";
+            label2.Text = "Ocupación:";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Hombre", "mujer" });
-            comboBox1.Location = new Point(468, 125);
+            comboBox1.Location = new Point(458, 167);
+            comboBox1.Margin = new Padding(2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
+            comboBox1.Size = new Size(176, 28);
             comboBox1.TabIndex = 7;
             // 
             // sexoaaa
             // 
             sexoaaa.AutoSize = true;
-            sexoaaa.Location = new Point(485, 88);
+            sexoaaa.Font = new Font("Segoe UI", 12F);
+            sexoaaa.Location = new Point(458, 124);
+            sexoaaa.Margin = new Padding(2, 0, 2, 0);
             sexoaaa.Name = "sexoaaa";
-            sexoaaa.Size = new Size(48, 25);
+            sexoaaa.Size = new Size(58, 28);
             sexoaaa.TabIndex = 6;
-            sexoaaa.Text = "sexo";
+            sexoaaa.Text = "Sexo:";
             // 
             // edad1
             // 
-            edad1.Location = new Point(223, 124);
+            edad1.Location = new Point(249, 168);
+            edad1.Margin = new Padding(2);
             edad1.Name = "edad1";
-            edad1.Size = new Size(180, 31);
+            edad1.Size = new Size(176, 27);
             edad1.TabIndex = 5;
             // 
             // labeledad
             // 
             labeledad.AutoSize = true;
-            labeledad.Location = new Point(240, 96);
+            labeledad.Font = new Font("Segoe UI", 12F);
+            labeledad.Location = new Point(249, 124);
+            labeledad.Margin = new Padding(2, 0, 2, 0);
             labeledad.Name = "labeledad";
-            labeledad.Size = new Size(52, 25);
+            labeledad.Size = new Size(60, 28);
             labeledad.TabIndex = 4;
-            labeledad.Text = "edad";
+            labeledad.Text = "Edad:";
+            labeledad.Click += labeledad_Click;
             // 
             // nombre
             // 
-            nombre.Location = new Point(19, 125);
+            nombre.BackColor = SystemColors.Window;
+            nombre.ForeColor = Color.FromArgb(67, 105, 142);
+            nombre.Location = new Point(27, 167);
+            nombre.Margin = new Padding(2);
             nombre.Name = "nombre";
-            nombre.Size = new Size(150, 31);
+            nombre.Size = new Size(176, 27);
             nombre.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(20, 88);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(26, 124);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(75, 25);
+            label1.Size = new Size(89, 28);
             label1.TabIndex = 2;
-            label1.Text = "nombre";
+            label1.Text = "Nombre:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 22);
+            label6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(67, 105, 142);
+            label6.Location = new Point(22, 25);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(186, 25);
+            label6.Size = new Size(312, 41);
             label6.TabIndex = 1;
             label6.Text = "Ficha de identificacion";
             label6.Click += label6_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(1117, 668);
+            button1.BackColor = Color.FromArgb(67, 105, 142);
+            button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(895, 618);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(142, 41);
             button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "SIGUIENTE";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // tabPage2
@@ -502,19 +553,21 @@ namespace capaprecentacion
             tabPage2.Controls.Add(label13);
             tabPage2.Controls.Add(label12);
             tabPage2.Controls.Add(label9);
-            tabPage2.Location = new Point(4, 34);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Margin = new Padding(2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1322, 852);
+            tabPage2.Padding = new Padding(2);
+            tabPage2.Size = new Size(1056, 679);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
+            tabPage2.Text = "Antec.Heredofamiliares";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Location = new Point(1036, 768);
+            button5.Location = new Point(829, 614);
+            button5.Margin = new Padding(2);
             button5.Name = "button5";
-            button5.Size = new Size(112, 34);
+            button5.Size = new Size(90, 27);
             button5.TabIndex = 28;
             button5.Text = "anterior";
             button5.UseVisualStyleBackColor = true;
@@ -522,9 +575,10 @@ namespace capaprecentacion
             // 
             // button2
             // 
-            button2.Location = new Point(1182, 768);
+            button2.Location = new Point(946, 614);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(90, 27);
             button2.TabIndex = 27;
             button2.Text = "siguiente";
             button2.UseVisualStyleBackColor = true;
@@ -535,17 +589,19 @@ namespace capaprecentacion
             panel5.Controls.Add(radioButton9);
             panel5.Controls.Add(radioButton10);
             panel5.Controls.Add(label28);
-            panel5.Location = new Point(59, 748);
+            panel5.Location = new Point(47, 598);
+            panel5.Margin = new Padding(2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(712, 54);
+            panel5.Size = new Size(570, 43);
             panel5.TabIndex = 26;
             // 
             // radioButton9
             // 
             radioButton9.AutoSize = true;
-            radioButton9.Location = new Point(366, 11);
+            radioButton9.Location = new Point(293, 9);
+            radioButton9.Margin = new Padding(2);
             radioButton9.Name = "radioButton9";
-            radioButton9.Size = new Size(58, 29);
+            radioButton9.Size = new Size(47, 24);
             radioButton9.TabIndex = 2;
             radioButton9.TabStop = true;
             radioButton9.Text = "no";
@@ -554,9 +610,10 @@ namespace capaprecentacion
             // radioButton10
             // 
             radioButton10.AutoSize = true;
-            radioButton10.Location = new Point(273, 11);
+            radioButton10.Location = new Point(218, 9);
+            radioButton10.Margin = new Padding(2);
             radioButton10.Name = "radioButton10";
-            radioButton10.Size = new Size(49, 29);
+            radioButton10.Size = new Size(40, 24);
             radioButton10.TabIndex = 1;
             radioButton10.TabStop = true;
             radioButton10.Text = "si";
@@ -565,9 +622,10 @@ namespace capaprecentacion
             // label28
             // 
             label28.AutoSize = true;
-            label28.Location = new Point(16, 13);
+            label28.Location = new Point(13, 10);
+            label28.Margin = new Padding(2, 0, 2, 0);
             label28.Name = "label28";
-            label28.Size = new Size(65, 25);
+            label28.Size = new Size(54, 20);
             label28.TabIndex = 0;
             label28.Text = "Cáncer";
             // 
@@ -576,17 +634,19 @@ namespace capaprecentacion
             panel4.Controls.Add(radioButton7);
             panel4.Controls.Add(radioButton8);
             panel4.Controls.Add(label27);
-            panel4.Location = new Point(59, 677);
+            panel4.Location = new Point(47, 542);
+            panel4.Margin = new Padding(2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(712, 54);
+            panel4.Size = new Size(570, 43);
             panel4.TabIndex = 25;
             // 
             // radioButton7
             // 
             radioButton7.AutoSize = true;
-            radioButton7.Location = new Point(366, 11);
+            radioButton7.Location = new Point(293, 9);
+            radioButton7.Margin = new Padding(2);
             radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(58, 29);
+            radioButton7.Size = new Size(47, 24);
             radioButton7.TabIndex = 2;
             radioButton7.TabStop = true;
             radioButton7.Text = "no";
@@ -595,9 +655,10 @@ namespace capaprecentacion
             // radioButton8
             // 
             radioButton8.AutoSize = true;
-            radioButton8.Location = new Point(273, 11);
+            radioButton8.Location = new Point(218, 9);
+            radioButton8.Margin = new Padding(2);
             radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(49, 29);
+            radioButton8.Size = new Size(40, 24);
             radioButton8.TabIndex = 1;
             radioButton8.TabStop = true;
             radioButton8.Text = "si";
@@ -606,9 +667,10 @@ namespace capaprecentacion
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new Point(16, 13);
+            label27.Location = new Point(13, 10);
+            label27.Margin = new Padding(2, 0, 2, 0);
             label27.Name = "label27";
-            label27.Size = new Size(65, 25);
+            label27.Size = new Size(54, 20);
             label27.TabIndex = 0;
             label27.Text = "Cáncer";
             // 
@@ -617,17 +679,19 @@ namespace capaprecentacion
             panel3.Controls.Add(radioButton5);
             panel3.Controls.Add(radioButton6);
             panel3.Controls.Add(label26);
-            panel3.Location = new Point(59, 617);
+            panel3.Location = new Point(47, 494);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(712, 54);
+            panel3.Size = new Size(570, 43);
             panel3.TabIndex = 25;
             // 
             // radioButton5
             // 
             radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(366, 11);
+            radioButton5.Location = new Point(293, 9);
+            radioButton5.Margin = new Padding(2);
             radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(58, 29);
+            radioButton5.Size = new Size(47, 24);
             radioButton5.TabIndex = 2;
             radioButton5.TabStop = true;
             radioButton5.Text = "no";
@@ -636,9 +700,10 @@ namespace capaprecentacion
             // radioButton6
             // 
             radioButton6.AutoSize = true;
-            radioButton6.Location = new Point(273, 11);
+            radioButton6.Location = new Point(218, 9);
+            radioButton6.Margin = new Padding(2);
             radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(49, 29);
+            radioButton6.Size = new Size(40, 24);
             radioButton6.TabIndex = 1;
             radioButton6.TabStop = true;
             radioButton6.Text = "si";
@@ -647,9 +712,10 @@ namespace capaprecentacion
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(16, 13);
+            label26.Location = new Point(13, 10);
+            label26.Margin = new Padding(2, 0, 2, 0);
             label26.Name = "label26";
-            label26.Size = new Size(110, 25);
+            label26.Size = new Size(91, 20);
             label26.TabIndex = 0;
             label26.Text = "Tuberculosis";
             label26.Click += label26_Click;
@@ -659,17 +725,19 @@ namespace capaprecentacion
             panel2.Controls.Add(radioButton3);
             panel2.Controls.Add(radioButton4);
             panel2.Controls.Add(label25);
-            panel2.Location = new Point(59, 557);
+            panel2.Location = new Point(47, 446);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(712, 54);
+            panel2.Size = new Size(570, 43);
             panel2.TabIndex = 25;
             // 
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(366, 11);
+            radioButton3.Location = new Point(293, 9);
+            radioButton3.Margin = new Padding(2);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(58, 29);
+            radioButton3.Size = new Size(47, 24);
             radioButton3.TabIndex = 2;
             radioButton3.TabStop = true;
             radioButton3.Text = "no";
@@ -678,9 +746,10 @@ namespace capaprecentacion
             // radioButton4
             // 
             radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(273, 11);
+            radioButton4.Location = new Point(218, 9);
+            radioButton4.Margin = new Padding(2);
             radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(49, 29);
+            radioButton4.Size = new Size(40, 24);
             radioButton4.TabIndex = 1;
             radioButton4.TabStop = true;
             radioButton4.Text = "si";
@@ -689,9 +758,10 @@ namespace capaprecentacion
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(16, 13);
+            label25.Location = new Point(13, 10);
+            label25.Margin = new Padding(2, 0, 2, 0);
             label25.Name = "label25";
-            label25.Size = new Size(174, 25);
+            label25.Size = new Size(147, 20);
             label25.TabIndex = 0;
             label25.Text = "Hipertensión Arterial";
             label25.Click += label25_Click;
@@ -701,17 +771,19 @@ namespace capaprecentacion
             panel1.Controls.Add(radioButton2);
             panel1.Controls.Add(radioButton1);
             panel1.Controls.Add(label10);
-            panel1.Location = new Point(59, 497);
+            panel1.Location = new Point(47, 398);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(712, 54);
+            panel1.Size = new Size(570, 43);
             panel1.TabIndex = 24;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(366, 11);
+            radioButton2.Location = new Point(293, 9);
+            radioButton2.Margin = new Padding(2);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(58, 29);
+            radioButton2.Size = new Size(47, 24);
             radioButton2.TabIndex = 2;
             radioButton2.TabStop = true;
             radioButton2.Text = "no";
@@ -720,9 +792,10 @@ namespace capaprecentacion
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(273, 11);
+            radioButton1.Location = new Point(218, 9);
+            radioButton1.Margin = new Padding(2);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(49, 29);
+            radioButton1.Size = new Size(40, 24);
             radioButton1.TabIndex = 1;
             radioButton1.TabStop = true;
             radioButton1.Text = "si";
@@ -731,192 +804,215 @@ namespace capaprecentacion
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(16, 13);
+            label10.Location = new Point(13, 10);
+            label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
-            label10.Size = new Size(199, 25);
+            label10.Size = new Size(167, 20);
             label10.TabIndex = 0;
             label10.Text = "Diabetes Mellitus tipo 2";
             // 
             // causashijos
             // 
-            causashijos.Location = new Point(915, 279);
+            causashijos.Location = new Point(732, 223);
+            causashijos.Margin = new Padding(2);
             causashijos.Name = "causashijos";
-            causashijos.Size = new Size(360, 144);
+            causashijos.Size = new Size(289, 116);
             causashijos.TabIndex = 23;
             causashijos.Text = "";
             // 
             // causashermanos
             // 
-            causashermanos.Location = new Point(474, 279);
+            causashermanos.Location = new Point(379, 223);
+            causashermanos.Margin = new Padding(2);
             causashermanos.Name = "causashermanos";
-            causashermanos.Size = new Size(360, 144);
+            causashermanos.Size = new Size(289, 116);
             causashermanos.TabIndex = 22;
             causashermanos.Text = "";
             // 
             // fhijos
             // 
-            fhijos.Location = new Point(915, 217);
+            fhijos.Location = new Point(732, 174);
+            fhijos.Margin = new Padding(2);
             fhijos.Name = "fhijos";
-            fhijos.Size = new Size(351, 31);
+            fhijos.Size = new Size(282, 27);
             fhijos.TabIndex = 21;
             // 
             // vhijos
             // 
-            vhijos.Location = new Point(915, 144);
+            vhijos.Location = new Point(732, 115);
+            vhijos.Margin = new Padding(2);
             vhijos.Name = "vhijos";
-            vhijos.Size = new Size(351, 31);
+            vhijos.Size = new Size(282, 27);
             vhijos.TabIndex = 20;
             // 
             // fhermanos
             // 
-            fhermanos.Location = new Point(468, 217);
+            fhermanos.Location = new Point(374, 174);
+            fhermanos.Margin = new Padding(2);
             fhermanos.Name = "fhermanos";
-            fhermanos.Size = new Size(351, 31);
+            fhermanos.Size = new Size(282, 27);
             fhermanos.TabIndex = 19;
             // 
             // vhemanos
             // 
-            vhemanos.Location = new Point(474, 140);
+            vhemanos.Location = new Point(379, 112);
+            vhemanos.Margin = new Padding(2);
             vhemanos.Name = "vhemanos";
-            vhemanos.Size = new Size(351, 31);
+            vhemanos.Size = new Size(282, 27);
             vhemanos.TabIndex = 18;
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(915, 178);
+            label22.Location = new Point(732, 142);
+            label22.Margin = new Padding(2, 0, 2, 0);
             label22.Name = "label22";
-            label22.Size = new Size(86, 25);
+            label22.Size = new Size(73, 20);
             label22.TabIndex = 17;
             label22.Text = "fallecidos";
             // 
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(915, 251);
+            label23.Location = new Point(732, 201);
+            label23.Margin = new Padding(2, 0, 2, 0);
             label23.Name = "label23";
-            label23.Size = new Size(64, 25);
+            label23.Size = new Size(52, 20);
             label23.TabIndex = 16;
             label23.Text = "causas";
             // 
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(915, 109);
+            label24.Location = new Point(732, 87);
+            label24.Margin = new Padding(2, 0, 2, 0);
             label24.Name = "label24";
-            label24.Size = new Size(53, 25);
+            label24.Size = new Size(42, 20);
             label24.TabIndex = 15;
             label24.Text = "vivos";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(468, 178);
+            label19.Location = new Point(374, 142);
+            label19.Margin = new Padding(2, 0, 2, 0);
             label19.Name = "label19";
-            label19.Size = new Size(86, 25);
+            label19.Size = new Size(73, 20);
             label19.TabIndex = 14;
             label19.Text = "fallecidos";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(468, 251);
+            label20.Location = new Point(374, 201);
+            label20.Margin = new Padding(2, 0, 2, 0);
             label20.Name = "label20";
-            label20.Size = new Size(64, 25);
+            label20.Size = new Size(52, 20);
             label20.TabIndex = 13;
             label20.Text = "causas";
             // 
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(468, 109);
+            label21.Location = new Point(374, 87);
+            label21.Margin = new Padding(2, 0, 2, 0);
             label21.Name = "label21";
-            label21.Size = new Size(53, 25);
+            label21.Size = new Size(42, 20);
             label21.TabIndex = 12;
             label21.Text = "vivos";
             // 
             // causasp
             // 
-            causasp.Location = new Point(46, 279);
+            causasp.Location = new Point(37, 223);
+            causasp.Margin = new Padding(2);
             causasp.Name = "causasp";
-            causasp.Size = new Size(360, 144);
+            causasp.Size = new Size(289, 116);
             causasp.TabIndex = 11;
             causasp.Text = "";
             // 
             // fpadres
             // 
-            fpadres.Location = new Point(45, 215);
+            fpadres.Location = new Point(36, 172);
+            fpadres.Margin = new Padding(2);
             fpadres.Name = "fpadres";
-            fpadres.Size = new Size(361, 31);
+            fpadres.Size = new Size(290, 27);
             fpadres.TabIndex = 9;
             // 
             // vp
             // 
-            vp.Location = new Point(46, 141);
+            vp.Location = new Point(37, 113);
+            vp.Margin = new Padding(2);
             vp.Name = "vp";
-            vp.Size = new Size(360, 31);
+            vp.Size = new Size(289, 27);
             vp.TabIndex = 8;
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(915, 76);
+            label18.Location = new Point(732, 61);
+            label18.Margin = new Padding(2, 0, 2, 0);
             label18.Name = "label18";
-            label18.Size = new Size(52, 25);
+            label18.Size = new Size(43, 20);
             label18.TabIndex = 7;
             label18.Text = "Hijos";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(468, 80);
+            label17.Location = new Point(374, 64);
+            label17.Margin = new Padding(2, 0, 2, 0);
             label17.Name = "label17";
-            label17.Size = new Size(94, 25);
+            label17.Size = new Size(77, 20);
             label17.TabIndex = 6;
             label17.Text = "Hermanos";
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(40, 178);
+            label16.Location = new Point(32, 142);
+            label16.Margin = new Padding(2, 0, 2, 0);
             label16.Name = "label16";
-            label16.Size = new Size(86, 25);
+            label16.Size = new Size(73, 20);
             label16.TabIndex = 5;
             label16.Text = "fallecidos";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(40, 251);
+            label15.Location = new Point(32, 201);
+            label15.Margin = new Padding(2, 0, 2, 0);
             label15.Name = "label15";
-            label15.Size = new Size(64, 25);
+            label15.Size = new Size(52, 20);
             label15.TabIndex = 4;
             label15.Text = "causas";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(40, 109);
+            label14.Location = new Point(32, 87);
+            label14.Margin = new Padding(2, 0, 2, 0);
             label14.Name = "label14";
-            label14.Size = new Size(53, 25);
+            label14.Size = new Size(42, 20);
             label14.TabIndex = 3;
             label14.Text = "vivos";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(37, 71);
+            label13.Location = new Point(30, 57);
+            label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
-            label13.Size = new Size(64, 25);
+            label13.Size = new Size(52, 20);
             label13.TabIndex = 2;
             label13.Text = "Padres";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(37, 16);
+            label12.Location = new Point(30, 13);
+            label12.Margin = new Padding(2, 0, 2, 0);
             label12.Name = "label12";
-            label12.Size = new Size(258, 25);
+            label12.Size = new Size(218, 20);
             label12.TabIndex = 1;
             label12.Text = "Antecedentes Heredofamiliares";
             label12.Click += label12_Click;
@@ -924,9 +1020,10 @@ namespace capaprecentacion
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(40, 29);
+            label9.Location = new Point(32, 23);
+            label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(0, 25);
+            label9.Size = new Size(0, 20);
             label9.TabIndex = 0;
             // 
             // tabPage3
@@ -954,19 +1051,21 @@ namespace capaprecentacion
             tabPage3.Controls.Add(label31);
             tabPage3.Controls.Add(label30);
             tabPage3.Controls.Add(label29);
-            tabPage3.Location = new Point(4, 34);
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Margin = new Padding(2);
             tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(1322, 852);
+            tabPage3.Padding = new Padding(2);
+            tabPage3.Size = new Size(1056, 679);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "tabPage3";
+            tabPage3.Text = "Antec. No Patológicos";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Location = new Point(1044, 757);
+            button4.Location = new Point(835, 606);
+            button4.Margin = new Padding(2);
             button4.Name = "button4";
-            button4.Size = new Size(112, 34);
+            button4.Size = new Size(90, 27);
             button4.TabIndex = 22;
             button4.Text = "anterior";
             button4.UseVisualStyleBackColor = true;
@@ -974,9 +1073,10 @@ namespace capaprecentacion
             // 
             // button3
             // 
-            button3.Location = new Point(1179, 757);
+            button3.Location = new Point(943, 606);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
-            button3.Size = new Size(112, 34);
+            button3.Size = new Size(90, 27);
             button3.TabIndex = 21;
             button3.Text = "siguiente";
             button3.UseVisualStyleBackColor = true;
@@ -984,172 +1084,193 @@ namespace capaprecentacion
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(65, 760);
+            textBox9.Location = new Point(52, 608);
+            textBox9.Margin = new Padding(2);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(822, 31);
+            textBox9.Size = new Size(658, 27);
             textBox9.TabIndex = 20;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(64, 677);
+            textBox8.Location = new Point(51, 542);
+            textBox8.Margin = new Padding(2);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(822, 31);
+            textBox8.Size = new Size(658, 27);
             textBox8.TabIndex = 19;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(61, 590);
+            textBox7.Location = new Point(49, 472);
+            textBox7.Margin = new Padding(2);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(822, 31);
+            textBox7.Size = new Size(658, 27);
             textBox7.TabIndex = 18;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(65, 509);
+            textBox6.Location = new Point(52, 407);
+            textBox6.Margin = new Padding(2);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(822, 31);
+            textBox6.Size = new Size(658, 27);
             textBox6.TabIndex = 17;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(65, 415);
+            textBox5.Location = new Point(52, 332);
+            textBox5.Margin = new Padding(2);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(822, 31);
+            textBox5.Size = new Size(658, 27);
             textBox5.TabIndex = 16;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(65, 332);
+            textBox4.Location = new Point(52, 266);
+            textBox4.Margin = new Padding(2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(822, 31);
+            textBox4.Size = new Size(658, 27);
             textBox4.TabIndex = 15;
             // 
             // label40
             // 
             label40.AutoSize = true;
-            label40.Location = new Point(64, 711);
+            label40.Location = new Point(51, 569);
+            label40.Margin = new Padding(2, 0, 2, 0);
             label40.Name = "label40";
-            label40.Size = new Size(61, 25);
+            label40.Size = new Size(48, 20);
             label40.TabIndex = 14;
             label40.Text = "Otros:";
             // 
             // label39
             // 
             label39.AutoSize = true;
-            label39.Location = new Point(61, 624);
+            label39.Location = new Point(49, 499);
+            label39.Margin = new Padding(2, 0, 2, 0);
             label39.Name = "label39";
-            label39.Size = new Size(76, 25);
+            label39.Size = new Size(62, 20);
             label39.TabIndex = 13;
             label39.Text = "Somnia:";
             // 
             // label38
             // 
             label38.AutoSize = true;
-            label38.Location = new Point(64, 543);
+            label38.Location = new Point(51, 434);
+            label38.Margin = new Padding(2, 0, 2, 0);
             label38.Name = "label38";
-            label38.Size = new Size(77, 25);
+            label38.Size = new Size(63, 20);
             label38.TabIndex = 12;
             label38.Text = "Catarsis:";
             // 
             // label37
             // 
             label37.AutoSize = true;
-            label37.Location = new Point(64, 465);
+            label37.Location = new Point(51, 372);
+            label37.Margin = new Padding(2, 0, 2, 0);
             label37.Name = "label37";
-            label37.Size = new Size(78, 25);
+            label37.Size = new Size(64, 20);
             label37.TabIndex = 11;
             label37.Text = "Diuresis:";
             // 
             // label36
             // 
             label36.AutoSize = true;
-            label36.Location = new Point(64, 372);
+            label36.Location = new Point(51, 298);
+            label36.Margin = new Padding(2, 0, 2, 0);
             label36.Name = "label36";
-            label36.Size = new Size(65, 25);
+            label36.Size = new Size(54, 20);
             label36.TabIndex = 10;
             label36.Text = "Dipsia:";
             // 
             // label35
             // 
             label35.AutoSize = true;
-            label35.Location = new Point(61, 289);
+            label35.Location = new Point(49, 231);
+            label35.Margin = new Padding(2, 0, 2, 0);
             label35.Name = "label35";
-            label35.Size = new Size(119, 25);
+            label35.Size = new Size(100, 20);
             label35.TabIndex = 9;
             label35.Text = "Alimentación:";
             // 
             // label34
             // 
             label34.AutoSize = true;
-            label34.Location = new Point(57, 236);
+            label34.Location = new Point(46, 189);
+            label34.Margin = new Padding(2, 0, 2, 0);
             label34.Name = "label34";
-            label34.Size = new Size(129, 25);
+            label34.Size = new Size(107, 20);
             label34.TabIndex = 8;
             label34.Text = "2) Fisiológicos:";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(899, 147);
+            textBox3.Location = new Point(719, 118);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(359, 31);
+            textBox3.Size = new Size(288, 27);
             textBox3.TabIndex = 7;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(486, 147);
+            textBox2.Location = new Point(389, 118);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(359, 31);
+            textBox2.Size = new Size(288, 27);
             textBox2.TabIndex = 6;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(41, 147);
+            textBox1.Location = new Point(33, 118);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(359, 31);
+            textBox1.Size = new Size(288, 27);
             textBox1.TabIndex = 5;
             // 
             // label33
             // 
             label33.AutoSize = true;
-            label33.Location = new Point(899, 105);
+            label33.Location = new Point(719, 84);
+            label33.Margin = new Padding(2, 0, 2, 0);
             label33.Name = "label33";
-            label33.Size = new Size(70, 25);
+            label33.Size = new Size(57, 20);
             label33.TabIndex = 4;
             label33.Text = "Drogas";
             // 
             // label32
             // 
             label32.AutoSize = true;
-            label32.Location = new Point(486, 105);
+            label32.Location = new Point(389, 84);
+            label32.Margin = new Padding(2, 0, 2, 0);
             label32.Name = "label32";
-            label32.Size = new Size(67, 25);
+            label32.Size = new Size(56, 20);
             label32.TabIndex = 3;
             label32.Text = "Tabaco";
             // 
             // label31
             // 
             label31.AutoSize = true;
-            label31.Location = new Point(61, 105);
+            label31.Location = new Point(49, 84);
+            label31.Margin = new Padding(2, 0, 2, 0);
             label31.Name = "label31";
-            label31.Size = new Size(72, 25);
+            label31.Size = new Size(60, 20);
             label31.TabIndex = 2;
             label31.Text = "Alcohol";
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Location = new Point(56, 54);
+            label30.Location = new Point(45, 43);
+            label30.Margin = new Padding(2, 0, 2, 0);
             label30.Name = "label30";
-            label30.Size = new Size(160, 25);
+            label30.Size = new Size(134, 20);
             label30.TabIndex = 1;
             label30.Text = "1) Hábitos Tóxicos:";
             // 
             // label29
             // 
             label29.AutoSize = true;
-            label29.Location = new Point(37, 11);
+            label29.Location = new Point(30, 9);
+            label29.Margin = new Padding(2, 0, 2, 0);
             label29.Name = "label29";
-            label29.Size = new Size(402, 25);
+            label29.Size = new Size(333, 20);
             label29.TabIndex = 0;
             label29.Text = "ANTECEDENTES PERSONALES NO PATOLÓGICOS";
             // 
@@ -1175,19 +1296,21 @@ namespace capaprecentacion
             tabPage4.Controls.Add(label43);
             tabPage4.Controls.Add(label42);
             tabPage4.Controls.Add(label41);
-            tabPage4.Location = new Point(4, 34);
+            tabPage4.Location = new Point(4, 29);
+            tabPage4.Margin = new Padding(2);
             tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(1322, 852);
+            tabPage4.Padding = new Padding(2);
+            tabPage4.Size = new Size(1056, 679);
             tabPage4.TabIndex = 3;
-            tabPage4.Text = "tabPage4";
+            tabPage4.Text = "Antec. Patológicos";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            button6.Location = new Point(1034, 773);
+            button6.Location = new Point(827, 618);
+            button6.Margin = new Padding(2);
             button6.Name = "button6";
-            button6.Size = new Size(112, 34);
+            button6.Size = new Size(90, 27);
             button6.TabIndex = 30;
             button6.Text = "anterior";
             button6.UseVisualStyleBackColor = true;
@@ -1195,9 +1318,10 @@ namespace capaprecentacion
             // 
             // button7
             // 
-            button7.Location = new Point(1180, 773);
+            button7.Location = new Point(944, 618);
+            button7.Margin = new Padding(2);
             button7.Name = "button7";
-            button7.Size = new Size(112, 34);
+            button7.Size = new Size(90, 27);
             button7.TabIndex = 29;
             button7.Text = "siguiente";
             button7.UseVisualStyleBackColor = true;
@@ -1205,79 +1329,89 @@ namespace capaprecentacion
             // 
             // textBox20
             // 
-            textBox20.Location = new Point(27, 778);
+            textBox20.Location = new Point(22, 622);
+            textBox20.Margin = new Padding(2);
             textBox20.Name = "textBox20";
-            textBox20.Size = new Size(850, 31);
+            textBox20.Size = new Size(681, 27);
             textBox20.TabIndex = 16;
             // 
             // textBox19
             // 
-            textBox19.Location = new Point(29, 716);
+            textBox19.Location = new Point(23, 573);
+            textBox19.Margin = new Padding(2);
             textBox19.Name = "textBox19";
-            textBox19.Size = new Size(850, 31);
+            textBox19.Size = new Size(681, 27);
             textBox19.TabIndex = 15;
             // 
             // textBox18
             // 
-            textBox18.Location = new Point(27, 654);
+            textBox18.Location = new Point(22, 523);
+            textBox18.Margin = new Padding(2);
             textBox18.Name = "textBox18";
-            textBox18.Size = new Size(850, 31);
+            textBox18.Size = new Size(681, 27);
             textBox18.TabIndex = 14;
             // 
             // textBox17
             // 
-            textBox17.Location = new Point(28, 592);
+            textBox17.Location = new Point(22, 474);
+            textBox17.Margin = new Padding(2);
             textBox17.Name = "textBox17";
-            textBox17.Size = new Size(850, 31);
+            textBox17.Size = new Size(681, 27);
             textBox17.TabIndex = 13;
             // 
             // textBox16
             // 
-            textBox16.Location = new Point(28, 178);
+            textBox16.Location = new Point(22, 142);
+            textBox16.Margin = new Padding(2);
             textBox16.Name = "textBox16";
-            textBox16.Size = new Size(850, 31);
+            textBox16.Size = new Size(681, 27);
             textBox16.TabIndex = 12;
             // 
             // textBox15
             // 
-            textBox15.Location = new Point(28, 102);
+            textBox15.Location = new Point(22, 82);
+            textBox15.Margin = new Padding(2);
             textBox15.Name = "textBox15";
-            textBox15.Size = new Size(850, 31);
+            textBox15.Size = new Size(681, 27);
             textBox15.TabIndex = 11;
             // 
             // label52
             // 
             label52.AutoSize = true;
-            label52.Location = new Point(37, 750);
+            label52.Location = new Point(30, 600);
+            label52.Margin = new Padding(2, 0, 2, 0);
             label52.Name = "label52";
-            label52.Size = new Size(61, 25);
+            label52.Size = new Size(48, 20);
             label52.TabIndex = 10;
             label52.Text = "Otros:";
             // 
             // label51
             // 
             label51.AutoSize = true;
-            label51.Location = new Point(27, 688);
+            label51.Location = new Point(22, 550);
+            label51.Margin = new Padding(2, 0, 2, 0);
             label51.Name = "label51";
-            label51.Size = new Size(89, 25);
+            label51.Size = new Size(74, 20);
             label51.TabIndex = 9;
             label51.Text = "Alérgicos:";
             // 
             // label50
             // 
             label50.AutoSize = true;
-            label50.Location = new Point(29, 626);
+            label50.Location = new Point(23, 501);
+            label50.Margin = new Padding(2, 0, 2, 0);
             label50.Name = "label50";
-            label50.Size = new Size(147, 25);
+            label50.Size = new Size(123, 20);
             label50.TabIndex = 8;
             label50.Text = "Traumatológicos:";
             // 
             // label49
             // 
             label49.AutoSize = true;
-            label49.Location = new Point(27, 564);
+            label49.Location = new Point(22, 451);
+            label49.Margin = new Padding(2, 0, 2, 0);
             label49.Name = "label49";
-            label49.Size = new Size(108, 25);
+            label49.Size = new Size(88, 20);
             label49.TabIndex = 7;
             label49.Text = "Quirúrgicos:";
             // 
@@ -1287,24 +1421,27 @@ namespace capaprecentacion
             panel10.Controls.Add(radioButton19);
             panel10.Controls.Add(radioButton20);
             panel10.Controls.Add(label48);
-            panel10.Location = new Point(29, 492);
+            panel10.Location = new Point(23, 394);
+            panel10.Margin = new Padding(2);
             panel10.Name = "panel10";
-            panel10.Size = new Size(849, 56);
+            panel10.Size = new Size(679, 45);
             panel10.TabIndex = 4;
             // 
             // textBox14
             // 
-            textBox14.Location = new Point(434, 14);
+            textBox14.Location = new Point(347, 11);
+            textBox14.Margin = new Padding(2);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(383, 31);
+            textBox14.Size = new Size(307, 27);
             textBox14.TabIndex = 3;
             // 
             // radioButton19
             // 
             radioButton19.AutoSize = true;
-            radioButton19.Location = new Point(356, 13);
+            radioButton19.Location = new Point(285, 10);
+            radioButton19.Margin = new Padding(2);
             radioButton19.Name = "radioButton19";
-            radioButton19.Size = new Size(58, 29);
+            radioButton19.Size = new Size(47, 24);
             radioButton19.TabIndex = 2;
             radioButton19.TabStop = true;
             radioButton19.Text = "no";
@@ -1313,9 +1450,10 @@ namespace capaprecentacion
             // radioButton20
             // 
             radioButton20.AutoSize = true;
-            radioButton20.Location = new Point(261, 13);
+            radioButton20.Location = new Point(209, 10);
+            radioButton20.Margin = new Padding(2);
             radioButton20.Name = "radioButton20";
-            radioButton20.Size = new Size(49, 29);
+            radioButton20.Size = new Size(40, 24);
             radioButton20.TabIndex = 1;
             radioButton20.TabStop = true;
             radioButton20.Text = "si";
@@ -1324,9 +1462,10 @@ namespace capaprecentacion
             // label48
             // 
             label48.AutoSize = true;
-            label48.Location = new Point(14, 17);
+            label48.Location = new Point(11, 14);
+            label48.Margin = new Padding(2, 0, 2, 0);
             label48.Name = "label48";
-            label48.Size = new Size(152, 25);
+            label48.Size = new Size(129, 20);
             label48.TabIndex = 0;
             label48.Text = "Otras (especificar)";
             // 
@@ -1336,24 +1475,27 @@ namespace capaprecentacion
             panel9.Controls.Add(radioButton17);
             panel9.Controls.Add(radioButton18);
             panel9.Controls.Add(label47);
-            panel9.Location = new Point(28, 421);
+            panel9.Location = new Point(22, 337);
+            panel9.Margin = new Padding(2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(849, 56);
+            panel9.Size = new Size(679, 45);
             panel9.TabIndex = 6;
             // 
             // textBox13
             // 
-            textBox13.Location = new Point(434, 14);
+            textBox13.Location = new Point(347, 11);
+            textBox13.Margin = new Padding(2);
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(383, 31);
+            textBox13.Size = new Size(307, 27);
             textBox13.TabIndex = 3;
             // 
             // radioButton17
             // 
             radioButton17.AutoSize = true;
-            radioButton17.Location = new Point(356, 13);
+            radioButton17.Location = new Point(285, 10);
+            radioButton17.Margin = new Padding(2);
             radioButton17.Name = "radioButton17";
-            radioButton17.Size = new Size(58, 29);
+            radioButton17.Size = new Size(47, 24);
             radioButton17.TabIndex = 2;
             radioButton17.TabStop = true;
             radioButton17.Text = "no";
@@ -1362,9 +1504,10 @@ namespace capaprecentacion
             // radioButton18
             // 
             radioButton18.AutoSize = true;
-            radioButton18.Location = new Point(261, 13);
+            radioButton18.Location = new Point(209, 10);
+            radioButton18.Margin = new Padding(2);
             radioButton18.Name = "radioButton18";
-            radioButton18.Size = new Size(49, 29);
+            radioButton18.Size = new Size(40, 24);
             radioButton18.TabIndex = 1;
             radioButton18.TabStop = true;
             radioButton18.Text = "si";
@@ -1373,9 +1516,10 @@ namespace capaprecentacion
             // label47
             // 
             label47.AutoSize = true;
-            label47.Location = new Point(14, 13);
+            label47.Location = new Point(11, 10);
+            label47.Margin = new Padding(2, 0, 2, 0);
             label47.Name = "label47";
-            label47.Size = new Size(65, 25);
+            label47.Size = new Size(54, 20);
             label47.TabIndex = 0;
             label47.Text = "Cáncer";
             // 
@@ -1385,24 +1529,27 @@ namespace capaprecentacion
             panel8.Controls.Add(radioButton15);
             panel8.Controls.Add(radioButton16);
             panel8.Controls.Add(label46);
-            panel8.Location = new Point(29, 359);
+            panel8.Location = new Point(23, 287);
+            panel8.Margin = new Padding(2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(849, 56);
+            panel8.Size = new Size(679, 45);
             panel8.TabIndex = 5;
             // 
             // textBox12
             // 
-            textBox12.Location = new Point(434, 14);
+            textBox12.Location = new Point(347, 11);
+            textBox12.Margin = new Padding(2);
             textBox12.Name = "textBox12";
-            textBox12.Size = new Size(383, 31);
+            textBox12.Size = new Size(307, 27);
             textBox12.TabIndex = 3;
             // 
             // radioButton15
             // 
             radioButton15.AutoSize = true;
-            radioButton15.Location = new Point(356, 13);
+            radioButton15.Location = new Point(285, 10);
+            radioButton15.Margin = new Padding(2);
             radioButton15.Name = "radioButton15";
-            radioButton15.Size = new Size(58, 29);
+            radioButton15.Size = new Size(47, 24);
             radioButton15.TabIndex = 2;
             radioButton15.TabStop = true;
             radioButton15.Text = "no";
@@ -1411,9 +1558,10 @@ namespace capaprecentacion
             // radioButton16
             // 
             radioButton16.AutoSize = true;
-            radioButton16.Location = new Point(261, 13);
+            radioButton16.Location = new Point(209, 10);
+            radioButton16.Margin = new Padding(2);
             radioButton16.Name = "radioButton16";
-            radioButton16.Size = new Size(49, 29);
+            radioButton16.Size = new Size(40, 24);
             radioButton16.TabIndex = 1;
             radioButton16.TabStop = true;
             radioButton16.Text = "si";
@@ -1422,9 +1570,10 @@ namespace capaprecentacion
             // label46
             // 
             label46.AutoSize = true;
-            label46.Location = new Point(14, 17);
+            label46.Location = new Point(11, 14);
+            label46.Margin = new Padding(2, 0, 2, 0);
             label46.Name = "label46";
-            label46.Size = new Size(110, 25);
+            label46.Size = new Size(91, 20);
             label46.TabIndex = 0;
             label46.Text = "Tuberculosis";
             // 
@@ -1434,24 +1583,27 @@ namespace capaprecentacion
             panel7.Controls.Add(radioButton13);
             panel7.Controls.Add(radioButton14);
             panel7.Controls.Add(label45);
-            panel7.Location = new Point(29, 297);
+            panel7.Location = new Point(23, 238);
+            panel7.Margin = new Padding(2);
             panel7.Name = "panel7";
-            panel7.Size = new Size(849, 56);
+            panel7.Size = new Size(679, 45);
             panel7.TabIndex = 4;
             // 
             // textBox11
             // 
-            textBox11.Location = new Point(434, 14);
+            textBox11.Location = new Point(347, 11);
+            textBox11.Margin = new Padding(2);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(383, 31);
+            textBox11.Size = new Size(307, 27);
             textBox11.TabIndex = 3;
             // 
             // radioButton13
             // 
             radioButton13.AutoSize = true;
-            radioButton13.Location = new Point(356, 13);
+            radioButton13.Location = new Point(285, 10);
+            radioButton13.Margin = new Padding(2);
             radioButton13.Name = "radioButton13";
-            radioButton13.Size = new Size(58, 29);
+            radioButton13.Size = new Size(47, 24);
             radioButton13.TabIndex = 2;
             radioButton13.TabStop = true;
             radioButton13.Text = "no";
@@ -1460,9 +1612,10 @@ namespace capaprecentacion
             // radioButton14
             // 
             radioButton14.AutoSize = true;
-            radioButton14.Location = new Point(261, 13);
+            radioButton14.Location = new Point(209, 10);
+            radioButton14.Margin = new Padding(2);
             radioButton14.Name = "radioButton14";
-            radioButton14.Size = new Size(49, 29);
+            radioButton14.Size = new Size(40, 24);
             radioButton14.TabIndex = 1;
             radioButton14.TabStop = true;
             radioButton14.Text = "si";
@@ -1471,9 +1624,10 @@ namespace capaprecentacion
             // label45
             // 
             label45.AutoSize = true;
-            label45.Location = new Point(14, 17);
+            label45.Location = new Point(11, 14);
+            label45.Margin = new Padding(2, 0, 2, 0);
             label45.Name = "label45";
-            label45.Size = new Size(174, 25);
+            label45.Size = new Size(147, 20);
             label45.TabIndex = 0;
             label45.Text = "Hipertensión Arterial";
             // 
@@ -1483,24 +1637,27 @@ namespace capaprecentacion
             panel6.Controls.Add(radioButton12);
             panel6.Controls.Add(radioButton11);
             panel6.Controls.Add(label44);
-            panel6.Location = new Point(29, 235);
+            panel6.Location = new Point(23, 188);
+            panel6.Margin = new Padding(2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(849, 56);
+            panel6.Size = new Size(679, 45);
             panel6.TabIndex = 3;
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(434, 14);
+            textBox10.Location = new Point(347, 11);
+            textBox10.Margin = new Padding(2);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(383, 31);
+            textBox10.Size = new Size(307, 27);
             textBox10.TabIndex = 3;
             // 
             // radioButton12
             // 
             radioButton12.AutoSize = true;
-            radioButton12.Location = new Point(356, 13);
+            radioButton12.Location = new Point(285, 10);
+            radioButton12.Margin = new Padding(2);
             radioButton12.Name = "radioButton12";
-            radioButton12.Size = new Size(58, 29);
+            radioButton12.Size = new Size(47, 24);
             radioButton12.TabIndex = 2;
             radioButton12.TabStop = true;
             radioButton12.Text = "no";
@@ -1509,9 +1666,10 @@ namespace capaprecentacion
             // radioButton11
             // 
             radioButton11.AutoSize = true;
-            radioButton11.Location = new Point(261, 13);
+            radioButton11.Location = new Point(209, 10);
+            radioButton11.Margin = new Padding(2);
             radioButton11.Name = "radioButton11";
-            radioButton11.Size = new Size(49, 29);
+            radioButton11.Size = new Size(40, 24);
             radioButton11.TabIndex = 1;
             radioButton11.TabStop = true;
             radioButton11.Text = "si";
@@ -1520,36 +1678,40 @@ namespace capaprecentacion
             // label44
             // 
             label44.AutoSize = true;
-            label44.Location = new Point(14, 17);
+            label44.Location = new Point(11, 14);
+            label44.Margin = new Padding(2, 0, 2, 0);
             label44.Name = "label44";
-            label44.Size = new Size(199, 25);
+            label44.Size = new Size(167, 20);
             label44.TabIndex = 0;
             label44.Text = "Diabetes Mellitus tipo 2";
             // 
             // label43
             // 
             label43.AutoSize = true;
-            label43.Location = new Point(32, 150);
+            label43.Location = new Point(26, 120);
+            label43.Margin = new Padding(2, 0, 2, 0);
             label43.Name = "label43";
-            label43.Size = new Size(66, 25);
+            label43.Size = new Size(54, 20);
             label43.TabIndex = 2;
             label43.Text = "Adulto";
             // 
             // label42
             // 
             label42.AutoSize = true;
-            label42.Location = new Point(32, 74);
+            label42.Location = new Point(26, 59);
+            label42.Margin = new Padding(2, 0, 2, 0);
             label42.Name = "label42";
-            label42.Size = new Size(73, 25);
+            label42.Size = new Size(61, 20);
             label42.TabIndex = 1;
             label42.Text = "Infancia";
             // 
             // label41
             // 
             label41.AutoSize = true;
-            label41.Location = new Point(29, 34);
+            label41.Location = new Point(23, 27);
+            label41.Margin = new Padding(2, 0, 2, 0);
             label41.Name = "label41";
-            label41.Size = new Size(370, 25);
+            label41.Size = new Size(307, 20);
             label41.TabIndex = 0;
             label41.Text = "ANTECEDENTES PERSONALES PATOLÓGICOS";
             // 
@@ -1565,144 +1727,159 @@ namespace capaprecentacion
             tabPage5.Controls.Add(label55);
             tabPage5.Controls.Add(dateTimePicker1);
             tabPage5.Controls.Add(label54);
-            tabPage5.Location = new Point(4, 34);
+            tabPage5.Location = new Point(4, 29);
+            tabPage5.Margin = new Padding(2);
             tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(1322, 852);
+            tabPage5.Padding = new Padding(2);
+            tabPage5.Size = new Size(1056, 679);
             tabPage5.TabIndex = 4;
-            tabPage5.Text = "tabPage5";
+            tabPage5.Text = "Gineco-Obstétricos";
             tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label59
+            // 
+            label59.AutoSize = true;
+            label59.Location = new Point(223, 106);
+            label59.Margin = new Padding(2, 0, 2, 0);
+            label59.Name = "label59";
+            label59.Size = new Size(58, 20);
+            label59.TabIndex = 9;
+            label59.Text = "label59";
+            // 
+            // textBox21
+            // 
+            textBox21.Location = new Point(87, 102);
+            textBox21.Margin = new Padding(2);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(121, 27);
+            textBox21.TabIndex = 8;
+            // 
+            // label58
+            // 
+            label58.AutoSize = true;
+            label58.Location = new Point(17, 96);
+            label58.Margin = new Padding(2, 0, 2, 0);
+            label58.Name = "label58";
+            label58.Size = new Size(69, 20);
+            label58.TabIndex = 7;
+            label58.Text = "Menarca:";
+            // 
+            // label57
+            // 
+            label57.AutoSize = true;
+            label57.Location = new Point(928, 27);
+            label57.Margin = new Padding(2, 0, 2, 0);
+            label57.Name = "label57";
+            label57.Size = new Size(69, 20);
+            label57.TabIndex = 6;
+            label57.Text = "semanas.";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(777, 24);
+            numericUpDown1.Margin = new Padding(2);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(144, 27);
+            numericUpDown1.TabIndex = 5;
             // 
             // label56
             // 
             label56.AutoSize = true;
-            label56.Location = new Point(836, 30);
+            label56.Location = new Point(669, 24);
+            label56.Margin = new Padding(2, 0, 2, 0);
             label56.Name = "label56";
-            label56.Size = new Size(129, 25);
+            label56.Size = new Size(108, 20);
             label56.TabIndex = 4;
             label56.Text = "edad gestional";
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(503, 27);
+            dateTimePicker2.Location = new Point(402, 22);
+            dateTimePicker2.Margin = new Padding(2);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(300, 31);
+            dateTimePicker2.Size = new Size(241, 27);
             dateTimePicker2.TabIndex = 3;
             // 
             // label55
             // 
             label55.AutoSize = true;
-            label55.Location = new Point(446, 27);
+            label55.Location = new Point(357, 22);
+            label55.Margin = new Padding(2, 0, 2, 0);
             label55.Name = "label55";
-            label55.Size = new Size(41, 25);
+            label55.Size = new Size(32, 20);
             label55.TabIndex = 2;
             label55.Text = "FPP";
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(71, 21);
+            dateTimePicker1.Location = new Point(57, 17);
+            dateTimePicker1.Margin = new Padding(2);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
+            dateTimePicker1.Size = new Size(241, 27);
             dateTimePicker1.TabIndex = 1;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label54
             // 
             label54.AutoSize = true;
-            label54.Location = new Point(16, 21);
+            label54.Location = new Point(13, 17);
+            label54.Margin = new Padding(2, 0, 2, 0);
             label54.Name = "label54";
-            label54.Size = new Size(49, 25);
+            label54.Size = new Size(39, 20);
             label54.TabIndex = 0;
             label54.Text = "FUM";
             // 
             // tabPage6
             // 
-            tabPage6.Location = new Point(4, 34);
+            tabPage6.Location = new Point(4, 29);
+            tabPage6.Margin = new Padding(2);
             tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(1322, 852);
+            tabPage6.Padding = new Padding(2);
+            tabPage6.Size = new Size(1056, 679);
             tabPage6.TabIndex = 5;
-            tabPage6.Text = "tabPage6";
+            tabPage6.Text = "Padecimiento Actual";
             tabPage6.UseVisualStyleBackColor = true;
             // 
             // tabPage7
             // 
-            tabPage7.Location = new Point(4, 34);
+            tabPage7.Location = new Point(4, 29);
+            tabPage7.Margin = new Padding(2);
             tabPage7.Name = "tabPage7";
-            tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(1322, 852);
+            tabPage7.Padding = new Padding(2);
+            tabPage7.Size = new Size(1056, 679);
             tabPage7.TabIndex = 6;
-            tabPage7.Text = "tabPage7";
+            tabPage7.Text = "Exploración Física";
             tabPage7.UseVisualStyleBackColor = true;
             // 
             // tabPage8
             // 
             tabPage8.Controls.Add(label53);
-            tabPage8.Location = new Point(4, 34);
+            tabPage8.Location = new Point(4, 29);
+            tabPage8.Margin = new Padding(2);
             tabPage8.Name = "tabPage8";
-            tabPage8.Padding = new Padding(3);
-            tabPage8.Size = new Size(1322, 852);
+            tabPage8.Padding = new Padding(2);
+            tabPage8.Size = new Size(1056, 679);
             tabPage8.TabIndex = 7;
-            tabPage8.Text = "tabPage8";
+            tabPage8.Text = "Diagnóstico y Plan";
             tabPage8.UseVisualStyleBackColor = true;
             // 
             // label53
             // 
             label53.AutoSize = true;
-            label53.Location = new Point(30, 29);
+            label53.Location = new Point(24, 23);
+            label53.Margin = new Padding(2, 0, 2, 0);
             label53.Name = "label53";
-            label53.Size = new Size(69, 25);
+            label53.Size = new Size(58, 20);
             label53.TabIndex = 0;
             label53.Text = "label53";
             // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(971, 30);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(180, 31);
-            numericUpDown1.TabIndex = 5;
-            // 
-            // label57
-            // 
-            label57.AutoSize = true;
-            label57.Location = new Point(1160, 34);
-            label57.Name = "label57";
-            label57.Size = new Size(85, 25);
-            label57.TabIndex = 6;
-            label57.Text = "semanas.";
-            // 
-            // label58
-            // 
-            label58.AutoSize = true;
-            label58.Location = new Point(21, 120);
-            label58.Name = "label58";
-            label58.Size = new Size(83, 25);
-            label58.TabIndex = 7;
-            label58.Text = "Menarca:";
-            // 
-            // textBox21
-            // 
-            textBox21.Location = new Point(109, 127);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(150, 31);
-            textBox21.TabIndex = 8;
-            // 
-            // label59
-            // 
-            label59.AutoSize = true;
-            label59.Location = new Point(279, 133);
-            label59.Name = "label59";
-            label59.Size = new Size(69, 25);
-            label59.TabIndex = 9;
-            label59.Text = "label59";
-            // 
             // formnuevo
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1338, 896);
+            ClientSize = new Size(1070, 717);
             Controls.Add(tabControl1);
-            Margin = new Padding(5, 6, 5, 6);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "formnuevo";
             Text = "frmVentas";
             tabControl1.ResumeLayout(false);
@@ -1737,9 +1914,9 @@ namespace capaprecentacion
             panel6.PerformLayout();
             tabPage5.ResumeLayout(false);
             tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabPage8.ResumeLayout(false);
             tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
