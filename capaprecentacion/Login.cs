@@ -1,10 +1,11 @@
+using capadatos.Database;
+using capaprecentacion;
+using Microsoft.Data.SqlClient;
+using programa_ventas;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
-using capadatos.Database;
-using capaprecentacion;
 
 namespace SistemaHospitalario
 {
@@ -70,33 +71,43 @@ namespace SistemaHospitalario
             RedondearControl(button1, 40);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button1.Text = "Cargando...";
+            button1.ForeColor = Color.White;
             try
             {
-                SqlConnection conn = Conexion.ObtenerConexion();
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE usuario=@usuario AND password=@password";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                conn.Open();
-                int resultado = (int)cmd.ExecuteScalar();
-                conn.Close();
-
-                if (resultado > 0)
+                // Una sola consulta que valida Y trae el nombre al mismo tiempo
+                string nombre = await Task.Run(() =>
                 {
+                    using SqlConnection conn = Conexion.ObtenerConexion();
+                    string query = "SELECT nombre FROM Usuarios WHERE usuario=@usuario AND password=@password";
+                    using SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                    conn.Open();
+                    return cmd.ExecuteScalar()?.ToString();
+                });
+
+                if (nombre != null)
+                {
+                    Sesion.NombreUsuario = nombre;
+                    new inicio().Show();
                     this.Hide();
-                    capaprecentacion.inicio frm = new capaprecentacion.inicio();
-                    frm.Show();
                 }
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos");
+                    button1.Enabled = true;
+                    button1.Text = "Entrar";
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error de conexión: " + ex.Message);
+                button1.Enabled = true;
+                button1.Text = "Entrar";
             }
         }
 

@@ -1,18 +1,27 @@
+using Microsoft.Data.SqlClient;
 using SistemaHospitalario;
+using capadatos.Database;
 
 namespace capaprecentacion
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            // Pre-calentar conexión SQL antes de mostrar el Login
+            Task.Run(() =>
+            {
+                try
+                {
+                    using var conn = Conexion.ObtenerConexion();
+                    conn.Open();
+                }
+                catch { }
+            });
+
             Application.Run(new Login());
         }
     }
