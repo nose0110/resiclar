@@ -1,147 +1,164 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using capaprecentacion.complementos;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using System.Windows.Forms;
-using System.Diagnostics;
 using conexion;
 
 namespace capaprecentacion
 {
     public partial class formnuevo : Form
     {
-        private const string FilePath = "data.json";
         private DatabaseConnection conectar;
 
         public formnuevo()
         {
             InitializeComponent();
-
             conectar = new DatabaseConnection();
-
         }
 
+        // ═════════════════════════════════════════════════════════════════
+        // NAVEGACIÓN LATERAL
+        // ═════════════════════════════════════════════════════════════════
+        private string[] _sectionTitles = {
+            "Ficha de identificación",
+            "Antecedentes heredofamiliares",
+            "Antecedentes no patológicos",
+            "Antecedentes patológicos",
+            "Gineco-obstétricos",
+            "Padecimiento actual",
+            "Exploración física",
+            "Diagnóstico y plan"
+        };
 
+        private void NavegateToSection(int idx)
+        {
+            tabControl1.SelectedIndex = idx;
+            lblSectionTitle.Text = _sectionTitles[idx];
 
+            System.Drawing.Color cPrimary = System.Drawing.Color.FromArgb(67, 105, 142);
+            System.Drawing.Color cPrimaryLight = System.Drawing.Color.FromArgb(230, 241, 251);
+            System.Drawing.Color cMuted = System.Drawing.Color.FromArgb(110, 130, 150);
+
+            Button[] btns = { btnNav1, btnNav2, btnNav3, btnNav4, btnNav5, btnNav6, btnNav7, btnNav8 };
+            foreach (Button b in btns)
+            {
+                b.BackColor = System.Drawing.Color.Transparent;
+                b.ForeColor = cMuted;
+            }
+            btns[idx].BackColor = cPrimaryLight;
+            btns[idx].ForeColor = cPrimary;
+        }
+
+        private void btnNav1_Click(object sender, EventArgs e) { NavegateToSection(0); }
+        private void btnNav2_Click(object sender, EventArgs e) { NavegateToSection(1); }
+        private void btnNav3_Click(object sender, EventArgs e) { NavegateToSection(2); }
+        private void btnNav4_Click(object sender, EventArgs e) { NavegateToSection(3); }
+        private void btnNav5_Click(object sender, EventArgs e) { NavegateToSection(4); }
+        private void btnNav6_Click(object sender, EventArgs e) { NavegateToSection(5); }
+        private void btnNav7_Click(object sender, EventArgs e) { NavegateToSection(6); }
+        private void btnNav8_Click(object sender, EventArgs e) { NavegateToSection(7); }
+
+        // ═════════════════════════════════════════════════════════════════
+        // BOTONES SIGUIENTE / ANTERIOR (sincronizan con el sidebar)
+        // ═════════════════════════════════════════════════════════════════
+
+        // Tab 1 – Ficha: solo "Siguiente"
         private void button1_Click(object sender, EventArgs e)
         {
-            // Cambia a la siguiente pestaña por índice
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex += 1;
-            }
+            NavegateToSection(1);
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Tab 2 – Heredofamiliares
         private void button2_Click(object sender, EventArgs e)
         {
-            // Cambia a la siguiente pestaña por índice
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex += 1;
-            }
+            NavegateToSection(2);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex -= 1;
-            }
+            NavegateToSection(0);
+        }
+
+        // Tab 3 – No Patológicos
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NavegateToSection(3);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex -= 1;
-            }
+            NavegateToSection(1);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex += 1;
-            }
-        }
-
+        // Tab 4 – Patológicos
         private void button7_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex += 1;
-            }
+            NavegateToSection(4);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex < tabControl1.TabCount - 1)
-            {
-                tabControl1.SelectedIndex -= 1;
-            }
+            NavegateToSection(2);
         }
+
+        // ═════════════════════════════════════════════════════════════════
+        // EVENTOS DE CAMPOS
+        // ═════════════════════════════════════════════════════════════════
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            // Sumamos 280 días a la FUM para obtener la FPP automáticamente
-            //    DateTime fum = dateTimePicker2.Value;
-            //   DateTime fpp = fum.AddDays(280);
+            // Calcula FPP automáticamente sumando 280 días a la FUM
+            DateTime fum = dateTimePicker1.Value;
+            DateTime fpp = fum.AddDays(280);
+            dateTimePicker2.Value = fpp;
 
-            // Mostramos el resultado en el otro cuadro de fecha
-            //   dateTimePicker2.Value = fpp;
+            // Calcula edad gestacional en semanas
+            TimeSpan diff = DateTime.Now - fum;
+            int semanas = (int)(diff.TotalDays / 7);
+            if (semanas >= 0 && semanas <= 42)
+                numericUpDown1.Value = semanas;
         }
 
-        private void labeledad_Click(object sender, EventArgs e)
+        private void estado_civil_TextChanged(object sender, EventArgs e) { }
+        private void labeledad_Click(object sender, EventArgs e) { }
+        private void asdasdasd_Click(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
+        private void label6_Click(object sender, EventArgs e) { }
+        private void label12_Click(object sender, EventArgs e) { }
+        private void label25_Click(object sender, EventArgs e) { }
+        private void label26_Click(object sender, EventArgs e) { }
+
+        private void pnlPatientDet_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void asdasdasd_Click(object sender, EventArgs e)
+        private void lblTiempo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void estado_civil_TextChanged(object sender, EventArgs e)
+        private void lblSlash1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRM_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSlash1_Click_1(object sender, EventArgs e)
         {
 
         }
     }
 }
-
