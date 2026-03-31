@@ -22,18 +22,12 @@
             panelNavItems = new Panel();
             iconNavInicio = new FontAwesome.Sharp.IconPictureBox();
             lblNavInicio = new Label();
-            iconNavRegistrar = new FontAwesome.Sharp.IconPictureBox();
-            lblNavRegistrar = new Label();
-            iconNavMantenedor = new FontAwesome.Sharp.IconPictureBox();
-            lblNavMantenedor = new Label();
-            iconNavVentas = new FontAwesome.Sharp.IconPictureBox();
-            lblNavVentas = new Label();
-            iconNavProveedores = new FontAwesome.Sharp.IconPictureBox();
-            lblNavProveedores = new Label();
-            iconNavReportes = new FontAwesome.Sharp.IconPictureBox();
-            lblNavReportes = new Label();
-            iconNavCalculadora = new FontAwesome.Sharp.IconPictureBox();
-            lblNavCalculadora = new Label();
+            iconNavExpedientes = new FontAwesome.Sharp.IconPictureBox();
+            lblNavExpedientes = new Label();
+            iconNavResumenes = new FontAwesome.Sharp.IconPictureBox();
+            lblNavResumenes = new Label();
+            iconNavRespaldo = new FontAwesome.Sharp.IconPictureBox();
+            lblNavRespaldo = new Label();
             panelLogo = new Panel();
             lblLogoIcon = new PictureBox();
             btnCerrarSesion = new Button();
@@ -68,12 +62,9 @@
             panelSidebar.SuspendLayout();
             panelNavItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconNavInicio).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavRegistrar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavMantenedor).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavVentas).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavProveedores).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavReportes).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavCalculadora).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconNavExpedientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconNavResumenes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)iconNavRespaldo).BeginInit();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lblLogoIcon).BeginInit();
             panelHeader.SuspendLayout();
@@ -99,18 +90,12 @@
             panelNavItems.BackColor = Color.Transparent;
             panelNavItems.Controls.Add(iconNavInicio);
             panelNavItems.Controls.Add(lblNavInicio);
-            panelNavItems.Controls.Add(iconNavRegistrar);
-            panelNavItems.Controls.Add(lblNavRegistrar);
-            panelNavItems.Controls.Add(iconNavMantenedor);
-            panelNavItems.Controls.Add(lblNavMantenedor);
-            panelNavItems.Controls.Add(iconNavVentas);
-            panelNavItems.Controls.Add(lblNavVentas);
-            panelNavItems.Controls.Add(iconNavProveedores);
-            panelNavItems.Controls.Add(lblNavProveedores);
-            panelNavItems.Controls.Add(iconNavReportes);
-            panelNavItems.Controls.Add(lblNavReportes);
-            panelNavItems.Controls.Add(iconNavCalculadora);
-            panelNavItems.Controls.Add(lblNavCalculadora);
+            panelNavItems.Controls.Add(iconNavExpedientes);
+            panelNavItems.Controls.Add(lblNavExpedientes);
+            panelNavItems.Controls.Add(iconNavResumenes);
+            panelNavItems.Controls.Add(lblNavResumenes);
+            panelNavItems.Controls.Add(iconNavRespaldo);
+            panelNavItems.Controls.Add(lblNavRespaldo);
             panelNavItems.ForeColor = SystemColors.ControlDarkDark;
             panelNavItems.Location = new Point(0, 188);
             panelNavItems.Name = "panelNavItems";
@@ -144,167 +129,86 @@
             lblNavInicio.Text = "INICIO";
             lblNavInicio.Click += lblNavInicio_Click;
             // 
-            // iconNavRegistrar
+            // iconNavExpedientes
             // 
-            iconNavRegistrar.BackColor = Color.Transparent;
-            iconNavRegistrar.Cursor = Cursors.Hand;
-            iconNavRegistrar.IconChar = FontAwesome.Sharp.IconChar.Vcard;
-            iconNavRegistrar.IconColor = Color.White;
-            iconNavRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconNavRegistrar.IconSize = 24;
-            iconNavRegistrar.Location = new Point(22, 60);
-            iconNavRegistrar.Name = "iconNavRegistrar";
-            iconNavRegistrar.Size = new Size(24, 24);
-            iconNavRegistrar.TabIndex = 2;
-            iconNavRegistrar.TabStop = false;
-            iconNavRegistrar.Click += menucompras_Click;
+            iconNavExpedientes.BackColor = Color.Transparent;
+            iconNavExpedientes.Cursor = Cursors.Hand;
+            iconNavExpedientes.IconChar = FontAwesome.Sharp.IconChar.FolderPlus;
+            iconNavExpedientes.IconColor = Color.White;
+            iconNavExpedientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconNavExpedientes.IconSize = 24;
+            iconNavExpedientes.Location = new Point(22, 60);
+            iconNavExpedientes.Name = "iconNavExpedientes";
+            iconNavExpedientes.Size = new Size(24, 24);
+            iconNavExpedientes.TabIndex = 2;
+            iconNavExpedientes.TabStop = false;
+            iconNavExpedientes.Click += navExpedientes_Click;
             // 
-            // lblNavRegistrar
+            // lblNavExpedientes
             // 
-            lblNavRegistrar.Cursor = Cursors.Hand;
-            lblNavRegistrar.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblNavRegistrar.ForeColor = Color.White;
-            lblNavRegistrar.Location = new Point(54, 58);
-            lblNavRegistrar.Name = "lblNavRegistrar";
-            lblNavRegistrar.Size = new Size(140, 28);
-            lblNavRegistrar.TabIndex = 3;
-            lblNavRegistrar.Text = "REGISTRAR";
-            lblNavRegistrar.Click += menucompras_Click;
+            lblNavExpedientes.Cursor = Cursors.Hand;
+            lblNavExpedientes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNavExpedientes.ForeColor = Color.White;
+            lblNavExpedientes.Location = new Point(54, 58);
+            lblNavExpedientes.Name = "lblNavExpedientes";
+            lblNavExpedientes.Size = new Size(140, 28);
+            lblNavExpedientes.TabIndex = 3;
+            lblNavExpedientes.Text = "EXPEDIENTES";
+            lblNavExpedientes.Click += navExpedientes_Click;
             // 
-            // iconNavMantenedor
+            // iconNavResumenes
             // 
-            iconNavMantenedor.BackColor = Color.Transparent;
-            iconNavMantenedor.Cursor = Cursors.Hand;
-            iconNavMantenedor.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
-            iconNavMantenedor.IconColor = Color.White;
-            iconNavMantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconNavMantenedor.IconSize = 24;
-            iconNavMantenedor.Location = new Point(22, 110);
-            iconNavMantenedor.Name = "iconNavMantenedor";
-            iconNavMantenedor.Size = new Size(24, 24);
-            iconNavMantenedor.TabIndex = 4;
-            iconNavMantenedor.TabStop = false;
-            iconNavMantenedor.Click += menumantenedor_Click;
+            iconNavResumenes.BackColor = Color.Transparent;
+            iconNavResumenes.Cursor = Cursors.Hand;
+            iconNavResumenes.IconChar = FontAwesome.Sharp.IconChar.FileMedical;
+            iconNavResumenes.IconColor = Color.White;
+            iconNavResumenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconNavResumenes.IconSize = 24;
+            iconNavResumenes.Location = new Point(22, 110);
+            iconNavResumenes.Name = "iconNavResumenes";
+            iconNavResumenes.Size = new Size(24, 24);
+            iconNavResumenes.TabIndex = 4;
+            iconNavResumenes.TabStop = false;
+            iconNavResumenes.Click += navResumenes_Click;
             // 
-            // lblNavMantenedor
+            // lblNavResumenes
             // 
-            lblNavMantenedor.Cursor = Cursors.Hand;
-            lblNavMantenedor.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblNavMantenedor.ForeColor = Color.White;
-            lblNavMantenedor.Location = new Point(54, 108);
-            lblNavMantenedor.Name = "lblNavMantenedor";
-            lblNavMantenedor.Size = new Size(140, 28);
-            lblNavMantenedor.TabIndex = 5;
-            lblNavMantenedor.Text = "MANTENEDOR";
-            lblNavMantenedor.Click += menumantenedor_Click;
+            lblNavResumenes.Cursor = Cursors.Hand;
+            lblNavResumenes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNavResumenes.ForeColor = Color.White;
+            lblNavResumenes.Location = new Point(54, 108);
+            lblNavResumenes.Name = "lblNavResumenes";
+            lblNavResumenes.Size = new Size(140, 28);
+            lblNavResumenes.TabIndex = 5;
+            lblNavResumenes.Text = "RESÚMENES";
+            lblNavResumenes.Click += navResumenes_Click;
             // 
-            // iconNavVentas
+            // iconNavRespaldo
             // 
-            iconNavVentas.BackColor = Color.Transparent;
-            iconNavVentas.Cursor = Cursors.Hand;
-            iconNavVentas.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            iconNavVentas.IconColor = Color.White;
-            iconNavVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconNavVentas.IconSize = 24;
-            iconNavVentas.Location = new Point(22, 160);
-            iconNavVentas.Name = "iconNavVentas";
-            iconNavVentas.Size = new Size(24, 24);
-            iconNavVentas.TabIndex = 6;
-            iconNavVentas.TabStop = false;
-            iconNavVentas.Click += menuventas_Click;
+            iconNavRespaldo.BackColor = Color.Transparent;
+            iconNavRespaldo.Cursor = Cursors.Hand;
+            iconNavRespaldo.IconChar = FontAwesome.Sharp.IconChar.ShieldHalved;
+            iconNavRespaldo.IconColor = Color.White;
+            iconNavRespaldo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconNavRespaldo.IconSize = 24;
+            iconNavRespaldo.Location = new Point(22, 160);
+            iconNavRespaldo.Name = "iconNavRespaldo";
+            iconNavRespaldo.Size = new Size(24, 24);
+            iconNavRespaldo.TabIndex = 6;
+            iconNavRespaldo.TabStop = false;
+            iconNavRespaldo.Click += navRespaldo_Click;
             // 
-            // lblNavVentas
+            // lblNavRespaldo
             // 
-            lblNavVentas.Cursor = Cursors.Hand;
-            lblNavVentas.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblNavVentas.ForeColor = Color.White;
-            lblNavVentas.Location = new Point(54, 158);
-            lblNavVentas.Name = "lblNavVentas";
-            lblNavVentas.Size = new Size(140, 28);
-            lblNavVentas.TabIndex = 7;
-            lblNavVentas.Text = "VENTAS";
-            lblNavVentas.Click += menuventas_Click;
-            // 
-            // iconNavProveedores
-            // 
-            iconNavProveedores.BackColor = Color.Transparent;
-            iconNavProveedores.Cursor = Cursors.Hand;
-            iconNavProveedores.IconChar = FontAwesome.Sharp.IconChar.Vcard;
-            iconNavProveedores.IconColor = Color.White;
-            iconNavProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconNavProveedores.IconSize = 24;
-            iconNavProveedores.Location = new Point(22, 210);
-            iconNavProveedores.Name = "iconNavProveedores";
-            iconNavProveedores.Size = new Size(24, 24);
-            iconNavProveedores.TabIndex = 8;
-            iconNavProveedores.TabStop = false;
-            iconNavProveedores.Click += menuprovedores_Click;
-            // 
-            // lblNavProveedores
-            // 
-            lblNavProveedores.Cursor = Cursors.Hand;
-            lblNavProveedores.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblNavProveedores.ForeColor = Color.White;
-            lblNavProveedores.Location = new Point(54, 208);
-            lblNavProveedores.Name = "lblNavProveedores";
-            lblNavProveedores.Size = new Size(140, 28);
-            lblNavProveedores.TabIndex = 9;
-            lblNavProveedores.Text = "PROVEEDORES";
-            lblNavProveedores.Click += menuprovedores_Click;
-            // 
-            // iconNavReportes
-            // 
-            iconNavReportes.BackColor = Color.Transparent;
-            iconNavReportes.Cursor = Cursors.Hand;
-            iconNavReportes.IconChar = FontAwesome.Sharp.IconChar.ChartGantt;
-            iconNavReportes.IconColor = Color.White;
-            iconNavReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconNavReportes.IconSize = 24;
-            iconNavReportes.Location = new Point(22, 260);
-            iconNavReportes.Name = "iconNavReportes";
-            iconNavReportes.Size = new Size(24, 24);
-            iconNavReportes.TabIndex = 10;
-            iconNavReportes.TabStop = false;
-            iconNavReportes.Click += menureportes_Click;
-            // 
-            // lblNavReportes
-            // 
-            lblNavReportes.Cursor = Cursors.Hand;
-            lblNavReportes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblNavReportes.ForeColor = Color.White;
-            lblNavReportes.Location = new Point(54, 258);
-            lblNavReportes.Name = "lblNavReportes";
-            lblNavReportes.Size = new Size(140, 28);
-            lblNavReportes.TabIndex = 11;
-            lblNavReportes.Text = "REPORTES";
-            lblNavReportes.Click += menureportes_Click;
-            // 
-            // iconNavCalculadora
-            // 
-            iconNavCalculadora.BackColor = Color.Transparent;
-            iconNavCalculadora.Cursor = Cursors.Hand;
-            iconNavCalculadora.IconChar = FontAwesome.Sharp.IconChar.Calculator;
-            iconNavCalculadora.IconColor = Color.White;
-            iconNavCalculadora.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconNavCalculadora.IconSize = 24;
-            iconNavCalculadora.Location = new Point(22, 310);
-            iconNavCalculadora.Name = "iconNavCalculadora";
-            iconNavCalculadora.Size = new Size(24, 24);
-            iconNavCalculadora.TabIndex = 12;
-            iconNavCalculadora.TabStop = false;
-            iconNavCalculadora.Click += calculadora_clik;
-            // 
-            // lblNavCalculadora
-            // 
-            lblNavCalculadora.Cursor = Cursors.Hand;
-            lblNavCalculadora.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblNavCalculadora.ForeColor = Color.White;
-            lblNavCalculadora.Location = new Point(54, 308);
-            lblNavCalculadora.Name = "lblNavCalculadora";
-            lblNavCalculadora.Size = new Size(140, 28);
-            lblNavCalculadora.TabIndex = 13;
-            lblNavCalculadora.Text = "CALCULADORA";
-            lblNavCalculadora.Click += calculadora_clik;
+            lblNavRespaldo.Cursor = Cursors.Hand;
+            lblNavRespaldo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblNavRespaldo.ForeColor = Color.White;
+            lblNavRespaldo.Location = new Point(54, 158);
+            lblNavRespaldo.Name = "lblNavRespaldo";
+            lblNavRespaldo.Size = new Size(140, 28);
+            lblNavRespaldo.TabIndex = 7;
+            lblNavRespaldo.Text = "RESPALDO";
+            lblNavRespaldo.Click += navRespaldo_Click;
             // 
             // panelLogo
             // 
@@ -543,118 +447,6 @@
             contenedor.TabIndex = 1;
             contenedor.Visible = false;
             // 
-            // menuStrip1
-            // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menucompras, menumantenedor, menuventas, menuprovedores, menureportes, iconMenuItem5 });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1456, 28);
-            menuStrip1.TabIndex = 4;
-            menuStrip1.Visible = false;
-            // 
-            // menucompras
-            // 
-            menucompras.IconChar = FontAwesome.Sharp.IconChar.Vcard;
-            menucompras.IconColor = Color.Black;
-            menucompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menucompras.Name = "menucompras";
-            menucompras.Size = new Size(150, 24);
-            menucompras.Text = "registrar usuario";
-            menucompras.Click += menucompras_Click;
-            // 
-            // menumantenedor
-            // 
-            menumantenedor.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem1, iconMenuItem2 });
-            menumantenedor.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
-            menumantenedor.IconColor = Color.Black;
-            menumantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menumantenedor.Name = "menumantenedor";
-            menumantenedor.Size = new Size(124, 24);
-            menumantenedor.Text = "mantenedor";
-            menumantenedor.Click += menumantenedor_Click;
-            // 
-            // iconMenuItem1
-            // 
-            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem1.IconColor = Color.Black;
-            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem1.Name = "iconMenuItem1";
-            iconMenuItem1.Size = new Size(159, 26);
-            iconMenuItem1.Text = "productos";
-            iconMenuItem1.Click += iconMenuItem1_Click_1;
-            // 
-            // iconMenuItem2
-            // 
-            iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem2.IconColor = Color.Black;
-            iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(159, 26);
-            iconMenuItem2.Text = "categoria";
-            iconMenuItem2.Click += iconMenuItem2_Click;
-            // 
-            // menuventas
-            // 
-            menuventas.IconChar = FontAwesome.Sharp.IconChar.Tags;
-            menuventas.IconColor = Color.Black;
-            menuventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menuventas.Name = "menuventas";
-            menuventas.Size = new Size(85, 24);
-            menuventas.Text = "ventas";
-            menuventas.Click += menuventas_Click;
-            // 
-            // menuprovedores
-            // 
-            menuprovedores.IconChar = FontAwesome.Sharp.IconChar.Vcard;
-            menuprovedores.IconColor = Color.Black;
-            menuprovedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menuprovedores.Name = "menuprovedores";
-            menuprovedores.Size = new Size(118, 24);
-            menuprovedores.Text = "provedores";
-            menuprovedores.Click += menuprovedores_Click;
-            // 
-            // menureportes
-            // 
-            menureportes.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem4, iconMenuItem3 });
-            menureportes.IconChar = FontAwesome.Sharp.IconChar.ChartGantt;
-            menureportes.IconColor = Color.Black;
-            menureportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menureportes.Name = "menureportes";
-            menureportes.Size = new Size(98, 24);
-            menureportes.Text = "reportes";
-            menureportes.Click += menureportes_Click;
-            // 
-            // iconMenuItem4
-            // 
-            iconMenuItem4.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem4.IconColor = Color.Black;
-            iconMenuItem4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem4.Name = "iconMenuItem4";
-            iconMenuItem4.Size = new Size(224, 26);
-            iconMenuItem4.Text = "ventas";
-            iconMenuItem4.Click += iconMenuItem4_Click;
-            // 
-            // iconMenuItem3
-            // 
-            iconMenuItem3.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem3.IconColor = Color.Black;
-            iconMenuItem3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem3.Name = "iconMenuItem3";
-            iconMenuItem3.Size = new Size(149, 26);
-            iconMenuItem3.Text = "compras";
-            iconMenuItem3.Click += iconMenuItem3_Click;
-            // 
-            // iconMenuItem5
-            // 
-            iconMenuItem5.IconChar = FontAwesome.Sharp.IconChar.None;
-            iconMenuItem5.IconColor = Color.Black;
-            iconMenuItem5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem5.Name = "iconMenuItem5";
-            iconMenuItem5.Size = new Size(120, 24);
-            iconMenuItem5.Text = "calculadora";
-            iconMenuItem5.Click += calculadora_clik;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -670,8 +462,8 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1456, 816);
-            Controls.Add(panelMain);
             Controls.Add(contenedor);
+            Controls.Add(panelMain);
             Controls.Add(panelHeader);
             Controls.Add(panelSidebar);
             Controls.Add(label1);
@@ -684,12 +476,9 @@
             panelSidebar.ResumeLayout(false);
             panelNavItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)iconNavInicio).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavRegistrar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavMantenedor).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavVentas).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavProveedores).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavReportes).EndInit();
-            ((System.ComponentModel.ISupportInitialize)iconNavCalculadora).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconNavExpedientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconNavResumenes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconNavRespaldo).EndInit();
             panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)lblLogoIcon).EndInit();
             panelHeader.ResumeLayout(false);
@@ -721,11 +510,9 @@
         private Panel panelMain, panelLinea, contenedor;
 
         private PictureBox lblLogoIcon;
-        private FontAwesome.Sharp.IconPictureBox iconNavInicio, iconNavRegistrar, iconNavMantenedor;
-        private FontAwesome.Sharp.IconPictureBox iconNavVentas, iconNavProveedores, iconNavReportes, iconNavCalculadora;
+        private FontAwesome.Sharp.IconPictureBox iconNavInicio, iconNavExpedientes, iconNavResumenes, iconNavRespaldo;
+        private Label lblNavInicio, lblNavExpedientes, lblNavResumenes, lblNavRespaldo;
 
-        private Label lblNavInicio, lblNavRegistrar, lblNavMantenedor;
-        private Label lblNavVentas, lblNavProveedores, lblNavReportes, lblNavCalculadora;
         private Label lblSistemaProtegido, lblNombreUsuario, lblPacientesRecientes;
 
         private TextBox txtBuscar;

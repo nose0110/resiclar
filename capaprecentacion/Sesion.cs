@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace programa_ventas
 {
-    internal class Sesion{
+    internal class Sesion
+    {
         public static string NombreUsuario { get; set; }
         public static string Rol { get; set; }
+        public static int IdUsuario { get; set; } // ← Agrega esta línea
     }
 }
-

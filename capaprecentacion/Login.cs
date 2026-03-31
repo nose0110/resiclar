@@ -40,20 +40,16 @@ namespace SistemaHospitalario
         {
             int mitad = this.ClientSize.Width / 2;
 
-            // Panel izquierdo (blanco) — siempre a la izquierda
             PanelIzquierdo.Location = new Point(0, 0);
             PanelIzquierdo.Size = new Size(mitad, this.ClientSize.Height);
-            PanelIzquierdo.BringToFront(); // ← clave para que no quede tapado
+            PanelIzquierdo.BringToFront();
 
-            // Panel derecho (azul) — arranca donde termina el izquierdo
             PanelDerecho.Location = new Point(mitad, 0);
             PanelDerecho.Size = new Size(this.ClientSize.Width - mitad, this.ClientSize.Height);
 
-            // Centrar tarjeta login dentro del panel derecho
             PanelLogin.Left = (PanelDerecho.Width - PanelLogin.Width) / 2;
             PanelLogin.Top = (PanelDerecho.Height - PanelLogin.Height) / 2;
 
-            // Centrar logo y textos dentro del panel izquierdo
             Logo.Left = (PanelIzquierdo.Width - Logo.Width) / 2;
             Logo.Top = (PanelIzquierdo.Height - Logo.Height) / 2 - 80;
 
@@ -66,7 +62,6 @@ namespace SistemaHospitalario
             label2.Left = (PanelIzquierdo.Width - label2.Width) / 2;
             label2.Top = label1.Bottom + 2;
 
-            // Redibujar bordes redondeados
             RedondearControl(PanelLogin, 40);
             RedondearControl(button1, 40);
         }
@@ -78,21 +73,24 @@ namespace SistemaHospitalario
             button1.ForeColor = Color.White;
             try
             {
-                // Una sola consulta que valida Y trae el nombre al mismo tiempo
-                string nombre = await Task.Run(() =>
+                var (nombre, idUsuario) = await Task.Run(() =>
                 {
                     using SqlConnection conn = Conexion.ObtenerConexion();
-                    string query = "SELECT nombre FROM Usuarios WHERE usuario=@usuario AND password=@password";
+                    string query = "SELECT id_usuario, nombre FROM Usuarios WHERE usuario=@usuario AND password=@password";
                     using SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                     conn.Open();
-                    return cmd.ExecuteScalar()?.ToString();
+                    using SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                        return (reader["nombre"].ToString(), Convert.ToInt32(reader["id_usuario"]));
+                    return (null, 0);
                 });
 
                 if (nombre != null)
                 {
                     Sesion.NombreUsuario = nombre;
+                    Sesion.IdUsuario = idUsuario;
                     new inicio().Show();
                     this.Hide();
                 }

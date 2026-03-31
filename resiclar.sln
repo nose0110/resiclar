@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.9.34902.65
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11620.152 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "programa ventas", "capaprecentacion\programa ventas.csproj", "{E2D5C38C-273C-4A2D-838A-216E0E161290}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaHospitalario", "capaprecentacion\SistemaHospitalario.csproj", "{E2D5C38C-273C-4A2D-838A-216E0E161290}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "capadatos", "capadatos\capadatos.csproj", "{860DCAC1-06D8-499A-9651-52CF5E76DE15}"
 EndProject

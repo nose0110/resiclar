@@ -17,6 +17,7 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            label6 = new Label();
             sep1tab1 = new Panel();
             sep2tab1 = new Panel();
             label1 = new Label();
@@ -43,13 +44,13 @@
             no_expediente = new TextBox();
             label11 = new Label();
             telefono = new TextBox();
-            label6 = new Label();
             tabPage2 = new TabPage();
-            this.label9 = new Label();
-            this.label13 = new Label();
-            this.label14 = new Label();
-            this.label15 = new Label();
-            this.label16 = new Label();
+            label12 = new Label();
+            label9 = new Label();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
             label17 = new Label();
             label18 = new Label();
             label19 = new Label();
@@ -68,7 +69,7 @@
             fhijos = new TextBox();
             causashijos = new RichTextBox();
             panel1 = new Panel();
-            this.label10 = new Label();
+            label10 = new Label();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             panel2 = new Panel();
@@ -88,11 +89,12 @@
             radioButton9 = new RadioButton();
             radioButton10 = new RadioButton();
             tabPage3 = new TabPage();
-            this.label30 = new Label();
-            this.label31 = new Label();
-            this.label32 = new Label();
-            this.label33 = new Label();
-            this.label34 = new Label();
+            label29 = new Label();
+            label30 = new Label();
+            label31 = new Label();
+            label32 = new Label();
+            label33 = new Label();
+            label34 = new Label();
             label35 = new Label();
             label36 = new Label();
             label37 = new Label();
@@ -109,8 +111,9 @@
             textBox8 = new TextBox();
             textBox9 = new TextBox();
             tabPage4 = new TabPage();
-            this.label42 = new Label();
-            this.label43 = new Label();
+            label41 = new Label();
+            label42 = new Label();
+            label43 = new Label();
             label49 = new Label();
             label50 = new Label();
             label51 = new Label();
@@ -122,17 +125,17 @@
             textBox19 = new TextBox();
             textBox20 = new TextBox();
             panel6 = new Panel();
-            this.label44 = new Label();
+            label44 = new Label();
             radioButton11 = new RadioButton();
             radioButton12 = new RadioButton();
             textBox10 = new TextBox();
             panel7 = new Panel();
-            this.label45 = new Label();
+            label45 = new Label();
             radioButton13 = new RadioButton();
             radioButton14 = new RadioButton();
             textBox11 = new TextBox();
             panel8 = new Panel();
-            this.label46 = new Label();
+            label46 = new Label();
             radioButton15 = new RadioButton();
             radioButton16 = new RadioButton();
             textBox12 = new TextBox();
@@ -147,14 +150,15 @@
             radioButton20 = new RadioButton();
             textBox14 = new TextBox();
             tabPage5 = new TabPage();
-            this.label54 = new Label();
+            label59 = new Label();
+            label54 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            this.label55 = new Label();
+            label55 = new Label();
             dateTimePicker2 = new DateTimePicker();
-            this.label56 = new Label();
+            label56 = new Label();
             numericUpDown1 = new NumericUpDown();
-            this.label57 = new Label();
-            this.label58 = new Label();
+            label57 = new Label();
+            label58 = new Label();
             textBox21 = new TextBox();
             lblRM = new Label();
             nudRM = new NumericUpDown();
@@ -265,7 +269,7 @@
             txtNomMed = new TextBox();
             lblCedMed = new Label();
             txtCedMed = new TextBox();
-            this.label53 = new Label();
+            label53 = new Label();
             pnlSidebar = new Panel();
             pnlPatientCard = new Panel();
             lblInitials = new Label();
@@ -356,6 +360,7 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.White;
+            tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(sep1tab1);
             tabPage1.Controls.Add(sep2tab1);
             tabPage1.Controls.Add(label1);
@@ -382,17 +387,28 @@
             tabPage1.Controls.Add(no_expediente);
             tabPage1.Controls.Add(label11);
             tabPage1.Controls.Add(telefono);
-            tabPage1.Controls.Add(label6);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Size = new Size(1081, 654);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Ficha de Identificación";
+            tabPage1.Click += tabPage1_Click;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(67, 105, 142);
+            label6.Location = new Point(25, 22);
+            label6.Name = "label6";
+            label6.Size = new Size(420, 28);
+            label6.TabIndex = 4;
+            label6.Text = "FICHA DE IDENTIFICACIÓN:";
             // 
             // sep1tab1
             // 
             sep1tab1.BackColor = Color.FromArgb(230, 235, 242);
-            sep1tab1.Location = new Point(24, 102);
+            sep1tab1.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            sep1tab1.Location = new Point(25, 163);
             sep1tab1.Name = "sep1tab1";
             sep1tab1.Size = new Size(1040, 1);
             sep1tab1.TabIndex = 0;
@@ -400,7 +416,8 @@
             // sep2tab1
             // 
             sep2tab1.BackColor = Color.FromArgb(230, 235, 242);
-            sep2tab1.Location = new Point(24, 232);
+            sep2tab1.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            sep2tab1.Location = new Point(25, 293);
             sep2tab1.Name = "sep2tab1";
             sep2tab1.Size = new Size(1040, 1);
             sep2tab1.TabIndex = 1;
@@ -408,268 +425,264 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label1.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(110, 130, 150);
-            label1.Location = new Point(24, 20);
+            label1.Location = new Point(25, 81);
             label1.Name = "label1";
-            label1.Size = new Size(156, 20);
+            label1.Size = new Size(86, 25);
             label1.TabIndex = 2;
-            label1.Text = "NOMBRE COMPLETO";
+            label1.Text = "Nombre:";
+            label1.Click += label1_Click;
             // 
             // nombre
             // 
             nombre.BorderStyle = BorderStyle.FixedSingle;
-            nombre.Font = new Font("Segoe UI", 10F);
-            nombre.ForeColor = Color.FromArgb(67, 105, 142);
-            nombre.Location = new Point(24, 40);
+            nombre.Font = new Font("Segoe UI Light", 12F);
+            nombre.ForeColor = SystemColors.WindowText;
+            nombre.Location = new Point(25, 101);
             nombre.Name = "nombre";
-            nombre.Size = new Size(230, 30);
+            nombre.Size = new Size(230, 34);
             nombre.TabIndex = 3;
             // 
             // labeledad
             // 
             labeledad.AutoSize = true;
-            labeledad.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            labeledad.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             labeledad.ForeColor = Color.FromArgb(110, 130, 150);
-            labeledad.Location = new Point(284, 20);
+            labeledad.Location = new Point(285, 81);
             labeledad.Name = "labeledad";
-            labeledad.Size = new Size(50, 20);
+            labeledad.Size = new Size(59, 25);
             labeledad.TabIndex = 4;
-            labeledad.Text = "EDAD";
+            labeledad.Text = "Edad:";
             labeledad.Click += labeledad_Click;
             // 
             // edad1
             // 
             edad1.BorderStyle = BorderStyle.FixedSingle;
-            edad1.Font = new Font("Segoe UI", 10F);
-            edad1.Location = new Point(284, 40);
+            edad1.Font = new Font("Segoe UI Light", 12F);
+            edad1.ForeColor = SystemColors.WindowText;
+            edad1.Location = new Point(285, 101);
             edad1.Name = "edad1";
-            edad1.Size = new Size(230, 30);
+            edad1.Size = new Size(230, 34);
             edad1.TabIndex = 5;
             // 
             // sexoaaa
             // 
             sexoaaa.AutoSize = true;
-            sexoaaa.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            sexoaaa.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             sexoaaa.ForeColor = Color.FromArgb(110, 130, 150);
-            sexoaaa.Location = new Point(544, 20);
+            sexoaaa.Location = new Point(545, 81);
             sexoaaa.Name = "sexoaaa";
-            sexoaaa.Size = new Size(46, 20);
+            sexoaaa.Size = new Size(58, 25);
             sexoaaa.TabIndex = 6;
-            sexoaaa.Text = "SEXO";
+            sexoaaa.Text = "Sexo:";
             // 
             // comboBox1
             // 
             comboBox1.BackColor = Color.White;
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Segoe UI", 10F);
-            comboBox1.ForeColor = Color.FromArgb(67, 105, 142);
+            comboBox1.Font = new Font("Segoe UI Light", 12F);
+            comboBox1.ForeColor = SystemColors.WindowText;
             comboBox1.Items.AddRange(new object[] { "— Seleccionar —", "Hombre", "Mujer" });
-            comboBox1.Location = new Point(544, 40);
+            comboBox1.Location = new Point(545, 101);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(230, 31);
+            comboBox1.Size = new Size(230, 36);
             comboBox1.TabIndex = 7;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label2.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label2.ForeColor = Color.FromArgb(110, 130, 150);
-            label2.Location = new Point(804, 20);
+            label2.Location = new Point(805, 81);
             label2.Name = "label2";
-            label2.Size = new Size(96, 20);
+            label2.Size = new Size(108, 25);
             label2.TabIndex = 8;
-            label2.Text = "OCUPACIÓN";
+            label2.Text = "Ocupación:";
             // 
             // ocupacion
             // 
             ocupacion.BorderStyle = BorderStyle.FixedSingle;
-            ocupacion.Font = new Font("Segoe UI", 10F);
-            ocupacion.Location = new Point(804, 40);
+            ocupacion.Font = new Font("Segoe UI Light", 12F);
+            ocupacion.ForeColor = SystemColors.WindowText;
+            ocupacion.Location = new Point(805, 101);
             ocupacion.Name = "ocupacion";
-            ocupacion.Size = new Size(230, 30);
+            ocupacion.Size = new Size(230, 34);
             ocupacion.TabIndex = 9;
             // 
             // labe2
             // 
             labe2.AutoSize = true;
-            labe2.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            labe2.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             labe2.ForeColor = Color.FromArgb(110, 130, 150);
-            labe2.Location = new Point(24, 118);
+            labe2.Location = new Point(25, 189);
             labe2.Name = "labe2";
-            labe2.Size = new Size(107, 20);
+            labe2.Size = new Size(115, 25);
             labe2.TabIndex = 10;
-            labe2.Text = "ESTADO CIVIL";
+            labe2.Text = "Estado Civil:";
             // 
             // estado_civil
             // 
             estado_civil.BorderStyle = BorderStyle.FixedSingle;
-            estado_civil.Font = new Font("Segoe UI", 10F);
-            estado_civil.Location = new Point(24, 138);
+            estado_civil.Font = new Font("Segoe UI Light", 12F);
+            estado_civil.Location = new Point(25, 209);
             estado_civil.Name = "estado_civil";
-            estado_civil.Size = new Size(230, 30);
+            estado_civil.Size = new Size(230, 34);
             estado_civil.TabIndex = 11;
             estado_civil.TextChanged += estado_civil_TextChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label3.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label3.ForeColor = Color.FromArgb(110, 130, 150);
-            label3.Location = new Point(284, 118);
+            label3.Location = new Point(285, 189);
             label3.Name = "label3";
-            label3.Size = new Size(126, 20);
+            label3.Size = new Size(129, 25);
             label3.TabIndex = 12;
-            label3.Text = "NACIONALIDAD";
+            label3.Text = "Nacionalidad:";
             // 
             // nacionalidad
             // 
             nacionalidad.BorderStyle = BorderStyle.FixedSingle;
-            nacionalidad.Font = new Font("Segoe UI", 10F);
-            nacionalidad.Location = new Point(284, 138);
+            nacionalidad.Font = new Font("Segoe UI Light", 12F);
+            nacionalidad.Location = new Point(285, 209);
             nacionalidad.Name = "nacionalidad";
-            nacionalidad.Size = new Size(230, 30);
+            nacionalidad.Size = new Size(230, 34);
             nacionalidad.TabIndex = 13;
             // 
             // asdasdasd
             // 
             asdasdasd.AutoSize = true;
-            asdasdasd.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            asdasdasd.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             asdasdasd.ForeColor = Color.FromArgb(110, 130, 150);
-            asdasdasd.Location = new Point(544, 118);
+            asdasdasd.Location = new Point(545, 189);
             asdasdasd.Name = "asdasdasd";
-            asdasdasd.Size = new Size(112, 20);
+            asdasdasd.Size = new Size(114, 25);
             asdasdasd.TabIndex = 14;
-            asdasdasd.Text = "ESCOLARIDAD";
+            asdasdasd.Text = "Escolaridad:";
             asdasdasd.Click += asdasdasd_Click;
             // 
             // escolaridad
             // 
             escolaridad.BorderStyle = BorderStyle.FixedSingle;
-            escolaridad.Font = new Font("Segoe UI", 10F);
-            escolaridad.Location = new Point(544, 138);
+            escolaridad.Font = new Font("Segoe UI Light", 12F);
+            escolaridad.Location = new Point(545, 209);
             escolaridad.Name = "escolaridad";
-            escolaridad.Size = new Size(230, 30);
+            escolaridad.Size = new Size(230, 34);
             escolaridad.TabIndex = 15;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label4.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label4.ForeColor = Color.FromArgb(110, 130, 150);
-            label4.Location = new Point(804, 118);
+            label4.Location = new Point(805, 189);
             label4.Name = "label4";
-            label4.Size = new Size(79, 20);
+            label4.Size = new Size(87, 25);
             label4.TabIndex = 16;
-            label4.Text = "RELIGIÓN";
+            label4.Text = "Religión:";
             // 
             // religion
             // 
             religion.BorderStyle = BorderStyle.FixedSingle;
-            religion.Font = new Font("Segoe UI", 10F);
-            religion.Location = new Point(804, 138);
+            religion.Font = new Font("Segoe UI Light", 12F);
+            religion.Location = new Point(805, 209);
             religion.Name = "religion";
-            religion.Size = new Size(230, 30);
+            religion.Size = new Size(230, 34);
             religion.TabIndex = 17;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label5.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label5.ForeColor = Color.FromArgb(110, 130, 150);
-            label5.Location = new Point(24, 248);
+            label5.Location = new Point(25, 309);
             label5.Name = "label5";
-            label5.Size = new Size(75, 20);
+            label5.Size = new Size(85, 25);
             label5.TabIndex = 18;
-            label5.Text = "SERVICIO";
+            label5.Text = "Servicio:";
             label5.Click += label5_Click;
             // 
             // servicio
             // 
             servicio.BorderStyle = BorderStyle.FixedSingle;
-            servicio.Font = new Font("Segoe UI", 10F);
-            servicio.Location = new Point(24, 268);
+            servicio.Font = new Font("Segoe UI Light", 12F);
+            servicio.Location = new Point(25, 329);
             servicio.Name = "servicio";
-            servicio.Size = new Size(230, 30);
+            servicio.Size = new Size(230, 34);
             servicio.TabIndex = 19;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label7.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label7.ForeColor = Color.FromArgb(110, 130, 150);
-            label7.Location = new Point(284, 248);
+            label7.Location = new Point(285, 309);
             label7.Name = "label7";
-            label7.Size = new Size(54, 20);
+            label7.Size = new Size(64, 25);
             label7.TabIndex = 20;
-            label7.Text = "CAMA";
+            label7.Text = "Cama:";
             // 
             // cama
             // 
             cama.BorderStyle = BorderStyle.FixedSingle;
-            cama.Font = new Font("Segoe UI", 10F);
-            cama.Location = new Point(284, 268);
+            cama.Font = new Font("Segoe UI Light", 12F);
+            cama.Location = new Point(285, 329);
             cama.Name = "cama";
-            cama.Size = new Size(230, 30);
+            cama.Size = new Size(230, 34);
             cama.TabIndex = 21;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label8.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label8.ForeColor = Color.FromArgb(110, 130, 150);
-            label8.Location = new Point(544, 248);
+            label8.Location = new Point(545, 309);
             label8.Name = "label8";
-            label8.Size = new Size(127, 20);
+            label8.Size = new Size(147, 25);
             label8.TabIndex = 22;
-            label8.Text = "NO. EXPEDIENTE";
+            label8.Text = "No. Expediente:";
             // 
             // no_expediente
             // 
             no_expediente.BorderStyle = BorderStyle.FixedSingle;
-            no_expediente.Font = new Font("Segoe UI", 10F);
-            no_expediente.Location = new Point(544, 268);
+            no_expediente.Font = new Font("Segoe UI Light", 12F);
+            no_expediente.Location = new Point(545, 329);
             no_expediente.Name = "no_expediente";
-            no_expediente.Size = new Size(230, 30);
+            no_expediente.Size = new Size(230, 34);
             no_expediente.TabIndex = 23;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label11.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label11.ForeColor = Color.FromArgb(110, 130, 150);
-            label11.Location = new Point(804, 248);
+            label11.Location = new Point(805, 309);
             label11.Name = "label11";
-            label11.Size = new Size(121, 20);
+            label11.Size = new Size(123, 25);
             label11.TabIndex = 24;
-            label11.Text = "TEL. CONTACTO";
+            label11.Text = "Tel.Contacto:";
             // 
             // telefono
             // 
             telefono.BorderStyle = BorderStyle.FixedSingle;
-            telefono.Font = new Font("Segoe UI", 10F);
-            telefono.Location = new Point(804, 268);
+            telefono.Font = new Font("Segoe UI Light", 12F);
+            telefono.Location = new Point(805, 329);
             telefono.Name = "telefono";
-            telefono.Size = new Size(230, 30);
+            telefono.Size = new Size(230, 34);
             telefono.TabIndex = 25;
-            // 
-            // label6
-            // 
-            label6.Location = new Point(0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(100, 23);
-            label6.TabIndex = 26;
-            label6.Visible = false;
             // 
             // tabPage2
             // 
             tabPage2.BackColor = Color.White;
-            tabPage2.Controls.Add(this.label9);
-            tabPage2.Controls.Add(this.label13);
-            tabPage2.Controls.Add(this.label14);
-            tabPage2.Controls.Add(this.label15);
-            tabPage2.Controls.Add(this.label16);
+            tabPage2.Controls.Add(label12);
+            tabPage2.Controls.Add(label9);
+            tabPage2.Controls.Add(label13);
+            tabPage2.Controls.Add(label14);
+            tabPage2.Controls.Add(label15);
+            tabPage2.Controls.Add(label16);
             tabPage2.Controls.Add(label17);
             tabPage2.Controls.Add(label18);
             tabPage2.Controls.Add(label19);
@@ -699,56 +712,69 @@
             tabPage2.Text = "Antec.Heredofamiliares";
             tabPage2.Click += tabPage2_Click;
             // 
+            // label12
+            // 
+            label12.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.ForeColor = Color.FromArgb(67, 105, 142);
+            label12.Location = new Point(31, 23);
+            label12.Name = "label12";
+            label12.Size = new Size(420, 28);
+            label12.TabIndex = 28;
+            label12.Text = "ANTECEDENTES HEREDOFAMILIARES:";
+            // 
             // label9
             // 
-            this.label9.Location = new Point(32, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new Size(0, 20);
-            this.label9.TabIndex = 0;
+            label9.Location = new Point(32, 23);
+            label9.Name = "label9";
+            label9.Size = new Size(0, 20);
+            label9.TabIndex = 0;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new Point(29, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new Size(60, 23);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Padres";
+            label13.AutoSize = true;
+            label13.Location = new Point(23, 65);
+            label13.Name = "label13";
+            label13.Size = new Size(60, 23);
+            label13.TabIndex = 2;
+            label13.Text = "Padres";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label14.Location = new Point(31, 50);
-            this.label14.Name = "label14";
-            this.label14.Size = new Size(50, 23);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Vivos";
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label14.ForeColor = Color.FromArgb(110, 130, 150);
+            label14.Location = new Point(29, 104);
+            label14.Name = "label14";
+            label14.Size = new Size(63, 25);
+            label14.TabIndex = 3;
+            label14.Text = "Vivos:";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label15.Location = new Point(31, 164);
-            this.label15.Name = "label15";
-            this.label15.Size = new Size(63, 23);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Causas";
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label15.ForeColor = Color.FromArgb(110, 130, 150);
+            label15.Location = new Point(26, 236);
+            label15.Name = "label15";
+            label15.Size = new Size(75, 25);
+            label15.TabIndex = 4;
+            label15.Text = "Causas:";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label16.Location = new Point(31, 105);
-            this.label16.Name = "label16";
-            this.label16.Size = new Size(82, 23);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Fallecidos";
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label16.ForeColor = Color.FromArgb(110, 130, 150);
+            label16.Location = new Point(25, 175);
+            label16.Name = "label16";
+            label16.Size = new Size(99, 25);
+            label16.TabIndex = 5;
+            label16.Text = "Fallecidos:";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(373, 27);
+            label17.Location = new Point(367, 72);
             label17.Name = "label17";
             label17.Size = new Size(88, 23);
             label17.TabIndex = 6;
@@ -757,7 +783,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(731, 24);
+            label18.Location = new Point(725, 69);
             label18.Name = "label18";
             label18.Size = new Size(47, 23);
             label18.TabIndex = 7;
@@ -766,82 +792,91 @@
             // label19
             // 
             label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label19.ForeColor = Color.FromArgb(110, 130, 150);
-            label19.Location = new Point(373, 105);
+            label19.Location = new Point(367, 179);
             label19.Name = "label19";
-            label19.Size = new Size(82, 23);
+            label19.Size = new Size(99, 25);
             label19.TabIndex = 8;
-            label19.Text = "Fallecidos";
+            label19.Text = "Fallecidos:";
             // 
             // label20
             // 
             label20.AutoSize = true;
+            label20.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label20.ForeColor = Color.FromArgb(110, 130, 150);
-            label20.Location = new Point(373, 164);
+            label20.Location = new Point(372, 236);
             label20.Name = "label20";
-            label20.Size = new Size(63, 23);
+            label20.Size = new Size(75, 25);
             label20.TabIndex = 9;
-            label20.Text = "Causas";
+            label20.Text = "Causas:";
             // 
             // label21
             // 
             label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label21.ForeColor = Color.FromArgb(110, 130, 150);
-            label21.Location = new Point(373, 50);
+            label21.Location = new Point(367, 101);
             label21.Name = "label21";
-            label21.Size = new Size(50, 23);
+            label21.Size = new Size(63, 25);
             label21.TabIndex = 10;
-            label21.Text = "Vivos";
+            label21.Text = "Vivos:";
             // 
             // label22
             // 
             label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label22.ForeColor = Color.FromArgb(110, 130, 150);
-            label22.Location = new Point(731, 105);
+            label22.Location = new Point(725, 179);
             label22.Name = "label22";
-            label22.Size = new Size(82, 23);
+            label22.Size = new Size(99, 25);
             label22.TabIndex = 11;
-            label22.Text = "Fallecidos";
+            label22.Text = "Fallecidos:";
             // 
             // label23
             // 
             label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label23.ForeColor = Color.FromArgb(110, 130, 150);
-            label23.Location = new Point(731, 164);
+            label23.Location = new Point(725, 236);
             label23.Name = "label23";
-            label23.Size = new Size(63, 23);
+            label23.Size = new Size(75, 25);
             label23.TabIndex = 12;
-            label23.Text = "Causas";
+            label23.Text = "Causas:";
             // 
             // label24
             // 
             label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label24.ForeColor = Color.FromArgb(110, 130, 150);
-            label24.Location = new Point(731, 50);
+            label24.Location = new Point(725, 101);
             label24.Name = "label24";
-            label24.Size = new Size(50, 23);
+            label24.Size = new Size(63, 25);
             label24.TabIndex = 13;
-            label24.Text = "Vivos";
+            label24.Text = "Vivos:";
             // 
             // vp
             // 
             vp.BorderStyle = BorderStyle.FixedSingle;
-            vp.Location = new Point(36, 76);
+            vp.Font = new Font("Segoe UI Light", 12F);
+            vp.Location = new Point(30, 121);
             vp.Name = "vp";
-            vp.Size = new Size(289, 30);
+            vp.Size = new Size(289, 34);
             vp.TabIndex = 14;
             // 
             // fpadres
             // 
             fpadres.BorderStyle = BorderStyle.FixedSingle;
-            fpadres.Location = new Point(35, 135);
+            fpadres.Font = new Font("Segoe UI Light", 12F);
+            fpadres.Location = new Point(29, 193);
             fpadres.Name = "fpadres";
-            fpadres.Size = new Size(290, 30);
+            fpadres.Size = new Size(290, 34);
             fpadres.TabIndex = 15;
             // 
             // causasp
             // 
-            causasp.Location = new Point(36, 186);
+            causasp.Font = new Font("Segoe UI Light", 12F);
+            causasp.Location = new Point(30, 253);
             causasp.Name = "causasp";
             causasp.Size = new Size(289, 116);
             causasp.TabIndex = 16;
@@ -850,22 +885,25 @@
             // vhemanos
             // 
             vhemanos.BorderStyle = BorderStyle.FixedSingle;
-            vhemanos.Location = new Point(378, 75);
+            vhemanos.Font = new Font("Segoe UI Light", 12F);
+            vhemanos.Location = new Point(372, 120);
             vhemanos.Name = "vhemanos";
-            vhemanos.Size = new Size(282, 30);
+            vhemanos.Size = new Size(282, 34);
             vhemanos.TabIndex = 17;
             // 
             // fhermanos
             // 
             fhermanos.BorderStyle = BorderStyle.FixedSingle;
-            fhermanos.Location = new Point(373, 137);
+            fhermanos.Font = new Font("Segoe UI Light", 12F);
+            fhermanos.Location = new Point(367, 195);
             fhermanos.Name = "fhermanos";
-            fhermanos.Size = new Size(282, 30);
+            fhermanos.Size = new Size(282, 34);
             fhermanos.TabIndex = 18;
             // 
             // causashermanos
             // 
-            causashermanos.Location = new Point(378, 186);
+            causashermanos.Font = new Font("Segoe UI Light", 12F);
+            causashermanos.Location = new Point(372, 253);
             causashermanos.Name = "causashermanos";
             causashermanos.Size = new Size(289, 116);
             causashermanos.TabIndex = 19;
@@ -874,22 +912,25 @@
             // vhijos
             // 
             vhijos.BorderStyle = BorderStyle.FixedSingle;
-            vhijos.Location = new Point(731, 78);
+            vhijos.Font = new Font("Segoe UI Light", 12F);
+            vhijos.Location = new Point(725, 123);
             vhijos.Name = "vhijos";
-            vhijos.Size = new Size(282, 30);
+            vhijos.Size = new Size(282, 34);
             vhijos.TabIndex = 20;
             // 
             // fhijos
             // 
             fhijos.BorderStyle = BorderStyle.FixedSingle;
-            fhijos.Location = new Point(731, 137);
+            fhijos.Font = new Font("Segoe UI Light", 12F);
+            fhijos.Location = new Point(725, 195);
             fhijos.Name = "fhijos";
-            fhijos.Size = new Size(282, 30);
+            fhijos.Size = new Size(282, 34);
             fhijos.TabIndex = 21;
             // 
             // causashijos
             // 
-            causashijos.Location = new Point(731, 186);
+            causashijos.Font = new Font("Segoe UI Light", 12F);
+            causashijos.Location = new Point(725, 253);
             causashijos.Name = "causashijos";
             causashijos.Size = new Size(289, 116);
             causashijos.TabIndex = 22;
@@ -898,22 +939,22 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(this.label10);
+            panel1.Controls.Add(label10);
             panel1.Controls.Add(radioButton1);
             panel1.Controls.Add(radioButton2);
-            panel1.Location = new Point(36, 350);
+            panel1.Location = new Point(23, 388);
             panel1.Name = "panel1";
             panel1.Size = new Size(570, 43);
             panel1.TabIndex = 23;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new Point(13, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new Size(189, 23);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Diabetes Mellitus tipo 2";
+            label10.AutoSize = true;
+            label10.Location = new Point(13, 10);
+            label10.Name = "label10";
+            label10.Size = new Size(189, 23);
+            label10.TabIndex = 0;
+            label10.Text = "Diabetes Mellitus tipo 2";
             // 
             // radioButton1
             // 
@@ -939,7 +980,7 @@
             panel2.Controls.Add(label25);
             panel2.Controls.Add(radioButton3);
             panel2.Controls.Add(radioButton4);
-            panel2.Location = new Point(36, 398);
+            panel2.Location = new Point(23, 436);
             panel2.Name = "panel2";
             panel2.Size = new Size(570, 43);
             panel2.TabIndex = 24;
@@ -978,7 +1019,7 @@
             panel3.Controls.Add(label26);
             panel3.Controls.Add(radioButton5);
             panel3.Controls.Add(radioButton6);
-            panel3.Location = new Point(36, 446);
+            panel3.Location = new Point(23, 484);
             panel3.Name = "panel3";
             panel3.Size = new Size(570, 43);
             panel3.TabIndex = 25;
@@ -1017,7 +1058,7 @@
             panel4.Controls.Add(label27);
             panel4.Controls.Add(radioButton7);
             panel4.Controls.Add(radioButton8);
-            panel4.Location = new Point(36, 494);
+            panel4.Location = new Point(23, 538);
             panel4.Name = "panel4";
             panel4.Size = new Size(570, 43);
             panel4.TabIndex = 26;
@@ -1055,7 +1096,7 @@
             panel5.Controls.Add(label28);
             panel5.Controls.Add(radioButton9);
             panel5.Controls.Add(radioButton10);
-            panel5.Location = new Point(36, 542);
+            panel5.Location = new Point(23, 591);
             panel5.Name = "panel5";
             panel5.Size = new Size(570, 43);
             panel5.TabIndex = 27;
@@ -1090,11 +1131,12 @@
             // tabPage3
             // 
             tabPage3.BackColor = Color.White;
-            tabPage3.Controls.Add(this.label30);
-            tabPage3.Controls.Add(this.label31);
-            tabPage3.Controls.Add(this.label32);
-            tabPage3.Controls.Add(this.label33);
-            tabPage3.Controls.Add(this.label34);
+            tabPage3.Controls.Add(label29);
+            tabPage3.Controls.Add(label30);
+            tabPage3.Controls.Add(label31);
+            tabPage3.Controls.Add(label32);
+            tabPage3.Controls.Add(label33);
+            tabPage3.Controls.Add(label34);
             tabPage3.Controls.Add(label35);
             tabPage3.Controls.Add(label36);
             tabPage3.Controls.Add(label37);
@@ -1110,197 +1152,233 @@
             tabPage3.Controls.Add(textBox7);
             tabPage3.Controls.Add(textBox8);
             tabPage3.Controls.Add(textBox9);
+            tabPage3.Font = new Font("Segoe UI Light", 12F);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(1081, 654);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Antec. No Patológicos";
+            tabPage3.Click += tabPage3_Click;
+            // 
+            // label29
+            // 
+            label29.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label29.ForeColor = Color.FromArgb(67, 105, 142);
+            label29.Location = new Point(44, 26);
+            label29.Name = "label29";
+            label29.Size = new Size(606, 28);
+            label29.TabIndex = 21;
+            label29.Text = "ANTECEDENTES PERSONALES NO PATOLOGICOS:";
+            label29.Click += label29_Click;
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new Point(45, 40);
-            this.label30.Name = "label30";
-            this.label30.Size = new Size(150, 23);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "1) Hábitos Tóxicos:";
+            label30.AutoSize = true;
+            label30.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label30.Location = new Point(44, 77);
+            label30.Name = "label30";
+            label30.Size = new Size(203, 31);
+            label30.TabIndex = 1;
+            label30.Text = "1) Hábitos Tóxicos:";
+            label30.Click += label30_Click;
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label31.Location = new Point(48, 85);
-            this.label31.Name = "label31";
-            this.label31.Size = new Size(67, 23);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "Alcohol";
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label31.ForeColor = Color.FromArgb(110, 130, 150);
+            label31.Location = new Point(47, 129);
+            label31.Name = "label31";
+            label31.Size = new Size(82, 25);
+            label31.TabIndex = 2;
+            label31.Text = "Alcohol:";
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label32.Location = new Point(388, 85);
-            this.label32.Name = "label32";
-            this.label32.Size = new Size(63, 23);
-            this.label32.TabIndex = 3;
-            this.label32.Text = "Tabaco";
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label32.ForeColor = Color.FromArgb(110, 130, 150);
+            label32.Location = new Point(387, 129);
+            label32.Name = "label32";
+            label32.Size = new Size(77, 25);
+            label32.TabIndex = 3;
+            label32.Text = "Tabaco:";
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label33.Location = new Point(718, 85);
-            this.label33.Name = "label33";
-            this.label33.Size = new Size(64, 23);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "Drogas";
+            label33.AutoSize = true;
+            label33.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label33.ForeColor = Color.FromArgb(110, 130, 150);
+            label33.Location = new Point(717, 129);
+            label33.Name = "label33";
+            label33.Size = new Size(77, 25);
+            label33.TabIndex = 4;
+            label33.Text = "Drogas:";
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new Point(45, 174);
-            this.label34.Name = "label34";
-            this.label34.Size = new Size(119, 23);
-            this.label34.TabIndex = 5;
-            this.label34.Text = "2) Fisiológicos:";
+            label34.AutoSize = true;
+            label34.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label34.Location = new Point(44, 208);
+            label34.Name = "label34";
+            label34.Size = new Size(163, 31);
+            label34.TabIndex = 5;
+            label34.Text = "2) Fisiológicos:";
+            label34.Click += label34_Click;
             // 
             // label35
             // 
             label35.AutoSize = true;
+            label35.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label35.ForeColor = Color.FromArgb(110, 130, 150);
-            label35.Location = new Point(50, 211);
+            label35.Location = new Point(47, 264);
             label35.Name = "label35";
-            label35.Size = new Size(114, 23);
+            label35.Size = new Size(130, 25);
             label35.TabIndex = 6;
             label35.Text = "Alimentación:";
             // 
             // label36
             // 
             label36.AutoSize = true;
+            label36.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label36.ForeColor = Color.FromArgb(110, 130, 150);
-            label36.Location = new Point(50, 274);
+            label36.Location = new Point(47, 327);
             label36.Name = "label36";
-            label36.Size = new Size(60, 23);
+            label36.Size = new Size(69, 25);
             label36.TabIndex = 7;
             label36.Text = "Dipsia:";
             // 
             // label37
             // 
             label37.AutoSize = true;
+            label37.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label37.ForeColor = Color.FromArgb(110, 130, 150);
-            label37.Location = new Point(49, 350);
+            label37.Location = new Point(46, 403);
             label37.Name = "label37";
-            label37.Size = new Size(73, 23);
+            label37.Size = new Size(84, 25);
             label37.TabIndex = 8;
             label37.Text = "Diuresis:";
             // 
             // label38
             // 
             label38.AutoSize = true;
+            label38.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label38.ForeColor = Color.FromArgb(110, 130, 150);
-            label38.Location = new Point(47, 415);
+            label38.Location = new Point(44, 468);
             label38.Name = "label38";
-            label38.Size = new Size(73, 23);
+            label38.Size = new Size(83, 25);
             label38.TabIndex = 9;
             label38.Text = "Catarsis:";
             // 
             // label39
             // 
             label39.AutoSize = true;
+            label39.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label39.ForeColor = Color.FromArgb(110, 130, 150);
-            label39.Location = new Point(47, 483);
+            label39.Location = new Point(44, 536);
             label39.Name = "label39";
-            label39.Size = new Size(71, 23);
+            label39.Size = new Size(80, 25);
             label39.TabIndex = 10;
             label39.Text = "Somnia:";
             // 
             // label40
             // 
             label40.AutoSize = true;
+            label40.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label40.ForeColor = Color.FromArgb(110, 130, 150);
-            label40.Location = new Point(47, 548);
+            label40.Location = new Point(44, 601);
             label40.Name = "label40";
-            label40.Size = new Size(56, 23);
+            label40.Size = new Size(64, 25);
             label40.TabIndex = 11;
             label40.Text = "Otros:";
             // 
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(45, 103);
+            textBox1.Font = new Font("Segoe UI Light", 12F);
+            textBox1.Location = new Point(44, 147);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(288, 30);
+            textBox1.Size = new Size(288, 34);
             textBox1.TabIndex = 12;
             // 
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(388, 103);
+            textBox2.Font = new Font("Segoe UI Light", 12F);
+            textBox2.Location = new Point(387, 147);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(288, 30);
+            textBox2.Size = new Size(288, 34);
             textBox2.TabIndex = 13;
             // 
             // textBox3
             // 
             textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(718, 103);
+            textBox3.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            textBox3.Location = new Point(717, 147);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(288, 30);
+            textBox3.Size = new Size(288, 31);
             textBox3.TabIndex = 14;
             // 
             // textBox4
             // 
             textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(50, 224);
+            textBox4.Font = new Font("Segoe UI Light", 12F);
+            textBox4.Location = new Point(47, 277);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(658, 30);
+            textBox4.Size = new Size(658, 34);
             textBox4.TabIndex = 15;
             // 
             // textBox5
             // 
             textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(50, 290);
+            textBox5.Font = new Font("Segoe UI Light", 12F);
+            textBox5.Location = new Point(47, 343);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(658, 30);
+            textBox5.Size = new Size(658, 34);
             textBox5.TabIndex = 16;
             // 
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(50, 365);
+            textBox6.Font = new Font("Segoe UI Light", 12F);
+            textBox6.Location = new Point(47, 418);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(658, 30);
+            textBox6.Size = new Size(658, 34);
             textBox6.TabIndex = 17;
             // 
             // textBox7
             // 
             textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(47, 430);
+            textBox7.Font = new Font("Segoe UI Light", 12F);
+            textBox7.Location = new Point(44, 483);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(658, 30);
+            textBox7.Size = new Size(658, 34);
             textBox7.TabIndex = 18;
             // 
             // textBox8
             // 
             textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(49, 500);
+            textBox8.Font = new Font("Segoe UI Light", 12F);
+            textBox8.Location = new Point(46, 553);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(658, 30);
+            textBox8.Size = new Size(658, 34);
             textBox8.TabIndex = 19;
             // 
             // textBox9
             // 
             textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Location = new Point(50, 566);
+            textBox9.Font = new Font("Segoe UI Light", 12F);
+            textBox9.Location = new Point(47, 619);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(658, 30);
+            textBox9.Size = new Size(658, 34);
             textBox9.TabIndex = 20;
             // 
             // tabPage4
             // 
             tabPage4.BackColor = Color.White;
-            tabPage4.Controls.Add(this.label42);
-            tabPage4.Controls.Add(this.label43);
+            tabPage4.Controls.Add(label41);
+            tabPage4.Controls.Add(label42);
+            tabPage4.Controls.Add(label43);
             tabPage4.Controls.Add(label49);
             tabPage4.Controls.Add(label50);
             tabPage4.Controls.Add(label51);
@@ -1323,132 +1401,156 @@
             tabPage4.Text = "Antec. Patológicos";
             tabPage4.Click += tabPage4_Click;
             // 
+            // label41
+            // 
+            label41.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label41.ForeColor = Color.FromArgb(67, 105, 142);
+            label41.Location = new Point(27, 24);
+            label41.Name = "label41";
+            label41.Size = new Size(606, 28);
+            label41.TabIndex = 22;
+            label41.Text = "ANTECEDENTES PERSONALES PATOLOGICOS:";
+            // 
             // label42
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new Point(26, 40);
-            this.label42.Name = "label42";
-            this.label42.Size = new Size(70, 23);
-            this.label42.TabIndex = 1;
-            this.label42.Text = "Infancia";
+            label42.AutoSize = true;
+            label42.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label42.ForeColor = Color.FromArgb(110, 130, 150);
+            label42.Location = new Point(30, 67);
+            label42.Name = "label42";
+            label42.Size = new Size(86, 25);
+            label42.TabIndex = 1;
+            label42.Text = "Infancia:";
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new Point(30, 92);
-            this.label43.Name = "label43";
-            this.label43.Size = new Size(61, 23);
-            this.label43.TabIndex = 2;
-            this.label43.Text = "Adulto";
+            label43.AutoSize = true;
+            label43.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label43.ForeColor = Color.FromArgb(110, 130, 150);
+            label43.Location = new Point(27, 127);
+            label43.Name = "label43";
+            label43.Size = new Size(75, 25);
+            label43.TabIndex = 2;
+            label43.Text = "Adulto:";
             // 
             // label49
             // 
             label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label49.ForeColor = Color.FromArgb(110, 130, 150);
-            label49.Location = new Point(26, 435);
+            label49.Location = new Point(31, 447);
             label49.Name = "label49";
-            label49.Size = new Size(102, 23);
+            label49.Size = new Size(116, 25);
             label49.TabIndex = 3;
             label49.Text = "Quirúrgicos:";
             // 
             // label50
             // 
             label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label50.ForeColor = Color.FromArgb(110, 130, 150);
-            label50.Location = new Point(26, 488);
+            label50.Location = new Point(31, 500);
             label50.Name = "label50";
-            label50.Size = new Size(140, 23);
+            label50.Size = new Size(159, 25);
             label50.TabIndex = 4;
             label50.Text = "Traumatológicos:";
             // 
             // label51
             // 
             label51.AutoSize = true;
+            label51.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label51.ForeColor = Color.FromArgb(110, 130, 150);
-            label51.Location = new Point(26, 544);
+            label51.Location = new Point(32, 560);
             label51.Name = "label51";
-            label51.Size = new Size(83, 23);
+            label51.Size = new Size(96, 25);
             label51.TabIndex = 5;
             label51.Text = "Alérgicos:";
             // 
             // label52
             // 
             label52.AutoSize = true;
+            label52.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             label52.ForeColor = Color.FromArgb(110, 130, 150);
-            label52.Location = new Point(34, 588);
+            label52.Location = new Point(39, 600);
             label52.Name = "label52";
-            label52.Size = new Size(56, 23);
+            label52.Size = new Size(64, 25);
             label52.TabIndex = 6;
             label52.Text = "Otros:";
             // 
             // textBox15
             // 
             textBox15.BorderStyle = BorderStyle.FixedSingle;
-            textBox15.Location = new Point(26, 54);
+            textBox15.Font = new Font("Segoe UI Light", 12F);
+            textBox15.Location = new Point(30, 81);
             textBox15.Name = "textBox15";
-            textBox15.Size = new Size(681, 30);
+            textBox15.Size = new Size(681, 34);
             textBox15.TabIndex = 7;
             // 
             // textBox16
             // 
             textBox16.BorderStyle = BorderStyle.FixedSingle;
-            textBox16.Location = new Point(26, 114);
+            textBox16.Font = new Font("Segoe UI Light", 12F);
+            textBox16.Location = new Point(30, 141);
             textBox16.Name = "textBox16";
-            textBox16.Size = new Size(681, 30);
+            textBox16.Size = new Size(681, 34);
             textBox16.TabIndex = 8;
             // 
             // textBox17
             // 
             textBox17.BorderStyle = BorderStyle.FixedSingle;
-            textBox17.Location = new Point(26, 446);
+            textBox17.Font = new Font("Segoe UI Light", 12F);
+            textBox17.Location = new Point(31, 458);
             textBox17.Name = "textBox17";
-            textBox17.Size = new Size(681, 30);
+            textBox17.Size = new Size(681, 34);
             textBox17.TabIndex = 9;
             // 
             // textBox18
             // 
             textBox18.BorderStyle = BorderStyle.FixedSingle;
-            textBox18.Location = new Point(26, 504);
+            textBox18.Font = new Font("Segoe UI Light", 12F);
+            textBox18.Location = new Point(31, 516);
             textBox18.Name = "textBox18";
-            textBox18.Size = new Size(681, 30);
+            textBox18.Size = new Size(681, 34);
             textBox18.TabIndex = 10;
             // 
             // textBox19
             // 
             textBox19.BorderStyle = BorderStyle.FixedSingle;
-            textBox19.Location = new Point(27, 561);
+            textBox19.Font = new Font("Segoe UI Light", 12F);
+            textBox19.Location = new Point(32, 573);
             textBox19.Name = "textBox19";
-            textBox19.Size = new Size(681, 30);
+            textBox19.Size = new Size(681, 34);
             textBox19.TabIndex = 11;
             // 
             // textBox20
             // 
             textBox20.BorderStyle = BorderStyle.FixedSingle;
-            textBox20.Location = new Point(26, 610);
+            textBox20.Font = new Font("Segoe UI Light", 12F);
+            textBox20.Location = new Point(31, 622);
             textBox20.Name = "textBox20";
-            textBox20.Size = new Size(681, 30);
+            textBox20.Size = new Size(681, 34);
             textBox20.TabIndex = 12;
             // 
             // panel6
             // 
             panel6.BackColor = Color.Transparent;
-            panel6.Controls.Add(this.label44);
+            panel6.Controls.Add(label44);
             panel6.Controls.Add(radioButton11);
             panel6.Controls.Add(radioButton12);
             panel6.Controls.Add(textBox10);
-            panel6.Location = new Point(27, 160);
+            panel6.Location = new Point(31, 184);
             panel6.Name = "panel6";
             panel6.Size = new Size(679, 45);
             panel6.TabIndex = 13;
             // 
             // label44
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new Point(11, 14);
-            this.label44.Name = "label44";
-            this.label44.Size = new Size(189, 23);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "Diabetes Mellitus tipo 2";
+            label44.AutoSize = true;
+            label44.Location = new Point(11, 14);
+            label44.Name = "label44";
+            label44.Size = new Size(189, 23);
+            label44.TabIndex = 0;
+            label44.Text = "Diabetes Mellitus tipo 2";
             // 
             // radioButton11
             // 
@@ -1471,31 +1573,32 @@
             // textBox10
             // 
             textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Font = new Font("Segoe UI Light", 12F);
             textBox10.Location = new Point(347, 11);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(307, 30);
+            textBox10.Size = new Size(307, 34);
             textBox10.TabIndex = 3;
             // 
             // panel7
             // 
             panel7.BackColor = Color.Transparent;
-            panel7.Controls.Add(this.label45);
+            panel7.Controls.Add(label45);
             panel7.Controls.Add(radioButton13);
             panel7.Controls.Add(radioButton14);
             panel7.Controls.Add(textBox11);
-            panel7.Location = new Point(27, 210);
+            panel7.Location = new Point(31, 234);
             panel7.Name = "panel7";
             panel7.Size = new Size(679, 45);
             panel7.TabIndex = 14;
             // 
             // label45
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new Point(11, 14);
-            this.label45.Name = "label45";
-            this.label45.Size = new Size(167, 23);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "Hipertensión Arterial";
+            label45.AutoSize = true;
+            label45.Location = new Point(11, 14);
+            label45.Name = "label45";
+            label45.Size = new Size(167, 23);
+            label45.TabIndex = 0;
+            label45.Text = "Hipertensión Arterial";
             // 
             // radioButton13
             // 
@@ -1518,31 +1621,32 @@
             // textBox11
             // 
             textBox11.BorderStyle = BorderStyle.FixedSingle;
+            textBox11.Font = new Font("Segoe UI Light", 12F);
             textBox11.Location = new Point(347, 11);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(307, 30);
+            textBox11.Size = new Size(307, 34);
             textBox11.TabIndex = 3;
             // 
             // panel8
             // 
             panel8.BackColor = Color.Transparent;
-            panel8.Controls.Add(this.label46);
+            panel8.Controls.Add(label46);
             panel8.Controls.Add(radioButton15);
             panel8.Controls.Add(radioButton16);
             panel8.Controls.Add(textBox12);
-            panel8.Location = new Point(27, 259);
+            panel8.Location = new Point(31, 283);
             panel8.Name = "panel8";
             panel8.Size = new Size(679, 45);
             panel8.TabIndex = 15;
             // 
             // label46
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new Point(11, 14);
-            this.label46.Name = "label46";
-            this.label46.Size = new Size(104, 23);
-            this.label46.TabIndex = 0;
-            this.label46.Text = "Tuberculosis";
+            label46.AutoSize = true;
+            label46.Location = new Point(11, 14);
+            label46.Name = "label46";
+            label46.Size = new Size(104, 23);
+            label46.TabIndex = 0;
+            label46.Text = "Tuberculosis";
             // 
             // radioButton15
             // 
@@ -1565,9 +1669,10 @@
             // textBox12
             // 
             textBox12.BorderStyle = BorderStyle.FixedSingle;
+            textBox12.Font = new Font("Segoe UI Light", 12F);
             textBox12.Location = new Point(347, 11);
             textBox12.Name = "textBox12";
-            textBox12.Size = new Size(307, 30);
+            textBox12.Size = new Size(307, 34);
             textBox12.TabIndex = 3;
             // 
             // panel9
@@ -1577,7 +1682,7 @@
             panel9.Controls.Add(radioButton17);
             panel9.Controls.Add(radioButton18);
             panel9.Controls.Add(textBox13);
-            panel9.Location = new Point(26, 309);
+            panel9.Location = new Point(30, 333);
             panel9.Name = "panel9";
             panel9.Size = new Size(679, 45);
             panel9.TabIndex = 16;
@@ -1612,9 +1717,10 @@
             // textBox13
             // 
             textBox13.BorderStyle = BorderStyle.FixedSingle;
+            textBox13.Font = new Font("Segoe UI Light", 12F);
             textBox13.Location = new Point(347, 11);
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(307, 30);
+            textBox13.Size = new Size(307, 34);
             textBox13.TabIndex = 3;
             // 
             // panel10
@@ -1624,7 +1730,7 @@
             panel10.Controls.Add(radioButton19);
             panel10.Controls.Add(radioButton20);
             panel10.Controls.Add(textBox14);
-            panel10.Location = new Point(27, 366);
+            panel10.Location = new Point(31, 390);
             panel10.Name = "panel10";
             panel10.Size = new Size(679, 45);
             panel10.TabIndex = 17;
@@ -1659,9 +1765,10 @@
             // textBox14
             // 
             textBox14.BorderStyle = BorderStyle.FixedSingle;
+            textBox14.Font = new Font("Segoe UI Light", 12F);
             textBox14.Location = new Point(347, 11);
             textBox14.Name = "textBox14";
-            textBox14.Size = new Size(307, 30);
+            textBox14.Size = new Size(307, 34);
             textBox14.TabIndex = 3;
             // 
             // tabPage5
@@ -1669,14 +1776,15 @@
             tabPage5.AutoScroll = true;
             tabPage5.AutoScrollMinSize = new Size(0, 400);
             tabPage5.BackColor = Color.White;
-            tabPage5.Controls.Add(this.label54);
+            tabPage5.Controls.Add(label59);
+            tabPage5.Controls.Add(label54);
             tabPage5.Controls.Add(dateTimePicker1);
-            tabPage5.Controls.Add(this.label55);
+            tabPage5.Controls.Add(label55);
             tabPage5.Controls.Add(dateTimePicker2);
-            tabPage5.Controls.Add(this.label56);
+            tabPage5.Controls.Add(label56);
             tabPage5.Controls.Add(numericUpDown1);
-            tabPage5.Controls.Add(this.label57);
-            tabPage5.Controls.Add(this.label58);
+            tabPage5.Controls.Add(label57);
+            tabPage5.Controls.Add(label58);
             tabPage5.Controls.Add(textBox21);
             tabPage5.Controls.Add(lblRM);
             tabPage5.Controls.Add(nudRM);
@@ -1709,100 +1817,121 @@
             tabPage5.Controls.Add(txtCirGin);
             tabPage5.Controls.Add(lblOtrosGin);
             tabPage5.Controls.Add(txtOtrosGin);
+            tabPage5.Font = new Font("Segoe UI Light", 12F);
+            tabPage5.ForeColor = SystemColors.WindowText;
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Size = new Size(1081, 654);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Gineco-Obstétricos";
+            tabPage5.Click += tabPage5_Click;
+            // 
+            // label59
+            // 
+            label59.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label59.ForeColor = Color.FromArgb(67, 105, 142);
+            label59.Location = new Point(32, 30);
+            label59.Name = "label59";
+            label59.Size = new Size(606, 28);
+            label59.TabIndex = 41;
+            label59.Text = "GINECO-OBSTÉTRICOS:";
             // 
             // label54
             // 
-            this.label54.AutoSize = true;
-            this.label54.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label54.Location = new Point(29, 32);
-            this.label54.Name = "label54";
-            this.label54.Size = new Size(49, 23);
-            this.label54.TabIndex = 0;
-            this.label54.Text = "FUM:";
+            label54.AutoSize = true;
+            label54.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label54.ForeColor = Color.FromArgb(110, 130, 150);
+            label54.Location = new Point(24, 108);
+            label54.Name = "label54";
+            label54.Size = new Size(46, 20);
+            label54.TabIndex = 0;
+            label54.Text = "FUM:";
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(80, 32);
+            dateTimePicker1.Location = new Point(76, 98);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(241, 30);
+            dateTimePicker1.Size = new Size(241, 34);
             dateTimePicker1.TabIndex = 1;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label55
             // 
-            this.label55.AutoSize = true;
-            this.label55.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label55.Location = new Point(352, 32);
-            this.label55.Name = "label55";
-            this.label55.Size = new Size(42, 23);
-            this.label55.TabIndex = 2;
-            this.label55.Text = "FPP:";
+            label55.AutoSize = true;
+            label55.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            label55.ForeColor = Color.FromArgb(110, 130, 150);
+            label55.Location = new Point(347, 108);
+            label55.Name = "label55";
+            label55.Size = new Size(39, 20);
+            label55.TabIndex = 2;
+            label55.Text = "FPP:";
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(396, 32);
+            dateTimePicker2.Location = new Point(392, 98);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(241, 30);
+            dateTimePicker2.Size = new Size(241, 34);
             dateTimePicker2.TabIndex = 3;
             // 
             // label56
             // 
-            this.label56.AutoSize = true;
-            this.label56.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label56.Location = new Point(659, 31);
-            this.label56.Name = "label56";
-            this.label56.Size = new Size(143, 23);
-            this.label56.TabIndex = 4;
-            this.label56.Text = "Edad gestacional:";
+            label56.AutoSize = true;
+            label56.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label56.ForeColor = Color.FromArgb(110, 130, 150);
+            label56.Location = new Point(653, 106);
+            label56.Name = "label56";
+            label56.Size = new Size(142, 25);
+            label56.TabIndex = 4;
+            label56.Text = "Edad gestional:";
             // 
             // numericUpDown1
             // 
             numericUpDown1.BorderStyle = BorderStyle.FixedSingle;
-            numericUpDown1.Location = new Point(804, 32);
+            numericUpDown1.Location = new Point(800, 98);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(144, 30);
+            numericUpDown1.Size = new Size(144, 34);
             numericUpDown1.TabIndex = 5;
             // 
             // label57
             // 
-            this.label57.AutoSize = true;
-            this.label57.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label57.Location = new Point(954, 32);
-            this.label57.Name = "label57";
-            this.label57.Size = new Size(76, 23);
-            this.label57.TabIndex = 6;
-            this.label57.Text = "semanas";
+            label57.AutoSize = true;
+            label57.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label57.ForeColor = Color.FromArgb(110, 130, 150);
+            label57.Location = new Point(950, 107);
+            label57.Name = "label57";
+            label57.Size = new Size(87, 25);
+            label57.TabIndex = 6;
+            label57.Text = "Semanas";
             // 
             // label58
             // 
-            this.label58.AutoSize = true;
-            this.label58.ForeColor = Color.FromArgb(110, 130, 150);
-            this.label58.Location = new Point(23, 114);
-            this.label58.Name = "label58";
-            this.label58.Size = new Size(80, 23);
-            this.label58.TabIndex = 7;
-            this.label58.Text = "Menarca:";
+            label58.AutoSize = true;
+            label58.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
+            label58.ForeColor = Color.FromArgb(110, 130, 150);
+            label58.Location = new Point(11, 191);
+            label58.Name = "label58";
+            label58.Size = new Size(91, 25);
+            label58.TabIndex = 7;
+            label58.Text = "Menarca:";
             // 
             // textBox21
             // 
             textBox21.BorderStyle = BorderStyle.FixedSingle;
-            textBox21.Location = new Point(109, 114);
+            textBox21.Font = new Font("Segoe UI Light", 12F);
+            textBox21.ForeColor = SystemColors.WindowText;
+            textBox21.Location = new Point(105, 180);
             textBox21.Name = "textBox21";
-            textBox21.Size = new Size(121, 30);
+            textBox21.Size = new Size(121, 34);
             textBox21.TabIndex = 8;
             // 
             // lblRM
             // 
             lblRM.AutoSize = true;
+            lblRM.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
             lblRM.ForeColor = Color.FromArgb(110, 130, 150);
-            lblRM.Location = new Point(254, 114);
+            lblRM.Location = new Point(243, 191);
             lblRM.Name = "lblRM";
-            lblRM.Size = new Size(140, 23);
+            lblRM.Size = new Size(134, 20);
             lblRM.TabIndex = 10;
             lblRM.Text = "RM (Rit. Menstr.):";
             lblRM.Click += lblRM_Click;
@@ -1810,17 +1939,20 @@
             // nudRM
             // 
             nudRM.BorderStyle = BorderStyle.FixedSingle;
-            nudRM.Location = new Point(396, 112);
+            nudRM.Font = new Font("Segoe UI Light", 12F);
+            nudRM.ForeColor = SystemColors.WindowText;
+            nudRM.Location = new Point(383, 178);
             nudRM.Name = "nudRM";
-            nudRM.Size = new Size(60, 30);
+            nudRM.Size = new Size(60, 34);
             nudRM.TabIndex = 11;
             // 
             // lblSlash1
             // 
             lblSlash1.AutoSize = true;
-            lblSlash1.Location = new Point(462, 114);
+            lblSlash1.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
+            lblSlash1.Location = new Point(449, 180);
             lblSlash1.Name = "lblSlash1";
-            lblSlash1.Size = new Size(17, 23);
+            lblSlash1.Size = new Size(16, 20);
             lblSlash1.TabIndex = 12;
             lblSlash1.Text = "/";
             lblSlash1.Click += lblSlash1_Click_1;
@@ -1828,253 +1960,292 @@
             // nudRitmo
             // 
             nudRitmo.BorderStyle = BorderStyle.FixedSingle;
-            nudRitmo.Location = new Point(485, 112);
+            nudRitmo.Font = new Font("Segoe UI Light", 12F);
+            nudRitmo.ForeColor = SystemColors.WindowText;
+            nudRitmo.Location = new Point(472, 178);
             nudRitmo.Name = "nudRitmo";
-            nudRitmo.Size = new Size(50, 30);
+            nudRitmo.Size = new Size(50, 34);
             nudRitmo.TabIndex = 13;
             // 
             // lblIRS
             // 
             lblIRS.AutoSize = true;
+            lblIRS.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
             lblIRS.ForeColor = Color.FromArgb(110, 130, 150);
-            lblIRS.Location = new Point(541, 115);
+            lblIRS.Location = new Point(528, 181);
             lblIRS.Name = "lblIRS";
-            lblIRS.Size = new Size(34, 23);
+            lblIRS.Size = new Size(32, 20);
             lblIRS.TabIndex = 14;
             lblIRS.Text = "IRS";
             // 
             // nudIRS
             // 
             nudIRS.BorderStyle = BorderStyle.FixedSingle;
-            nudIRS.Location = new Point(581, 112);
+            nudIRS.Font = new Font("Segoe UI Light", 12F);
+            nudIRS.ForeColor = SystemColors.WindowText;
+            nudIRS.Location = new Point(568, 178);
             nudIRS.Name = "nudIRS";
-            nudIRS.Size = new Size(60, 30);
+            nudIRS.Size = new Size(60, 34);
             nudIRS.TabIndex = 15;
             // 
             // lblParejas
             // 
             lblParejas.AutoSize = true;
+            lblParejas.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblParejas.ForeColor = Color.FromArgb(110, 130, 150);
-            lblParejas.Location = new Point(659, 114);
+            lblParejas.Location = new Point(643, 186);
             lblParejas.Name = "lblParejas";
-            lblParejas.Size = new Size(93, 23);
+            lblParejas.Size = new Size(105, 25);
             lblParejas.TabIndex = 16;
-            lblParejas.Text = "Nº parejas:";
+            lblParejas.Text = "Nº Parejas:";
             // 
             // nudParejas
             // 
             nudParejas.BorderStyle = BorderStyle.FixedSingle;
-            nudParejas.Location = new Point(758, 113);
+            nudParejas.Font = new Font("Segoe UI Light", 12F);
+            nudParejas.ForeColor = SystemColors.WindowText;
+            nudParejas.Location = new Point(748, 178);
             nudParejas.Name = "nudParejas";
-            nudParejas.Size = new Size(60, 30);
+            nudParejas.Size = new Size(60, 34);
             nudParejas.TabIndex = 17;
             // 
             // lblFlujo
             // 
             lblFlujo.AutoSize = true;
+            lblFlujo.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblFlujo.ForeColor = Color.FromArgb(110, 130, 150);
-            lblFlujo.Location = new Point(830, 117);
+            lblFlujo.Location = new Point(823, 188);
             lblFlujo.Name = "lblFlujo";
-            lblFlujo.Size = new Size(107, 23);
+            lblFlujo.Size = new Size(124, 25);
             lblFlujo.TabIndex = 18;
-            lblFlujo.Text = "Flujo genital:";
+            lblFlujo.Text = "Flujo Genital:";
             // 
             // txtFlujo
             // 
             txtFlujo.BorderStyle = BorderStyle.FixedSingle;
-            txtFlujo.Location = new Point(943, 115);
+            txtFlujo.Font = new Font("Segoe UI Light", 12F);
+            txtFlujo.ForeColor = SystemColors.WindowText;
+            txtFlujo.Location = new Point(949, 180);
             txtFlujo.Name = "txtFlujo";
-            txtFlujo.Size = new Size(120, 30);
+            txtFlujo.Size = new Size(120, 34);
             txtFlujo.TabIndex = 19;
             // 
             // lblGestas
             // 
             lblGestas.AutoSize = true;
+            lblGestas.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblGestas.ForeColor = Color.FromArgb(110, 130, 150);
-            lblGestas.Location = new Point(21, 203);
+            lblGestas.Location = new Point(32, 272);
             lblGestas.Name = "lblGestas";
-            lblGestas.Size = new Size(64, 23);
+            lblGestas.Size = new Size(73, 25);
             lblGestas.TabIndex = 20;
             lblGestas.Text = "Gestas:";
             // 
             // nudGestas
             // 
             nudGestas.BorderStyle = BorderStyle.FixedSingle;
-            nudGestas.Location = new Point(91, 196);
+            nudGestas.Font = new Font("Segoe UI Light", 12F);
+            nudGestas.ForeColor = SystemColors.WindowText;
+            nudGestas.Location = new Point(105, 264);
             nudGestas.Name = "nudGestas";
-            nudGestas.Size = new Size(60, 30);
+            nudGestas.Size = new Size(60, 34);
             nudGestas.TabIndex = 21;
             // 
             // lblPartos
             // 
             lblPartos.AutoSize = true;
+            lblPartos.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblPartos.ForeColor = Color.FromArgb(110, 130, 150);
-            lblPartos.Location = new Point(185, 198);
+            lblPartos.Location = new Point(191, 272);
             lblPartos.Name = "lblPartos";
-            lblPartos.Size = new Size(61, 23);
+            lblPartos.Size = new Size(72, 25);
             lblPartos.TabIndex = 22;
             lblPartos.Text = "Partos:";
             // 
             // nudPartos
             // 
             nudPartos.BorderStyle = BorderStyle.FixedSingle;
-            nudPartos.Location = new Point(252, 196);
+            nudPartos.Font = new Font("Segoe UI Light", 12F);
+            nudPartos.ForeColor = SystemColors.WindowText;
+            nudPartos.Location = new Point(266, 262);
             nudPartos.Name = "nudPartos";
-            nudPartos.Size = new Size(60, 30);
+            nudPartos.Size = new Size(60, 34);
             nudPartos.TabIndex = 23;
             // 
             // lblCesareas
             // 
             lblCesareas.AutoSize = true;
+            lblCesareas.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblCesareas.ForeColor = Color.FromArgb(110, 130, 150);
-            lblCesareas.Location = new Point(339, 198);
+            lblCesareas.Location = new Point(353, 269);
             lblCesareas.Name = "lblCesareas";
-            lblCesareas.Size = new Size(81, 23);
+            lblCesareas.Size = new Size(96, 25);
             lblCesareas.TabIndex = 24;
-            lblCesareas.Text = "Cesáreas:";
+            lblCesareas.Text = "Cesáreas: ";
             // 
             // nudCesareas
             // 
             nudCesareas.BorderStyle = BorderStyle.FixedSingle;
-            nudCesareas.Location = new Point(426, 196);
+            nudCesareas.Font = new Font("Segoe UI Light", 12F);
+            nudCesareas.ForeColor = SystemColors.WindowText;
+            nudCesareas.Location = new Point(449, 262);
             nudCesareas.Name = "nudCesareas";
-            nudCesareas.Size = new Size(60, 30);
+            nudCesareas.Size = new Size(60, 34);
             nudCesareas.TabIndex = 25;
             // 
             // lblAbortos
             // 
             lblAbortos.AutoSize = true;
+            lblAbortos.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAbortos.ForeColor = Color.FromArgb(110, 130, 150);
-            lblAbortos.Location = new Point(523, 201);
+            lblAbortos.Location = new Point(546, 272);
             lblAbortos.Name = "lblAbortos";
-            lblAbortos.Size = new Size(74, 23);
+            lblAbortos.Size = new Size(86, 25);
             lblAbortos.TabIndex = 26;
             lblAbortos.Text = "Abortos:";
             // 
             // nudAbortos
             // 
             nudAbortos.BorderStyle = BorderStyle.FixedSingle;
-            nudAbortos.Location = new Point(603, 196);
+            nudAbortos.Font = new Font("Segoe UI Light", 12F);
+            nudAbortos.ForeColor = SystemColors.WindowText;
+            nudAbortos.Location = new Point(643, 262);
             nudAbortos.Name = "nudAbortos";
-            nudAbortos.Size = new Size(60, 30);
+            nudAbortos.Size = new Size(60, 34);
             nudAbortos.TabIndex = 27;
             // 
             // lblAntico
             // 
             lblAntico.AutoSize = true;
+            lblAntico.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAntico.ForeColor = Color.FromArgb(110, 130, 150);
-            lblAntico.Location = new Point(694, 199);
+            lblAntico.Location = new Point(740, 267);
             lblAntico.Name = "lblAntico";
-            lblAntico.Size = new Size(135, 23);
+            lblAntico.Size = new Size(155, 25);
             lblAntico.TabIndex = 28;
             lblAntico.Text = "Anticonceptivos:";
             // 
             // rbAnticoSi
             // 
             rbAnticoSi.AutoSize = true;
-            rbAnticoSi.Location = new Point(831, 196);
+            rbAnticoSi.Location = new Point(901, 267);
             rbAnticoSi.Name = "rbAnticoSi";
-            rbAnticoSi.Size = new Size(44, 27);
+            rbAnticoSi.Size = new Size(47, 32);
             rbAnticoSi.TabIndex = 29;
             rbAnticoSi.Text = "Sí";
             // 
             // rbAnticoNo
             // 
             rbAnticoNo.AutoSize = true;
-            rbAnticoNo.Location = new Point(881, 196);
+            rbAnticoNo.Location = new Point(951, 267);
             rbAnticoNo.Name = "rbAnticoNo";
-            rbAnticoNo.Size = new Size(54, 27);
+            rbAnticoNo.Size = new Size(58, 32);
             rbAnticoNo.TabIndex = 30;
             rbAnticoNo.Text = "No";
             // 
             // lblTipo
             // 
             lblTipo.AutoSize = true;
+            lblTipo.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblTipo.ForeColor = Color.FromArgb(110, 130, 150);
-            lblTipo.Location = new Point(27, 283);
+            lblTipo.Location = new Point(110, 342);
             lblTipo.Name = "lblTipo";
-            lblTipo.Size = new Size(47, 23);
+            lblTipo.Size = new Size(55, 25);
             lblTipo.TabIndex = 31;
             lblTipo.Text = "Tipo:";
             // 
             // txtTipo
             // 
             txtTipo.BorderStyle = BorderStyle.FixedSingle;
-            txtTipo.Location = new Point(80, 281);
+            txtTipo.Font = new Font("Segoe UI Light", 12F);
+            txtTipo.ForeColor = SystemColors.WindowText;
+            txtTipo.Location = new Point(170, 340);
             txtTipo.Name = "txtTipo";
-            txtTipo.Size = new Size(200, 30);
+            txtTipo.Size = new Size(200, 34);
             txtTipo.TabIndex = 32;
             // 
             // lblTiempo
             // 
             lblTiempo.AutoSize = true;
+            lblTiempo.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblTiempo.ForeColor = Color.FromArgb(110, 130, 150);
-            lblTiempo.Location = new Point(297, 283);
+            lblTiempo.Location = new Point(396, 342);
             lblTiempo.Name = "lblTiempo";
-            lblTiempo.Size = new Size(71, 23);
+            lblTiempo.Size = new Size(81, 25);
             lblTiempo.TabIndex = 33;
             lblTiempo.Text = "Tiempo:";
             // 
             // txtTiempo
             // 
             txtTiempo.BorderStyle = BorderStyle.FixedSingle;
-            txtTiempo.Location = new Point(373, 281);
+            txtTiempo.Font = new Font("Segoe UI Light", 12F);
+            txtTiempo.ForeColor = SystemColors.WindowText;
+            txtTiempo.Location = new Point(478, 340);
             txtTiempo.Name = "txtTiempo";
-            txtTiempo.Size = new Size(150, 30);
+            txtTiempo.Size = new Size(150, 34);
             txtTiempo.TabIndex = 34;
             // 
             // lblUltToma
             // 
             lblUltToma.AutoSize = true;
+            lblUltToma.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblUltToma.ForeColor = Color.FromArgb(110, 130, 150);
-            lblUltToma.Location = new Point(563, 283);
+            lblUltToma.Location = new Point(653, 345);
             lblUltToma.Name = "lblUltToma";
-            lblUltToma.Size = new Size(109, 23);
+            lblUltToma.Size = new Size(122, 25);
             lblUltToma.TabIndex = 35;
             lblUltToma.Text = "Última toma:";
             // 
             // txtUltToma
             // 
             txtUltToma.BorderStyle = BorderStyle.FixedSingle;
-            txtUltToma.Location = new Point(672, 276);
+            txtUltToma.Font = new Font("Segoe UI Light", 12F);
+            txtUltToma.ForeColor = SystemColors.WindowText;
+            txtUltToma.Location = new Point(781, 340);
             txtUltToma.Name = "txtUltToma";
-            txtUltToma.Size = new Size(200, 30);
+            txtUltToma.Size = new Size(200, 34);
             txtUltToma.TabIndex = 36;
             // 
             // lblCirGin
             // 
             lblCirGin.AutoSize = true;
+            lblCirGin.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
             lblCirGin.ForeColor = Color.FromArgb(110, 130, 150);
-            lblCirGin.Location = new Point(27, 339);
+            lblCirGin.Location = new Point(23, 413);
             lblCirGin.Name = "lblCirGin";
-            lblCirGin.Size = new Size(277, 23);
+            lblCirGin.Size = new Size(312, 20);
             lblCirGin.TabIndex = 37;
-            lblCirGin.Text = "Cirugías ginecológicas (especificar):";
+            lblCirGin.Text = "CIRUGÍAS GINECOLÓGICAS (ESPECIFICAR):";
             // 
             // txtCirGin
             // 
             txtCirGin.BorderStyle = BorderStyle.FixedSingle;
-            txtCirGin.Location = new Point(27, 361);
+            txtCirGin.Font = new Font("Segoe UI Light", 12F);
+            txtCirGin.ForeColor = SystemColors.WindowText;
+            txtCirGin.Location = new Point(23, 427);
             txtCirGin.Name = "txtCirGin";
-            txtCirGin.Size = new Size(1020, 30);
+            txtCirGin.Size = new Size(1020, 34);
             txtCirGin.TabIndex = 38;
             // 
             // lblOtrosGin
             // 
             lblOtrosGin.AutoSize = true;
+            lblOtrosGin.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
             lblOtrosGin.ForeColor = Color.FromArgb(110, 130, 150);
-            lblOtrosGin.Location = new Point(27, 411);
+            lblOtrosGin.Location = new Point(23, 477);
             lblOtrosGin.Name = "lblOtrosGin";
-            lblOtrosGin.Size = new Size(56, 23);
+            lblOtrosGin.Size = new Size(52, 20);
             lblOtrosGin.TabIndex = 39;
             lblOtrosGin.Text = "Otros:";
             // 
             // txtOtrosGin
             // 
             txtOtrosGin.BorderStyle = BorderStyle.FixedSingle;
-            txtOtrosGin.Location = new Point(27, 427);
+            txtOtrosGin.Font = new Font("Segoe UI Light", 12F);
+            txtOtrosGin.ForeColor = SystemColors.WindowText;
+            txtOtrosGin.Location = new Point(23, 493);
             txtOtrosGin.Name = "txtOtrosGin";
-            txtOtrosGin.Size = new Size(1020, 30);
+            txtOtrosGin.Size = new Size(1020, 34);
             txtOtrosGin.TabIndex = 40;
             // 
             // tabPage6
@@ -2118,217 +2289,241 @@
             // lblAp1
             // 
             lblAp1.AutoSize = true;
+            lblAp1.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp1.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp1.Location = new Point(24, 296);
             lblAp1.Name = "lblAp1";
-            lblAp1.Size = new Size(167, 23);
+            lblAp1.Size = new Size(190, 25);
             lblAp1.TabIndex = 0;
             lblAp1.Text = "Aparato respiratorio:";
             // 
             // txtAp1
             // 
             txtAp1.BorderStyle = BorderStyle.FixedSingle;
+            txtAp1.Font = new Font("Segoe UI Light", 12F);
             txtAp1.Location = new Point(24, 316);
             txtAp1.Name = "txtAp1";
-            txtAp1.Size = new Size(1020, 30);
+            txtAp1.Size = new Size(1020, 34);
             txtAp1.TabIndex = 1;
             // 
             // lblAp2
             // 
             lblAp2.AutoSize = true;
+            lblAp2.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp2.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp2.Location = new Point(24, 354);
             lblAp2.Name = "lblAp2";
-            lblAp2.Size = new Size(148, 23);
+            lblAp2.Size = new Size(169, 25);
             lblAp2.TabIndex = 2;
             lblAp2.Text = "Aparato digestivo:";
             // 
             // txtAp2
             // 
             txtAp2.BorderStyle = BorderStyle.FixedSingle;
+            txtAp2.Font = new Font("Segoe UI Light", 12F);
             txtAp2.Location = new Point(24, 374);
             txtAp2.Name = "txtAp2";
-            txtAp2.Size = new Size(1020, 30);
+            txtAp2.Size = new Size(1020, 34);
             txtAp2.TabIndex = 3;
             // 
             // lblAp3
             // 
             lblAp3.AutoSize = true;
+            lblAp3.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp3.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp3.Location = new Point(24, 412);
             lblAp3.Name = "lblAp3";
-            lblAp3.Size = new Size(188, 23);
+            lblAp3.Size = new Size(215, 25);
             lblAp3.TabIndex = 4;
             lblAp3.Text = "Aparato cardiovascular:";
             // 
             // txtAp3
             // 
             txtAp3.BorderStyle = BorderStyle.FixedSingle;
+            txtAp3.Font = new Font("Segoe UI Light", 12F);
             txtAp3.Location = new Point(24, 432);
             txtAp3.Name = "txtAp3";
-            txtAp3.Size = new Size(1020, 30);
+            txtAp3.Size = new Size(1020, 34);
             txtAp3.TabIndex = 5;
             // 
             // lblAp4
             // 
             lblAp4.AutoSize = true;
+            lblAp4.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp4.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp4.Location = new Point(24, 470);
             lblAp4.Name = "lblAp4";
-            lblAp4.Size = new Size(195, 23);
+            lblAp4.Size = new Size(221, 25);
             lblAp4.TabIndex = 6;
             lblAp4.Text = "Aparato renal y urinario:";
             // 
             // txtAp4
             // 
             txtAp4.BorderStyle = BorderStyle.FixedSingle;
+            txtAp4.Font = new Font("Segoe UI Light", 12F);
             txtAp4.Location = new Point(24, 490);
             txtAp4.Name = "txtAp4";
-            txtAp4.Size = new Size(1020, 30);
+            txtAp4.Size = new Size(1020, 34);
             txtAp4.TabIndex = 7;
             // 
             // lblAp5
             // 
             lblAp5.AutoSize = true;
+            lblAp5.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp5.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp5.Location = new Point(24, 528);
             lblAp5.Name = "lblAp5";
-            lblAp5.Size = new Size(132, 23);
+            lblAp5.Size = new Size(150, 25);
             lblAp5.TabIndex = 8;
             lblAp5.Text = "Aparato genital:";
             // 
             // txtAp5
             // 
             txtAp5.BorderStyle = BorderStyle.FixedSingle;
+            txtAp5.Font = new Font("Segoe UI Light", 12F);
             txtAp5.Location = new Point(24, 548);
             txtAp5.Name = "txtAp5";
-            txtAp5.Size = new Size(1020, 30);
+            txtAp5.Size = new Size(1020, 34);
             txtAp5.TabIndex = 9;
             // 
             // lblAp6
             // 
             lblAp6.AutoSize = true;
+            lblAp6.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp6.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp6.Location = new Point(24, 586);
             lblAp6.Name = "lblAp6";
-            lblAp6.Size = new Size(155, 23);
+            lblAp6.Size = new Size(174, 25);
             lblAp6.TabIndex = 10;
             lblAp6.Text = "Sistema endocrino:";
             // 
             // txtAp6
             // 
             txtAp6.BorderStyle = BorderStyle.FixedSingle;
+            txtAp6.Font = new Font("Segoe UI Light", 12F);
             txtAp6.Location = new Point(24, 606);
             txtAp6.Name = "txtAp6";
-            txtAp6.Size = new Size(1020, 30);
+            txtAp6.Size = new Size(1020, 34);
             txtAp6.TabIndex = 11;
             // 
             // lblAp7
             // 
             lblAp7.AutoSize = true;
+            lblAp7.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp7.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp7.Location = new Point(24, 644);
             lblAp7.Name = "lblAp7";
-            lblAp7.Size = new Size(280, 23);
+            lblAp7.Size = new Size(317, 25);
             lblAp7.TabIndex = 12;
             lblAp7.Text = "Sistema hematopoyético y linfático:";
             // 
             // txtAp7
             // 
             txtAp7.BorderStyle = BorderStyle.FixedSingle;
+            txtAp7.Font = new Font("Segoe UI Light", 12F);
             txtAp7.Location = new Point(24, 664);
             txtAp7.Name = "txtAp7";
-            txtAp7.Size = new Size(1020, 30);
+            txtAp7.Size = new Size(1020, 34);
             txtAp7.TabIndex = 13;
             // 
             // lblAp8
             // 
             lblAp8.AutoSize = true;
+            lblAp8.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp8.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp8.Location = new Point(24, 702);
             lblAp8.Name = "lblAp8";
-            lblAp8.Size = new Size(112, 23);
+            lblAp8.Size = new Size(128, 25);
             lblAp8.TabIndex = 14;
             lblAp8.Text = "Piel y anexos:";
             // 
             // txtAp8
             // 
             txtAp8.BorderStyle = BorderStyle.FixedSingle;
+            txtAp8.Font = new Font("Segoe UI Light", 12F);
             txtAp8.Location = new Point(24, 722);
             txtAp8.Name = "txtAp8";
-            txtAp8.Size = new Size(1020, 30);
+            txtAp8.Size = new Size(1020, 34);
             txtAp8.TabIndex = 15;
             // 
             // lblAp9
             // 
             lblAp9.AutoSize = true;
+            lblAp9.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp9.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp9.Location = new Point(24, 760);
             lblAp9.Name = "lblAp9";
-            lblAp9.Size = new Size(169, 23);
+            lblAp9.Size = new Size(191, 25);
             lblAp9.TabIndex = 16;
             lblAp9.Text = "Músculo esquelético:";
             // 
             // txtAp9
             // 
             txtAp9.BorderStyle = BorderStyle.FixedSingle;
+            txtAp9.Font = new Font("Segoe UI Light", 12F);
             txtAp9.Location = new Point(24, 780);
             txtAp9.Name = "txtAp9";
-            txtAp9.Size = new Size(1020, 30);
+            txtAp9.Size = new Size(1020, 34);
             txtAp9.TabIndex = 17;
             // 
             // lblAp10
             // 
             lblAp10.AutoSize = true;
+            lblAp10.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp10.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp10.Location = new Point(24, 818);
             lblAp10.Name = "lblAp10";
-            lblAp10.Size = new Size(142, 23);
+            lblAp10.Size = new Size(162, 25);
             lblAp10.TabIndex = 18;
             lblAp10.Text = "Sistema nervioso:";
             // 
             // txtAp10
             // 
             txtAp10.BorderStyle = BorderStyle.FixedSingle;
+            txtAp10.Font = new Font("Segoe UI Light", 12F);
             txtAp10.Location = new Point(24, 838);
             txtAp10.Name = "txtAp10";
-            txtAp10.Size = new Size(1020, 30);
+            txtAp10.Size = new Size(1020, 34);
             txtAp10.TabIndex = 19;
             // 
             // lblAp11
             // 
             lblAp11.AutoSize = true;
+            lblAp11.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp11.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp11.Location = new Point(24, 876);
             lblAp11.Name = "lblAp11";
-            lblAp11.Size = new Size(197, 23);
+            lblAp11.Size = new Size(220, 25);
             lblAp11.TabIndex = 20;
             lblAp11.Text = "Órganos de los sentidos:";
             // 
             // txtAp11
             // 
             txtAp11.BorderStyle = BorderStyle.FixedSingle;
+            txtAp11.Font = new Font("Segoe UI Light", 12F);
             txtAp11.Location = new Point(24, 896);
             txtAp11.Name = "txtAp11";
-            txtAp11.Size = new Size(1020, 30);
+            txtAp11.Size = new Size(1020, 34);
             txtAp11.TabIndex = 21;
             // 
             // lblAp12
             // 
             lblAp12.AutoSize = true;
+            lblAp12.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblAp12.ForeColor = Color.FromArgb(110, 130, 150);
             lblAp12.Location = new Point(24, 934);
             lblAp12.Name = "lblAp12";
-            lblAp12.Size = new Size(162, 23);
+            lblAp12.Size = new Size(182, 25);
             lblAp12.TabIndex = 22;
             lblAp12.Text = "Síntomas generales:";
             // 
             // txtAp12
             // 
             txtAp12.BorderStyle = BorderStyle.FixedSingle;
+            txtAp12.Font = new Font("Segoe UI Light", 12F);
             txtAp12.Location = new Point(24, 954);
             txtAp12.Name = "txtAp12";
-            txtAp12.Size = new Size(1020, 30);
+            txtAp12.Size = new Size(1020, 34);
             txtAp12.TabIndex = 23;
             // 
             // lblPadActual
@@ -2345,7 +2540,7 @@
             // rtbPadActual
             // 
             rtbPadActual.BorderStyle = BorderStyle.FixedSingle;
-            rtbPadActual.Font = new Font("Segoe UI", 10F);
+            rtbPadActual.Font = new Font("Segoe UI Light", 12F);
             rtbPadActual.Location = new Point(24, 46);
             rtbPadActual.Name = "rtbPadActual";
             rtbPadActual.Size = new Size(1020, 200);
@@ -2413,107 +2608,118 @@
             // lblSVFC
             // 
             lblSVFC.AutoSize = true;
+            lblSVFC.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblSVFC.ForeColor = Color.FromArgb(110, 130, 150);
-            lblSVFC.Location = new Point(140, 120);
+            lblSVFC.Location = new Point(179, 123);
             lblSVFC.Name = "lblSVFC";
-            lblSVFC.Size = new Size(33, 23);
+            lblSVFC.Size = new Size(37, 25);
             lblSVFC.TabIndex = 0;
             lblSVFC.Text = "FC:";
             // 
             // txtSVFC
             // 
             txtSVFC.BorderStyle = BorderStyle.FixedSingle;
-            txtSVFC.Location = new Point(140, 140);
+            txtSVFC.Font = new Font("Segoe UI Light", 12F);
+            txtSVFC.Location = new Point(179, 143);
             txtSVFC.Name = "txtSVFC";
-            txtSVFC.Size = new Size(130, 30);
+            txtSVFC.Size = new Size(130, 34);
             txtSVFC.TabIndex = 1;
             // 
             // lblSVTA
             // 
             lblSVTA.AutoSize = true;
+            lblSVTA.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblSVTA.ForeColor = Color.FromArgb(110, 130, 150);
-            lblSVTA.Location = new Point(298, 120);
+            lblSVTA.Location = new Point(337, 123);
             lblSVTA.Name = "lblSVTA";
-            lblSVTA.Size = new Size(33, 23);
+            lblSVTA.Size = new Size(40, 25);
             lblSVTA.TabIndex = 2;
             lblSVTA.Text = "TA:";
             // 
             // txtSVTA
             // 
             txtSVTA.BorderStyle = BorderStyle.FixedSingle;
-            txtSVTA.Location = new Point(298, 140);
+            txtSVTA.Font = new Font("Segoe UI Light", 12F);
+            txtSVTA.Location = new Point(337, 143);
             txtSVTA.Name = "txtSVTA";
-            txtSVTA.Size = new Size(130, 30);
+            txtSVTA.Size = new Size(130, 34);
             txtSVTA.TabIndex = 3;
             // 
             // lblSVFR
             // 
             lblSVFR.AutoSize = true;
+            lblSVFR.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblSVFR.ForeColor = Color.FromArgb(110, 130, 150);
-            lblSVFR.Location = new Point(456, 120);
+            lblSVFR.Location = new Point(495, 123);
             lblSVFR.Name = "lblSVFR";
-            lblSVFR.Size = new Size(32, 23);
+            lblSVFR.Size = new Size(38, 25);
             lblSVFR.TabIndex = 4;
             lblSVFR.Text = "FR:";
             // 
             // txtSVFR
             // 
             txtSVFR.BorderStyle = BorderStyle.FixedSingle;
-            txtSVFR.Location = new Point(456, 140);
+            txtSVFR.Font = new Font("Segoe UI Light", 12F);
+            txtSVFR.Location = new Point(495, 143);
             txtSVFR.Name = "txtSVFR";
-            txtSVFR.Size = new Size(130, 30);
+            txtSVFR.Size = new Size(130, 34);
             txtSVFR.TabIndex = 5;
             // 
             // lblSVPulso
             // 
             lblSVPulso.AutoSize = true;
+            lblSVPulso.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblSVPulso.ForeColor = Color.FromArgb(110, 130, 150);
-            lblSVPulso.Location = new Point(614, 120);
+            lblSVPulso.Location = new Point(653, 123);
             lblSVPulso.Name = "lblSVPulso";
-            lblSVPulso.Size = new Size(55, 23);
+            lblSVPulso.Size = new Size(63, 25);
             lblSVPulso.TabIndex = 6;
             lblSVPulso.Text = "Pulso:";
             // 
             // txtSVPulso
             // 
             txtSVPulso.BorderStyle = BorderStyle.FixedSingle;
-            txtSVPulso.Location = new Point(614, 140);
+            txtSVPulso.Font = new Font("Segoe UI Light", 12F);
+            txtSVPulso.Location = new Point(653, 143);
             txtSVPulso.Name = "txtSVPulso";
-            txtSVPulso.Size = new Size(130, 30);
+            txtSVPulso.Size = new Size(130, 34);
             txtSVPulso.TabIndex = 7;
             // 
             // lblSVTemperatura
             // 
             lblSVTemperatura.AutoSize = true;
+            lblSVTemperatura.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblSVTemperatura.ForeColor = Color.FromArgb(110, 130, 150);
-            lblSVTemperatura.Location = new Point(772, 120);
+            lblSVTemperatura.Location = new Point(811, 123);
             lblSVTemperatura.Name = "lblSVTemperatura";
-            lblSVTemperatura.Size = new Size(110, 23);
+            lblSVTemperatura.Size = new Size(125, 25);
             lblSVTemperatura.TabIndex = 8;
             lblSVTemperatura.Text = "Temperatura:";
             // 
             // txtSVTemperatura
             // 
             txtSVTemperatura.BorderStyle = BorderStyle.FixedSingle;
-            txtSVTemperatura.Location = new Point(772, 140);
+            txtSVTemperatura.Font = new Font("Segoe UI Light", 12F);
+            txtSVTemperatura.Location = new Point(811, 143);
             txtSVTemperatura.Name = "txtSVTemperatura";
-            txtSVTemperatura.Size = new Size(130, 30);
+            txtSVTemperatura.Size = new Size(130, 34);
             txtSVTemperatura.TabIndex = 9;
             // 
             // lblRegInspGen
             // 
             lblRegInspGen.AutoSize = true;
+            lblRegInspGen.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegInspGen.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegInspGen.Location = new Point(24, 230);
             lblRegInspGen.Name = "lblRegInspGen";
-            lblRegInspGen.Size = new Size(157, 23);
+            lblRegInspGen.Size = new Size(177, 25);
             lblRegInspGen.TabIndex = 10;
             lblRegInspGen.Text = "Inspección general:";
             // 
             // rtbRegInspGen
             // 
             rtbRegInspGen.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegInspGen.Font = new Font("Segoe UI", 10F);
+            rtbRegInspGen.Font = new Font("Segoe UI Light", 12F);
             rtbRegInspGen.Location = new Point(24, 252);
             rtbRegInspGen.Name = "rtbRegInspGen";
             rtbRegInspGen.Size = new Size(1020, 60);
@@ -2523,17 +2729,18 @@
             // lblRegCabeza
             // 
             lblRegCabeza.AutoSize = true;
+            lblRegCabeza.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegCabeza.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegCabeza.Location = new Point(24, 330);
             lblRegCabeza.Name = "lblRegCabeza";
-            lblRegCabeza.Size = new Size(70, 23);
+            lblRegCabeza.Size = new Size(78, 25);
             lblRegCabeza.TabIndex = 12;
             lblRegCabeza.Text = "Cabeza:";
             // 
             // rtbRegCabeza
             // 
             rtbRegCabeza.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegCabeza.Font = new Font("Segoe UI", 10F);
+            rtbRegCabeza.Font = new Font("Segoe UI Light", 12F);
             rtbRegCabeza.Location = new Point(24, 352);
             rtbRegCabeza.Name = "rtbRegCabeza";
             rtbRegCabeza.Size = new Size(1020, 60);
@@ -2543,17 +2750,18 @@
             // lblRegCuello
             // 
             lblRegCuello.AutoSize = true;
+            lblRegCuello.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegCuello.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegCuello.Location = new Point(24, 430);
             lblRegCuello.Name = "lblRegCuello";
-            lblRegCuello.Size = new Size(62, 23);
+            lblRegCuello.Size = new Size(70, 25);
             lblRegCuello.TabIndex = 14;
             lblRegCuello.Text = "Cuello:";
             // 
             // rtbRegCuello
             // 
             rtbRegCuello.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegCuello.Font = new Font("Segoe UI", 10F);
+            rtbRegCuello.Font = new Font("Segoe UI Light", 12F);
             rtbRegCuello.Location = new Point(24, 452);
             rtbRegCuello.Name = "rtbRegCuello";
             rtbRegCuello.Size = new Size(1020, 60);
@@ -2563,17 +2771,18 @@
             // lblRegTorax
             // 
             lblRegTorax.AutoSize = true;
+            lblRegTorax.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegTorax.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegTorax.Location = new Point(24, 530);
             lblRegTorax.Name = "lblRegTorax";
-            lblRegTorax.Size = new Size(54, 23);
+            lblRegTorax.Size = new Size(64, 25);
             lblRegTorax.TabIndex = 16;
             lblRegTorax.Text = "Tórax:";
             // 
             // rtbRegTorax
             // 
             rtbRegTorax.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegTorax.Font = new Font("Segoe UI", 10F);
+            rtbRegTorax.Font = new Font("Segoe UI Light", 12F);
             rtbRegTorax.Location = new Point(24, 552);
             rtbRegTorax.Name = "rtbRegTorax";
             rtbRegTorax.Size = new Size(1020, 60);
@@ -2583,17 +2792,18 @@
             // lblRegAbdomen
             // 
             lblRegAbdomen.AutoSize = true;
+            lblRegAbdomen.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegAbdomen.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegAbdomen.Location = new Point(24, 630);
             lblRegAbdomen.Name = "lblRegAbdomen";
-            lblRegAbdomen.Size = new Size(89, 23);
+            lblRegAbdomen.Size = new Size(100, 25);
             lblRegAbdomen.TabIndex = 18;
             lblRegAbdomen.Text = "Abdomen:";
             // 
             // rtbRegAbdomen
             // 
             rtbRegAbdomen.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegAbdomen.Font = new Font("Segoe UI", 10F);
+            rtbRegAbdomen.Font = new Font("Segoe UI Light", 12F);
             rtbRegAbdomen.Location = new Point(24, 652);
             rtbRegAbdomen.Name = "rtbRegAbdomen";
             rtbRegAbdomen.Size = new Size(1020, 60);
@@ -2603,17 +2813,18 @@
             // lblRegTacto
             // 
             lblRegTacto.AutoSize = true;
+            lblRegTacto.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegTacto.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegTacto.Location = new Point(24, 730);
             lblRegTacto.Name = "lblRegTacto";
-            lblRegTacto.Size = new Size(173, 23);
+            lblRegTacto.Size = new Size(198, 25);
             lblRegTacto.TabIndex = 20;
             lblRegTacto.Text = "Tacto vaginal y rectal:";
             // 
             // rtbRegTacto
             // 
             rtbRegTacto.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegTacto.Font = new Font("Segoe UI", 10F);
+            rtbRegTacto.Font = new Font("Segoe UI Light", 12F);
             rtbRegTacto.Location = new Point(24, 752);
             rtbRegTacto.Name = "rtbRegTacto";
             rtbRegTacto.Size = new Size(1020, 60);
@@ -2623,17 +2834,18 @@
             // lblRegExtremidades
             // 
             lblRegExtremidades.AutoSize = true;
+            lblRegExtremidades.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegExtremidades.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegExtremidades.Location = new Point(24, 830);
             lblRegExtremidades.Name = "lblRegExtremidades";
-            lblRegExtremidades.Size = new Size(116, 23);
+            lblRegExtremidades.Size = new Size(132, 25);
             lblRegExtremidades.TabIndex = 22;
             lblRegExtremidades.Text = "Extremidades:";
             // 
             // rtbRegExtremidades
             // 
             rtbRegExtremidades.BorderStyle = BorderStyle.FixedSingle;
-            rtbRegExtremidades.Font = new Font("Segoe UI", 10F);
+            rtbRegExtremidades.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             rtbRegExtremidades.Location = new Point(24, 852);
             rtbRegExtremidades.Name = "rtbRegExtremidades";
             rtbRegExtremidades.Size = new Size(1020, 60);
@@ -2643,10 +2855,11 @@
             // lblRegNeurologica
             // 
             lblRegNeurologica.AutoSize = true;
+            lblRegNeurologica.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblRegNeurologica.ForeColor = Color.FromArgb(110, 130, 150);
             lblRegNeurologica.Location = new Point(24, 930);
             lblRegNeurologica.Name = "lblRegNeurologica";
-            lblRegNeurologica.Size = new Size(197, 23);
+            lblRegNeurologica.Size = new Size(223, 25);
             lblRegNeurologica.TabIndex = 24;
             lblRegNeurologica.Text = "Exploración neurológica:";
             // 
@@ -2663,96 +2876,105 @@
             // lblExpFis
             // 
             lblExpFis.AutoSize = true;
-            lblExpFis.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblExpFis.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblExpFis.ForeColor = Color.FromArgb(67, 105, 142);
             lblExpFis.Location = new Point(24, 16);
             lblExpFis.Name = "lblExpFis";
-            lblExpFis.Size = new Size(214, 28);
+            lblExpFis.Size = new Size(251, 31);
             lblExpFis.TabIndex = 26;
-            lblExpFis.Text = "EXPLORACIÓN FÍSICA";
+            lblExpFis.Text = "EXPLORACIÓN FÍSICA:";
             // 
             // lblImpGen
             // 
             lblImpGen.AutoSize = true;
+            lblImpGen.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblImpGen.ForeColor = Color.FromArgb(110, 130, 150);
             lblImpGen.Location = new Point(24, 56);
             lblImpGen.Name = "lblImpGen";
-            lblImpGen.Size = new Size(154, 23);
+            lblImpGen.Size = new Size(173, 25);
             lblImpGen.TabIndex = 27;
             lblImpGen.Text = "Impresión General:";
             // 
             // txtImpGen
             // 
             txtImpGen.BorderStyle = BorderStyle.FixedSingle;
+            txtImpGen.Font = new Font("Segoe UI Light", 12F);
             txtImpGen.Location = new Point(24, 76);
             txtImpGen.Name = "txtImpGen";
-            txtImpGen.Size = new Size(1020, 30);
+            txtImpGen.Size = new Size(1020, 34);
             txtImpGen.TabIndex = 28;
             // 
             // lblSignos
             // 
             lblSignos.AutoSize = true;
+            lblSignos.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblSignos.ForeColor = Color.FromArgb(110, 130, 150);
-            lblSignos.Location = new Point(24, 120);
+            lblSignos.Location = new Point(24, 149);
             lblSignos.Name = "lblSignos";
-            lblSignos.Size = new Size(119, 23);
+            lblSignos.Size = new Size(135, 25);
             lblSignos.TabIndex = 29;
             lblSignos.Text = "Signos Vitales:";
             // 
             // lblPeso
             // 
             lblPeso.AutoSize = true;
+            lblPeso.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblPeso.ForeColor = Color.FromArgb(110, 130, 150);
-            lblPeso.Location = new Point(24, 186);
+            lblPeso.Location = new Point(218, 188);
             lblPeso.Name = "lblPeso";
-            lblPeso.Size = new Size(82, 23);
+            lblPeso.Size = new Size(96, 25);
             lblPeso.TabIndex = 30;
             lblPeso.Text = "Peso (kg):";
             // 
             // txtPeso
             // 
             txtPeso.BorderStyle = BorderStyle.FixedSingle;
-            txtPeso.Location = new Point(100, 182);
+            txtPeso.Font = new Font("Segoe UI Light", 12F);
+            txtPeso.Location = new Point(318, 184);
             txtPeso.Name = "txtPeso";
-            txtPeso.Size = new Size(100, 30);
+            txtPeso.Size = new Size(100, 34);
             txtPeso.TabIndex = 31;
             // 
             // lblTalla
             // 
             lblTalla.AutoSize = true;
+            lblTalla.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblTalla.ForeColor = Color.FromArgb(110, 130, 150);
-            lblTalla.Location = new Point(216, 186);
+            lblTalla.Location = new Point(424, 188);
             lblTalla.Name = "lblTalla";
-            lblTalla.Size = new Size(77, 23);
+            lblTalla.Size = new Size(91, 25);
             lblTalla.TabIndex = 32;
             lblTalla.Text = "Talla (m):";
             // 
             // txtTalla
             // 
             txtTalla.BorderStyle = BorderStyle.FixedSingle;
-            txtTalla.Location = new Point(294, 182);
+            txtTalla.Font = new Font("Segoe UI Light", 12F);
+            txtTalla.Location = new Point(521, 184);
             txtTalla.Name = "txtTalla";
-            txtTalla.Size = new Size(100, 30);
+            txtTalla.Size = new Size(100, 34);
             txtTalla.TabIndex = 33;
             // 
             // lblBMI
             // 
             lblBMI.AutoSize = true;
+            lblBMI.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblBMI.ForeColor = Color.FromArgb(110, 130, 150);
-            lblBMI.Location = new Point(410, 186);
+            lblBMI.Location = new Point(633, 188);
             lblBMI.Name = "lblBMI";
-            lblBMI.Size = new Size(44, 23);
+            lblBMI.Size = new Size(52, 25);
             lblBMI.TabIndex = 34;
             lblBMI.Text = "BMI:";
             // 
             // txtBMI
             // 
-            txtBMI.BackColor = Color.FromArgb(245, 247, 250);
+            txtBMI.BackColor = Color.White;
             txtBMI.BorderStyle = BorderStyle.FixedSingle;
-            txtBMI.Location = new Point(450, 182);
+            txtBMI.Font = new Font("Segoe UI Light", 12F);
+            txtBMI.Location = new Point(691, 184);
             txtBMI.Name = "txtBMI";
             txtBMI.ReadOnly = true;
-            txtBMI.Size = new Size(100, 30);
+            txtBMI.Size = new Size(100, 34);
             txtBMI.TabIndex = 35;
             // 
             // tabPage8
@@ -2772,7 +2994,7 @@
             tabPage8.Controls.Add(txtNomMed);
             tabPage8.Controls.Add(lblCedMed);
             tabPage8.Controls.Add(txtCedMed);
-            tabPage8.Controls.Add(this.label53);
+            tabPage8.Controls.Add(label53);
             tabPage8.Location = new Point(4, 29);
             tabPage8.Name = "tabPage8";
             tabPage8.Size = new Size(1081, 654);
@@ -2782,28 +3004,29 @@
             // lblDiag
             // 
             lblDiag.AutoSize = true;
-            lblDiag.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblDiag.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             lblDiag.ForeColor = Color.FromArgb(67, 105, 142);
             lblDiag.Location = new Point(24, 16);
             lblDiag.Name = "lblDiag";
-            lblDiag.Size = new Size(362, 28);
+            lblDiag.Size = new Size(418, 31);
             lblDiag.TabIndex = 0;
-            lblDiag.Text = "DIAGNÓSTICO Y PLAN TERAPÉUTICO";
+            lblDiag.Text = "DIAGNÓSTICO Y PLAN TERAPÉUTICO:";
             // 
             // lblExamComp
             // 
             lblExamComp.AutoSize = true;
+            lblExamComp.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblExamComp.ForeColor = Color.FromArgb(110, 130, 150);
             lblExamComp.Location = new Point(24, 60);
             lblExamComp.Name = "lblExamComp";
-            lblExamComp.Size = new Size(227, 23);
+            lblExamComp.Size = new Size(254, 25);
             lblExamComp.TabIndex = 1;
             lblExamComp.Text = "Exámenes complementarios:";
             // 
             // rtbExamComp
             // 
             rtbExamComp.BorderStyle = BorderStyle.FixedSingle;
-            rtbExamComp.Font = new Font("Segoe UI", 10F);
+            rtbExamComp.Font = new Font("Segoe UI Light", 12F);
             rtbExamComp.Location = new Point(24, 82);
             rtbExamComp.Name = "rtbExamComp";
             rtbExamComp.Size = new Size(1020, 120);
@@ -2813,17 +3036,18 @@
             // lblDiagPresun
             // 
             lblDiagPresun.AutoSize = true;
+            lblDiagPresun.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblDiagPresun.ForeColor = Color.FromArgb(110, 130, 150);
             lblDiagPresun.Location = new Point(24, 222);
             lblDiagPresun.Name = "lblDiagPresun";
-            lblDiagPresun.Size = new Size(189, 23);
+            lblDiagPresun.Size = new Size(214, 25);
             lblDiagPresun.TabIndex = 3;
             lblDiagPresun.Text = "Diagnóstico presuntivo:";
             // 
             // rtbDiagPresun
             // 
             rtbDiagPresun.BorderStyle = BorderStyle.FixedSingle;
-            rtbDiagPresun.Font = new Font("Segoe UI", 10F);
+            rtbDiagPresun.Font = new Font("Segoe UI Light", 12F);
             rtbDiagPresun.Location = new Point(24, 244);
             rtbDiagPresun.Name = "rtbDiagPresun";
             rtbDiagPresun.Size = new Size(1020, 120);
@@ -2833,17 +3057,18 @@
             // lblPlanTer
             // 
             lblPlanTer.AutoSize = true;
+            lblPlanTer.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblPlanTer.ForeColor = Color.FromArgb(110, 130, 150);
             lblPlanTer.Location = new Point(24, 384);
             lblPlanTer.Name = "lblPlanTer";
-            lblPlanTer.Size = new Size(139, 23);
+            lblPlanTer.Size = new Size(157, 25);
             lblPlanTer.TabIndex = 5;
             lblPlanTer.Text = "Plan terapéutico:";
             // 
             // rtbPlanTer
             // 
             rtbPlanTer.BorderStyle = BorderStyle.FixedSingle;
-            rtbPlanTer.Font = new Font("Segoe UI", 10F);
+            rtbPlanTer.Font = new Font("Segoe UI Light", 12F);
             rtbPlanTer.Location = new Point(24, 406);
             rtbPlanTer.Name = "rtbPlanTer";
             rtbPlanTer.Size = new Size(1020, 120);
@@ -2853,68 +3078,74 @@
             // lblMedTrat
             // 
             lblMedTrat.AutoSize = true;
-            lblMedTrat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblMedTrat.ForeColor = Color.FromArgb(30, 40, 55);
+            lblMedTrat.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            lblMedTrat.ForeColor = Color.FromArgb(67, 105, 142);
             lblMedTrat.Location = new Point(24, 546);
             lblMedTrat.Name = "lblMedTrat";
-            lblMedTrat.Size = new Size(383, 20);
+            lblMedTrat.Size = new Size(578, 31);
             lblMedTrat.TabIndex = 7;
             lblMedTrat.Text = "NOMBRE, CÉDULA Y FIRMA DEL MÉDICO TRATANTE:";
             // 
             // lblNomMed
             // 
             lblNomMed.AutoSize = true;
+            lblNomMed.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblNomMed.ForeColor = Color.FromArgb(110, 130, 150);
-            lblNomMed.Location = new Point(24, 576);
+            lblNomMed.Location = new Point(24, 596);
             lblNomMed.Name = "lblNomMed";
-            lblNomMed.Size = new Size(77, 23);
+            lblNomMed.Size = new Size(89, 25);
             lblNomMed.TabIndex = 8;
-            lblNomMed.Text = "Nombre:";
+            lblNomMed.Text = "Tratante:";
             // 
             // txtNomMed
             // 
             txtNomMed.BorderStyle = BorderStyle.FixedSingle;
-            txtNomMed.Location = new Point(90, 572);
+            txtNomMed.Font = new Font("Segoe UI Light", 12F);
+            txtNomMed.Location = new Point(119, 592);
             txtNomMed.Name = "txtNomMed";
-            txtNomMed.Size = new Size(300, 30);
+            txtNomMed.Size = new Size(300, 34);
             txtNomMed.TabIndex = 9;
             // 
             // lblCedMed
             // 
             lblCedMed.AutoSize = true;
+            lblCedMed.Font = new Font("Segoe UI", 10.5F, FontStyle.Bold);
             lblCedMed.ForeColor = Color.FromArgb(110, 130, 150);
-            lblCedMed.Location = new Point(410, 576);
+            lblCedMed.Location = new Point(452, 597);
             lblCedMed.Name = "lblCedMed";
-            lblCedMed.Size = new Size(67, 23);
+            lblCedMed.Size = new Size(75, 25);
             lblCedMed.TabIndex = 10;
             lblCedMed.Text = "Cédula:";
+            lblCedMed.Click += lblCedMed_Click;
             // 
             // txtCedMed
             // 
             txtCedMed.BorderStyle = BorderStyle.FixedSingle;
-            txtCedMed.Location = new Point(470, 572);
+            txtCedMed.Font = new Font("Segoe UI Light", 12F);
+            txtCedMed.Location = new Point(533, 592);
             txtCedMed.Name = "txtCedMed";
-            txtCedMed.Size = new Size(200, 30);
+            txtCedMed.Size = new Size(200, 34);
             txtCedMed.TabIndex = 11;
             // 
             // label53
             // 
-            this.label53.Location = new Point(0, 0);
-            this.label53.Name = "label53";
-            this.label53.Size = new Size(100, 23);
-            this.label53.TabIndex = 12;
-            this.label53.Visible = false;
+            label53.Location = new Point(0, 0);
+            label53.Name = "label53";
+            label53.Size = new Size(100, 23);
+            label53.TabIndex = 12;
+            label53.Visible = false;
             // 
             // pnlSidebar
             // 
-            pnlSidebar.BackColor = Color.FromArgb(245, 247, 250);
+            pnlSidebar.BackColor = Color.FromArgb(67, 105, 142);
             pnlSidebar.Controls.Add(pnlPatientCard);
             pnlSidebar.Controls.Add(pnlSepSide);
             pnlSidebar.Controls.Add(pnlNav);
             pnlSidebar.Location = new Point(0, 0);
             pnlSidebar.Name = "pnlSidebar";
-            pnlSidebar.Size = new Size(210, 740);
+            pnlSidebar.Size = new Size(225, 740);
             pnlSidebar.TabIndex = 0;
+            pnlSidebar.Paint += pnlSidebar_Paint;
             // 
             // pnlPatientCard
             // 
@@ -2925,7 +3156,7 @@
             pnlPatientCard.Controls.Add(pnlPatientDet);
             pnlPatientCard.Location = new Point(0, 0);
             pnlPatientCard.Name = "pnlPatientCard";
-            pnlPatientCard.Size = new Size(210, 122);
+            pnlPatientCard.Size = new Size(211, 122);
             pnlPatientCard.TabIndex = 0;
             // 
             // lblInitials
@@ -2939,21 +3170,23 @@
             lblInitials.TabIndex = 0;
             lblInitials.Text = "MG";
             lblInitials.TextAlign = ContentAlignment.MiddleCenter;
+            lblInitials.Click += lblInitials_Click;
             // 
             // lblPatientName
             // 
             lblPatientName.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            lblPatientName.ForeColor = Color.FromArgb(30, 40, 55);
+            lblPatientName.ForeColor = SystemColors.Window;
             lblPatientName.Location = new Point(64, 16);
             lblPatientName.Name = "lblPatientName";
             lblPatientName.Size = new Size(136, 20);
             lblPatientName.TabIndex = 1;
             lblPatientName.Text = "Nombre Paciente";
+            lblPatientName.Click += lblPatientName_Click;
             // 
             // lblPatientMeta
             // 
             lblPatientMeta.Font = new Font("Segoe UI", 9F);
-            lblPatientMeta.ForeColor = Color.FromArgb(110, 130, 150);
+            lblPatientMeta.ForeColor = SystemColors.Window;
             lblPatientMeta.Location = new Point(64, 38);
             lblPatientMeta.Name = "lblPatientMeta";
             lblPatientMeta.Size = new Size(136, 18);
@@ -2967,25 +3200,26 @@
             pnlPatientDet.Controls.Add(lblExpValue);
             pnlPatientDet.Controls.Add(lblCamaLabel);
             pnlPatientDet.Controls.Add(lblCamaValue);
+            pnlPatientDet.ForeColor = SystemColors.Window;
             pnlPatientDet.Location = new Point(14, 66);
             pnlPatientDet.Name = "pnlPatientDet";
-            pnlPatientDet.Size = new Size(182, 46);
+            pnlPatientDet.Size = new Size(188, 46);
             pnlPatientDet.TabIndex = 3;
             // 
             // lblExpLabel
             // 
             lblExpLabel.Font = new Font("Segoe UI", 9F);
-            lblExpLabel.ForeColor = Color.FromArgb(110, 130, 150);
+            lblExpLabel.ForeColor = SystemColors.Window;
             lblExpLabel.Location = new Point(0, 2);
             lblExpLabel.Name = "lblExpLabel";
-            lblExpLabel.Size = new Size(80, 16);
+            lblExpLabel.Size = new Size(97, 16);
             lblExpLabel.TabIndex = 0;
-            lblExpLabel.Text = "Expediente";
+            lblExpLabel.Text = "Expediente:";
             // 
             // lblExpValue
             // 
             lblExpValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblExpValue.ForeColor = Color.FromArgb(30, 40, 55);
+            lblExpValue.ForeColor = SystemColors.Window;
             lblExpValue.Location = new Point(90, 2);
             lblExpValue.Name = "lblExpValue";
             lblExpValue.Size = new Size(90, 16);
@@ -2996,17 +3230,17 @@
             // lblCamaLabel
             // 
             lblCamaLabel.Font = new Font("Segoe UI", 9F);
-            lblCamaLabel.ForeColor = Color.FromArgb(110, 130, 150);
+            lblCamaLabel.ForeColor = SystemColors.Window;
             lblCamaLabel.Location = new Point(0, 26);
             lblCamaLabel.Name = "lblCamaLabel";
             lblCamaLabel.Size = new Size(80, 16);
             lblCamaLabel.TabIndex = 2;
-            lblCamaLabel.Text = "Cama";
+            lblCamaLabel.Text = "Cama:";
             // 
             // lblCamaValue
             // 
             lblCamaValue.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lblCamaValue.ForeColor = Color.FromArgb(30, 40, 55);
+            lblCamaValue.ForeColor = SystemColors.Window;
             lblCamaValue.Location = new Point(90, 26);
             lblCamaValue.Name = "lblCamaValue";
             lblCamaValue.Size = new Size(90, 16);
@@ -3034,6 +3268,7 @@
             pnlNav.Controls.Add(btnNav6);
             pnlNav.Controls.Add(btnNav7);
             pnlNav.Controls.Add(btnNav8);
+            pnlNav.ForeColor = SystemColors.Window;
             pnlNav.Location = new Point(0, 130);
             pnlNav.Name = "pnlNav";
             pnlNav.Size = new Size(210, 550);
@@ -3042,7 +3277,7 @@
             // lblNavTitle
             // 
             lblNavTitle.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
-            lblNavTitle.ForeColor = Color.FromArgb(110, 130, 150);
+            lblNavTitle.ForeColor = SystemColors.Window;
             lblNavTitle.Location = new Point(14, 8);
             lblNavTitle.Name = "lblNavTitle";
             lblNavTitle.Size = new Size(182, 16);
@@ -3057,13 +3292,13 @@
             btnNav1.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav1.FlatStyle = FlatStyle.Flat;
             btnNav1.Font = new Font("Segoe UI", 10F);
-            btnNav1.ForeColor = Color.FromArgb(67, 105, 142);
+            btnNav1.ForeColor = SystemColors.Window;
             btnNav1.Location = new Point(8, 28);
             btnNav1.Name = "btnNav1";
             btnNav1.Padding = new Padding(8, 0, 0, 0);
-            btnNav1.Size = new Size(194, 32);
+            btnNav1.Size = new Size(199, 32);
             btnNav1.TabIndex = 1;
-            btnNav1.Text = "Identificación";
+            btnNav1.Text = "Ficha de Identificación";
             btnNav1.TextAlign = ContentAlignment.MiddleLeft;
             btnNav1.UseVisualStyleBackColor = false;
             btnNav1.Click += btnNav1_Click;
@@ -3076,7 +3311,7 @@
             btnNav2.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav2.FlatStyle = FlatStyle.Flat;
             btnNav2.Font = new Font("Segoe UI", 10F);
-            btnNav2.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav2.ForeColor = SystemColors.Window;
             btnNav2.Location = new Point(8, 64);
             btnNav2.Name = "btnNav2";
             btnNav2.Padding = new Padding(8, 0, 0, 0);
@@ -3095,7 +3330,7 @@
             btnNav3.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav3.FlatStyle = FlatStyle.Flat;
             btnNav3.Font = new Font("Segoe UI", 10F);
-            btnNav3.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav3.ForeColor = SystemColors.Window;
             btnNav3.Location = new Point(8, 100);
             btnNav3.Name = "btnNav3";
             btnNav3.Padding = new Padding(8, 0, 0, 0);
@@ -3114,7 +3349,7 @@
             btnNav4.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav4.FlatStyle = FlatStyle.Flat;
             btnNav4.Font = new Font("Segoe UI", 10F);
-            btnNav4.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav4.ForeColor = SystemColors.Window;
             btnNav4.Location = new Point(8, 136);
             btnNav4.Name = "btnNav4";
             btnNav4.Padding = new Padding(8, 0, 0, 0);
@@ -3133,7 +3368,7 @@
             btnNav5.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav5.FlatStyle = FlatStyle.Flat;
             btnNav5.Font = new Font("Segoe UI", 10F);
-            btnNav5.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav5.ForeColor = SystemColors.Window;
             btnNav5.Location = new Point(8, 172);
             btnNav5.Name = "btnNav5";
             btnNav5.Padding = new Padding(8, 0, 0, 0);
@@ -3152,7 +3387,7 @@
             btnNav6.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav6.FlatStyle = FlatStyle.Flat;
             btnNav6.Font = new Font("Segoe UI", 10F);
-            btnNav6.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav6.ForeColor = SystemColors.Window;
             btnNav6.Location = new Point(8, 208);
             btnNav6.Name = "btnNav6";
             btnNav6.Padding = new Padding(8, 0, 0, 0);
@@ -3171,7 +3406,7 @@
             btnNav7.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav7.FlatStyle = FlatStyle.Flat;
             btnNav7.Font = new Font("Segoe UI", 10F);
-            btnNav7.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav7.ForeColor = SystemColors.Window;
             btnNav7.Location = new Point(8, 244);
             btnNav7.Name = "btnNav7";
             btnNav7.Padding = new Padding(8, 0, 0, 0);
@@ -3190,7 +3425,7 @@
             btnNav8.FlatAppearance.MouseOverBackColor = Color.FromArgb(220, 233, 247);
             btnNav8.FlatStyle = FlatStyle.Flat;
             btnNav8.Font = new Font("Segoe UI", 10F);
-            btnNav8.ForeColor = Color.FromArgb(110, 130, 150);
+            btnNav8.ForeColor = SystemColors.Window;
             btnNav8.Location = new Point(8, 280);
             btnNav8.Name = "btnNav8";
             btnNav8.Padding = new Padding(8, 0, 0, 0);
@@ -3249,13 +3484,14 @@
             // 
             // lblSectionTitle
             // 
-            lblSectionTitle.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lblSectionTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSectionTitle.ForeColor = Color.FromArgb(67, 105, 142);
             lblSectionTitle.Location = new Point(20, 12);
             lblSectionTitle.Name = "lblSectionTitle";
             lblSectionTitle.Size = new Size(420, 28);
             lblSectionTitle.TabIndex = 0;
-            lblSectionTitle.Text = "Ficha de identificación";
+            lblSectionTitle.Text = "HISTORIA CLINICA";
+            lblSectionTitle.Click += lblSectionTitle_Click;
             // 
             // btnGuardar
             // 
@@ -3271,6 +3507,7 @@
             btnGuardar.TabIndex = 1;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
@@ -3377,13 +3614,30 @@
         private System.Windows.Forms.Button btnNav1, btnNav2, btnNav3, btnNav4;
         private System.Windows.Forms.Button btnNav5, btnNav6, btnNav7, btnNav8;
         private System.Windows.Forms.Button btnGuardar, btnCancelar;
-        private System.Windows.Forms.Panel sep1tab1, sep2tab1;
-        private System.Windows.Forms.TextBox nombre, ocupacion, estado_civil, nacionalidad;
-        private System.Windows.Forms.TextBox escolaridad, religion, servicio, cama, no_expediente, telefono;
-        private System.Windows.Forms.Label label1, labeledad, sexoaaa, label2, labe2, label3;
-        private System.Windows.Forms.Label asdasdasd, label4, label5, label7, label8, label11, label6;
-        private System.Windows.Forms.NumericUpDown edad1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        // ── Labels que usaban "this." en InitializeComponent (AGREGADOS) ──
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        // ─────────────────────────────────────────────────────────────────
         private System.Windows.Forms.Label label17, label18, label19, label20, label21, label22, label23, label24;
         private System.Windows.Forms.Label label25, label26, label27, label28;
         private System.Windows.Forms.TextBox vp, fpadres, vhemanos, fhermanos, vhijos, fhijos;
@@ -3426,5 +3680,36 @@
         private System.Windows.Forms.RadioButton rbAnticoSi, rbAnticoNo;
         private System.Windows.Forms.RichTextBox rtbPadActual, rtbRegInspGen, rtbRegCabeza, rtbRegCuello, rtbRegTorax, rtbRegAbdomen;
         private System.Windows.Forms.RichTextBox rtbRegTacto, rtbRegExtremidades, rtbRegNeurologica, rtbExamComp, rtbDiagPresun, rtbPlanTer;
+        private Panel sep1tab1;
+        private Panel sep2tab1;
+        private Label label1;
+        private TextBox nombre;
+        private Label labeledad;
+        private NumericUpDown edad1;
+        private Label sexoaaa;
+        private ComboBox comboBox1;
+        private Label label2;
+        private TextBox ocupacion;
+        private Label labe2;
+        private TextBox estado_civil;
+        private Label label3;
+        private TextBox nacionalidad;
+        private Label asdasdasd;
+        private TextBox escolaridad;
+        private Label label4;
+        private TextBox religion;
+        private Label label5;
+        private TextBox servicio;
+        private Label label7;
+        private TextBox cama;
+        private Label label8;
+        private TextBox no_expediente;
+        private Label label11;
+        private TextBox telefono;
+        private Label label6;
+        private Label label12;
+        private Label label29;
+        private Label label41;
+        private Label label59;
     }
 }
